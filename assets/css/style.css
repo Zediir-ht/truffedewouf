@@ -330,6 +330,148 @@ h1, h2, h3 { margin: 0; font-weight: 400; }
 .cta__tel:hover { font-style: italic; }
 @media (max-width: 860px) { .cta .wrap { grid-template-columns: 1fr; } }
 
+
+/* =========================================================
+   ACCUEIL (structure : offre, phares, bandeau, bienvenue,
+   séances, équipe, accès, avis)
+   ========================================================= */
+
+/* 1. offre du moment */
+.promo { background: var(--tomato); color: var(--ink); padding: clamp(36px, 5vw, 72px) 0 clamp(28px, 3vw, 40px); overflow: hidden; }
+.promo__grid { display: grid; grid-template-columns: 1.15fr 1fr; gap: clamp(28px, 5vw, 72px); align-items: center; }
+.promo__tag {
+  display: inline-block; margin: 0 0 22px; padding: 8px 14px; border: 1px solid var(--ink); border-radius: 999px;
+  font-size: .76rem; font-weight: 600; letter-spacing: .16em; text-transform: uppercase;
+}
+.promo__title { display: grid; font-weight: 400; margin-bottom: 10px; }
+.promo__title span { font-family: var(--serif); font-size: clamp(1.9rem, 3.6vw, 3.2rem); line-height: 1; }
+.promo__title strong { font-family: var(--serif); font-weight: 400; font-style: italic; font-size: clamp(6rem, 17vw, 15rem); line-height: .82; letter-spacing: -.04em; color: var(--paper); }
+.promo__cond { font-weight: 600; letter-spacing: .14em; text-transform: uppercase; font-size: .85rem; margin: 18px 0 16px; }
+.promo__types { list-style: none; display: flex; flex-wrap: wrap; gap: 8px 0; margin: 0 0 30px; padding: 0; font-size: .9rem; font-weight: 500; }
+.promo__types li { display: flex; align-items: center; }
+.promo__types li + li::before { content: ""; width: 4px; height: 4px; border-radius: 50%; background: currentColor; margin: 0 12px; }
+.promo .btn:hover { background: var(--paper); border-color: var(--paper); color: var(--ink); }
+.promo__note { margin: 18px 0 0; font-size: .82rem; opacity: .75; }
+.promo__ph { aspect-ratio: 4 / 4.6; border-radius: 4px; box-shadow: 0 30px 60px -30px rgba(18, 17, 16, .55); }
+.promo__dots { display: flex; justify-content: flex-end; gap: 8px; margin-top: 18px; }
+.promo__dots button[aria-pressed="true"] { box-shadow: 0 0 0 2px var(--tomato), 0 0 0 3px var(--ink); }
+@media (max-width: 860px) {
+  .promo__grid { grid-template-columns: 1fr; }
+  .promo__ph { aspect-ratio: 4 / 3; }
+}
+
+/* 2. prestations phares */
+.featured { padding: clamp(14px, 1.6vw, 22px) 0 0; }
+.featured__grid { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(14px, 1.6vw, 22px); }
+.feature { position: relative; display: block; overflow: hidden; border-radius: 4px; }
+.feature .ph { aspect-ratio: 4 / 3; transition: transform 1.2s var(--ease); }
+.feature:hover .ph { transform: scale(1.03); }
+.feature__cap {
+  position: absolute; left: 0; right: 0; bottom: 0; z-index: 3; display: flex; justify-content: space-between; align-items: end; gap: 16px;
+  padding: clamp(18px, 2.4vw, 32px); background: linear-gradient(to top, rgba(18, 17, 16, .55), transparent); color: var(--paper);
+}
+.feature__cap .h3 { font-size: clamp(1.8rem, 3vw, 2.8rem); }
+.feature__cap .link { font-size: .9rem; white-space: nowrap; }
+@media (max-width: 700px) { .featured__grid { grid-template-columns: 1fr; } }
+
+/* 3. bandeau marque */
+.brandband { padding: clamp(14px, 1.6vw, 22px) 0 0; }
+.brandband__grid {
+  display: grid; grid-template-columns: 1fr 2.4fr; gap: clamp(24px, 4vw, 56px); align-items: center;
+  background: var(--ink); color: var(--paper); border-radius: 4px; padding: clamp(28px, 4vw, 52px) clamp(24px, 4vw, 56px);
+}
+.brandband__logo { display: flex; flex-direction: column; gap: 8px; padding-right: clamp(0px, 3vw, 40px); border-right: 1px solid rgba(243, 238, 230, .18); }
+.brandband__logo .logo__name { font-size: clamp(2.2rem, 3.4vw, 3rem); line-height: 1; }
+.brandband__logo .logo__sub { color: rgba(243, 238, 230, .55); margin: 0; }
+.brandband__points { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px 36px; }
+.brandband__points li { display: flex; gap: 14px; align-items: flex-start; font-size: .98rem; line-height: 1.45; color: rgba(243, 238, 230, .85); }
+.brandband__points .icon { width: 26px; height: 26px; color: var(--saffron); stroke-width: 1.4; }
+@media (max-width: 860px) {
+  .brandband__grid { grid-template-columns: 1fr; }
+  .brandband__logo { border-right: 0; border-bottom: 1px solid rgba(243, 238, 230, .18); padding: 0 0 24px; }
+  .brandband__points { grid-template-columns: 1fr; }
+}
+
+/* 4. bienvenue */
+.welcome__inner { max-width: 820px; text-align: center; display: flex; flex-direction: column; align-items: center; }
+.welcome .label { margin-bottom: 22px; }
+.welcome h1 { margin-bottom: 30px; text-wrap: balance; }
+.welcome p { font-size: 1.12rem; color: var(--ink-2); max-width: 40em; }
+.welcome .lead { font-size: clamp(1.2rem, 1.7vw, 1.4rem); color: var(--ink); }
+.welcome strong { font-weight: 600; color: var(--ink); }
+
+/* 5. séances */
+.seances__intro { display: grid; grid-template-columns: 1fr 1.2fr; gap: clamp(28px, 5vw, 80px); align-items: end; margin-bottom: clamp(44px, 6vw, 72px); }
+.seances__intro .label { margin-bottom: 22px; }
+.seances__intro p { font-size: 1.08rem; color: var(--ink-2); margin: 0; }
+.seances__intro .link { font-weight: 500; padding-bottom: 1px; }
+.seances__sub { font-family: var(--serif); font-size: clamp(1.6rem, 2.2vw, 2rem); margin-bottom: 28px; }
+.scards { display: grid; grid-template-columns: repeat(3, 1fr); gap: clamp(16px, 2vw, 28px); }
+.scard { display: flex; flex-direction: column; gap: 14px; }
+.scard__t { margin: 0; font-size: .78rem; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; }
+.scard .ph { aspect-ratio: 4 / 5; border-radius: 3px; }
+.scard__btn {
+  align-self: flex-start; display: inline-flex; align-items: center; gap: 10px; padding: 11px 18px;
+  border: 1px solid var(--ink); border-radius: 999px; font-size: .88rem; font-weight: 600; transition: background .25s, color .25s;
+}
+.scard__btn:hover { background: var(--ink); color: var(--paper); }
+@media (max-width: 860px) {
+  .seances__intro { grid-template-columns: 1fr; }
+  .scards { grid-template-columns: 1fr 1fr; }
+}
+
+/* 6. équipe */
+.team { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(28px, 5vw, 72px); }
+.team .ph { aspect-ratio: 5 / 4; border-radius: 3px; margin-bottom: 26px; }
+.team h3 { margin-bottom: 12px; }
+.team p { color: var(--ink-2); font-size: 1.05rem; max-width: 34em; }
+.team strong { font-weight: 600; color: var(--ink); }
+@media (max-width: 760px) { .team { grid-template-columns: 1fr; } }
+
+/* 7. contact & accès */
+.access { display: grid; grid-template-columns: 1fr 1.1fr; gap: clamp(32px, 5vw, 80px); align-items: stretch; }
+.access p { color: rgba(243, 238, 230, .78); font-size: 1.08rem; }
+.access strong { color: var(--paper); font-weight: 600; }
+.access__list { margin: 28px 0 32px; border-top: 1px solid rgba(243, 238, 230, .18); }
+.access__list div { display: grid; grid-template-columns: 130px 1fr; gap: 16px; padding: 14px 0; border-bottom: 1px solid rgba(243, 238, 230, .18); }
+.access__list dt { font-size: .74rem; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: rgba(243, 238, 230, .5); padding-top: 3px; }
+.access__list dd { margin: 0; }
+.access__list a { color: var(--saffron); font-weight: 600; }
+.access__ctas { display: flex; flex-wrap: wrap; gap: 12px; }
+.access .btn--outline { color: var(--paper); border-color: rgba(243, 238, 230, .5); }
+.access .btn--outline:hover { background: var(--paper); color: var(--ink); }
+.access__map { min-height: 380px; border-radius: 4px; overflow: hidden; background: var(--cobalt); }
+.access__map iframe { width: 100%; height: 100%; min-height: 380px; border: 0; display: block; filter: grayscale(.3) contrast(1.05); }
+@media (max-width: 860px) { .access { grid-template-columns: 1fr; } }
+@media (max-width: 480px) { .access__list div { grid-template-columns: 1fr; gap: 2px; } }
+
+/* WhatsApp dans le bandeau */
+.topbar__wa .icon { color: var(--emerald); }
+@media (max-width: 760px) { .topbar__wa span { display: none; } }
+
+/* étiquette d'avis flottante (toutes les pages) */
+.gbadge {
+  position: fixed; left: 0; top: 50%; z-index: 30; translate: 0 -50%;
+  display: flex; flex-direction: column; align-items: center; gap: 8px;
+  padding: 16px 10px 16px 8px; background: var(--paper); color: var(--ink);
+  border: 1px solid var(--line); border-left: 0; border-radius: 0 14px 14px 0;
+  box-shadow: 0 12px 30px -12px rgba(18, 17, 16, .35); transition: padding .25s var(--ease);
+}
+.gbadge:hover { padding-left: 14px; }
+.gbadge__g, .gbadge__lbl { writing-mode: vertical-rl; transform: rotate(180deg); font-size: .66rem; font-weight: 600; letter-spacing: .16em; text-transform: uppercase; }
+.gbadge__g { color: var(--muted); }
+.gbadge strong { font-family: var(--serif); font-weight: 400; font-size: 1.5rem; line-height: 1; }
+.gbadge .stars { flex-direction: column; gap: 2px; }
+.gbadge .stars svg { width: 12px; height: 12px; fill: var(--saffron); }
+@media (max-width: 760px) {
+  .gbadge { top: auto; bottom: calc(14px + env(safe-area-inset-bottom, 0px)); translate: none; flex-direction: row; padding: 10px 14px 10px 12px; gap: 8px; }
+  .gbadge:hover { padding-left: 12px; }
+  .gbadge__g, .gbadge__lbl { writing-mode: horizontal-tb; transform: none; }
+  .gbadge .stars { flex-direction: row; }
+  .gbadge strong { font-size: 1.2rem; }
+  .gbadge__lbl { display: none; }
+}
+
 /* =========================================================
    PAGE LE STUDIO
    ========================================================= */

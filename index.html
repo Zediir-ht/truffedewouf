@@ -131,6 +131,7 @@
       <a class="topbar__addr" href="https://www.google.com/maps/search/?api=1&query=Truffe+de+Wouf+Millau" target="_blank" rel="noopener"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg><span>Adresse à compléter, 12100 Millau</span></a>
       <div class="topbar__right">
         <span class="topbar__hours">Du mardi au samedi, sur rendez-vous</span>
+        <a class="topbar__wa" href="https://wa.me/33000000000" target="_blank" rel="noopener"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20l1.3-3.9A8 8 0 1 1 8 19z"/><path d="M9 9.5c.3 2 2.4 4.2 4.5 4.6l1.2-1.2 1.8.8"/></svg><span>WhatsApp</span></a>
         <a class="topbar__tel" href="tel:+33000000000"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>00 00 00 00 00</a>
       </div>
     </div>
@@ -154,124 +155,175 @@
 
   <main id="contenu">
 
-    <section class="hero" aria-labelledby="hero-title">
-      <div class="wrap">
-        <div class="hero__text">
-          <p class="label">Studio photo canin · Millau, Aveyron</p>
-          <h1 id="hero-title" class="display hero__title">
-            <span class="row"><span>Le portrait</span></span>
-            <span class="row"><span>de votre chien,</span></span>
-            <span class="row"><span><em data-accent>en couleur.</em></span></span>
-          </h1>
-          <p class="lead">Truffe de Wouf est un studio photo dédié aux chiens, à Millau. Des portraits francs et lumineux sur fonds colorés, ou en pleine nature sur les Grands Causses.</p>
-          <div class="hero__ctas">
-            <a class="btn" href="reservation.html">Réserver une séance <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h16M14 6l6 6-6 6"/></svg></a>
-            <a class="link" href="galerie.html">Voir la galerie <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h16M14 6l6 6-6 6"/></svg></a>
-          </div>
-          <dl class="hero__facts">
-            <div><dt>Studio</dt><dd>Millau</dd></div>
-            <div><dt>Extérieur</dt><dd>Grands Causses</dd></div>
-            <div><dt>Réservation</dt><dd><a href="tel:+33000000000">00 00 00 00 00</a></dd></div>
-          </dl>
+    <!-- 1. Offre du moment (contenu à valider avec le studio) -->
+    <section class="promo" aria-labelledby="promo-title">
+      <div class="wrap promo__grid">
+        <div class="promo__text">
+          <p class="promo__tag">Offre de lancement</p>
+          <h2 id="promo-title" class="promo__title"><span>Votre séance photo canine</span><strong>−20 %</strong></h2>
+          <p class="promo__cond">Uniquement du mardi au jeudi</p>
+          <ul class="promo__types" aria-label="Séances concernées"><li>Studio</li><li>Plein air</li><li>Chiot</li><li>Senior</li><li>Duo</li><li>Famille</li></ul>
+          <a class="btn" href="reservation.html#demande">Je réserve ma séance <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h16M14 6l6 6-6 6"/></svg></a>
+          <p class="promo__note">*Offre valable sur les formules Essentielle et Signature, hors tirages.</p>
         </div>
-        <div class="hero__media">
-          <!-- Remplacer par la photo phare : <div class="ph" data-cycle><img src="assets/img/hero.webp" alt="Portrait d'un chien au studio Truffe de Wouf à Millau" fetchpriority="high"></div> -->
-          <div class="ph" data-cycle><span class="ph__cap" data-cycle-label>Fond n°01 · Tomate</span></div>
-          <div class="hero__swatch">
-            <span>Nos fonds</span>
-            <div class="hero__dots" data-dots>
-              <button style="--c:var(--tomato)" data-name="Tomate" aria-label="Fond tomate"></button>
-              <button style="--c:var(--cobalt)" data-name="Cobalt" aria-label="Fond cobalt"></button>
-              <button style="--c:var(--saffron)" data-name="Safran" aria-label="Fond safran"></button>
-              <button style="--c:var(--fuchsia)" data-name="Fuchsia" aria-label="Fond fuchsia"></button>
-              <button style="--c:var(--emerald)" data-name="Émeraude" aria-label="Fond émeraude"></button>
-            </div>
-          </div>
-        </div>
+        <div class="ph ph--cobalt promo__ph" data-cycle><span class="ph__cap" data-cycle-label>Fond n°01 · Cobalt</span></div>
+      </div>
+      <div class="wrap promo__dots hero__dots" data-dots aria-label="Fonds du studio">
+        <button style="--c:var(--cobalt)" data-name="Cobalt" aria-label="Fond cobalt"></button>
+        <button style="--c:var(--saffron)" data-name="Safran" aria-label="Fond safran"></button>
+        <button style="--c:var(--fuchsia)" data-name="Fuchsia" aria-label="Fond fuchsia"></button>
+        <button style="--c:var(--emerald)" data-name="Émeraude" aria-label="Fond émeraude"></button>
+        <button style="--c:var(--lilac)" data-name="Lilas" aria-label="Fond lilas"></button>
       </div>
     </section>
 
-    <section class="section section--ink" aria-labelledby="manif-title">
-      <div class="wrap manifest">
-        <p class="label">Le studio</p>
-        <div class="manifest__body">
-          <h2 id="manif-title" class="h2" style="margin-bottom:36px">Un studio pensé pour les chiens, <em>pas l'inverse.</em></h2>
-          <p>Chaque séance commence par du temps : renifler les lieux, prendre ses marques, gagner la confiance. Les photos viennent ensuite, naturellement. Chiens timides, fougueux ou âgés, tous repartent avec des images qui leur ressemblent.</p>
-          <a class="link" href="le-studio.html">Découvrir le studio <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h16M14 6l6 6-6 6"/></svg></a>
-        </div>
+    <!-- 2. Prestations phares -->
+    <section class="featured" aria-label="Prestations phares">
+      <div class="wrap featured__grid">
+        <a class="feature" href="reservation.html">
+          <div class="ph ph--saffron "><span class="ph__cap"></span></div>
+          <span class="feature__cap"><span class="h3">Shooting en studio</span><span class="link">Découvrir <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h16M14 6l6 6-6 6"/></svg></span></span>
+        </a>
+        <a class="feature" href="le-studio.html#exterieur">
+          <div class="ph ph--emerald "><span class="ph__cap"></span></div>
+          <span class="feature__cap"><span class="h3">Shooting en plein air</span><span class="link">Découvrir <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h16M14 6l6 6-6 6"/></svg></span></span>
+        </a>
       </div>
     </section>
 
-    <section class="section" aria-labelledby="seances-title">
+    <!-- 3. Bandeau marque + points forts -->
+    <section class="brandband" aria-label="Le studio en bref">
+      <div class="wrap brandband__grid">
+        <div class="brandband__logo">
+          <span class="logo__name">Truffe <em>de</em> Wouf</span>
+          <span class="logo__sub">Studio photo canin · Millau</span>
+        </div>
+        <ul class="brandband__points"><li><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 8h3l2-3h6l2 3h3v11H4z"/><circle cx="12" cy="13" r="3.5"/></svg><span>Séances en studio et en extérieur, à Millau et dans tout le sud Aveyron</span></li>
+<li><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3a9 9 0 1 0 0 18c1.2 0 1.6-.9 1.2-1.8-.5-1-.1-2.2 1.2-2.2H17a4 4 0 0 0 4-4c0-5.5-4-10-9-10z"/><circle cx="7.5" cy="11" r="1"/><circle cx="10" cy="7" r="1"/><circle cx="14.5" cy="7" r="1"/></svg><span>Six fonds colorés signature et un éclairage doux pour les yeux de votre chien</span></li>
+<li><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20s-7.5-4.6-7.5-10A4.3 4.3 0 0 1 12 7.4 4.3 4.3 0 0 1 19.5 10c0 5.4-7.5 10-7.5 10z"/></svg><span>Une séance au rythme du chien : acclimatation, jeux, friandises et pauses</span></li>
+<li><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="4.5" width="17" height="15" rx="1"/><path d="m3.5 16 5-5 4 4 2.5-2.5 5 5"/><circle cx="15.5" cy="9" r="1.5"/></svg><span>Photos retouchées à la main, galerie privée en ligne et tirages d'art</span></li></ul>
+      </div>
+    </section>
+
+    <!-- 4. Bienvenue -->
+    <section class="section welcome" aria-labelledby="hero-title">
+      <div class="wrap welcome__inner">
+        <p class="label">Bienvenue</p>
+        <h1 id="hero-title" class="h2">Truffe de Wouf, le <em>studio photo canin</em> de Millau</h1>
+        <p class="lead">Bienvenue chez Truffe de Wouf, le <strong>studio photo</strong> entièrement dédié aux chiens, au cœur de Millau dans l'Aveyron.</p>
+        <p>Nous accueillons votre compagnon du mardi au samedi, sur rendez-vous au <a class="link" href="https://www.google.com/maps/search/?api=1&query=Truffe+de+Wouf+Millau" target="_blank" rel="noopener">Adresse à compléter, 12100 Millau</a>, pour un <strong>portrait en studio</strong> sur fond coloré ou une <strong>séance photo en extérieur</strong> sur les Causses et dans les Gorges du Tarn.</p>
+        <p>Découvrez <a class="link" href="le-studio.html">le studio</a>, <a class="link" href="galerie.html">nos réalisations</a> et <a class="link" href="reservation.html">nos tarifs</a>. À très vite pour le <strong>shooting photo</strong> de votre chien.</p>
+      </div>
+    </section>
+
+    <!-- 5. Les séances -->
+    <section class="section section--alt" aria-labelledby="seances-title">
       <div class="wrap">
-        <div class="sechead">
+        <div class="seances__intro">
           <div>
             <p class="label">Les séances</p>
-            <h2 id="seances-title" class="h2">Une séance photo chien <em>à votre mesure</em></h2>
+            <h2 id="seances-title" class="h2">Les séances photo <em>pour votre chien</em></h2>
           </div>
-          <a class="link" href="reservation.html">Tous les tarifs <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h16M14 6l6 6-6 6"/></svg></a>
+          <p>Des séances photo canines professionnelles pour toutes les étapes de sa vie : <a class="link" href="reservation.html">portrait en studio</a>, <a class="link" href="le-studio.html#exterieur">séance en plein air</a>, premières semaines du <a class="link" href="reservation.html">chiot</a>, belles années du <a class="link" href="reservation.html">chien senior</a>, <a class="link" href="reservation.html">duo maître et chien</a> ou <a class="link" href="reservation.html">toute la famille</a>. Chaque séance dure jusqu'à 1 h 30 en trois temps : acclimatation, prise de vue, puis choix des images.</p>
         </div>
-        <ul class="offers">
-          <li style="--c:var(--tomato)"><a href="reservation.html">
-            <span class="offers__n">01</span>
-            <span class="offers__t">Portrait studio</span>
-            <p class="offers__d">Fonds colorés, lumière de studio, portraits nets pour vos murs.</p>
-            <span class="offers__p">dès 150 €</span>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-          </a></li>
+        <h3 class="seances__sub">Découvrez nos séances photo :</h3>
+        <div class="scards">
+          <article class="scard">
+            <h4 class="scard__t">Séance portrait studio</h4>
+            <div class="ph ph--cobalt "><span class="ph__cap">Portrait studio</span></div>
+            <a class="scard__btn" href="reservation.html" aria-label="Découvrir : Séance portrait studio">Découvrir <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h16M14 6l6 6-6 6"/></svg></a>
+          </article>
 
-          <li style="--c:var(--saffron)"><a href="reservation.html">
-            <span class="offers__n">02</span>
-            <span class="offers__t">Plein air</span>
-            <p class="offers__d">Larzac, Gorges du Tarn, bords de Dourbie : votre chien dans ses grands espaces.</p>
-            <span class="offers__p">dès 220 €</span>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-          </a></li>
+          <article class="scard">
+            <h4 class="scard__t">Séance plein air</h4>
+            <div class="ph ph--emerald "><span class="ph__cap">Plein air</span></div>
+            <a class="scard__btn" href="reservation.html" aria-label="Découvrir : Séance plein air">Découvrir <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h16M14 6l6 6-6 6"/></svg></a>
+          </article>
 
-          <li style="--c:var(--fuchsia)"><a href="reservation.html">
-            <span class="offers__n">03</span>
-            <span class="offers__t">Chiot &amp; senior</span>
-            <p class="offers__d">Séance courte et douce, adaptée à son énergie et à son âge.</p>
-            <span class="offers__p">dès 120 €</span>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-          </a></li>
+          <article class="scard">
+            <h4 class="scard__t">Séance chiot</h4>
+            <div class="ph ph--lilac "><span class="ph__cap">Chiot</span></div>
+            <a class="scard__btn" href="reservation.html" aria-label="Découvrir : Séance chiot">Découvrir <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h16M14 6l6 6-6 6"/></svg></a>
+          </article>
 
-          <li style="--c:var(--emerald)"><a href="reservation.html">
-            <span class="offers__n">04</span>
-            <span class="offers__t">Duo &amp; famille</span>
-            <p class="offers__d">Vous et votre chien sur la même image, ou toute la meute.</p>
-            <span class="offers__p">dès 250 €</span>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-          </a></li>
-        </ul>
+          <article class="scard">
+            <h4 class="scard__t">Séance chien senior</h4>
+            <div class="ph ph--saffron "><span class="ph__cap">Senior</span></div>
+            <a class="scard__btn" href="reservation.html" aria-label="Découvrir : Séance chien senior">Découvrir <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h16M14 6l6 6-6 6"/></svg></a>
+          </article>
+
+          <article class="scard">
+            <h4 class="scard__t">Séance duo maître &amp; chien</h4>
+            <div class="ph ph--fuchsia "><span class="ph__cap">Duo</span></div>
+            <a class="scard__btn" href="reservation.html" aria-label="Découvrir : Séance duo maître &amp; chien">Découvrir <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h16M14 6l6 6-6 6"/></svg></a>
+          </article>
+
+          <article class="scard">
+            <h4 class="scard__t">Séance famille &amp; meute</h4>
+            <div class="ph ph--tomato "><span class="ph__cap">Famille</span></div>
+            <a class="scard__btn" href="reservation.html" aria-label="Découvrir : Séance famille &amp; meute">Découvrir <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h16M14 6l6 6-6 6"/></svg></a>
+          </article>
+        </div>
       </div>
     </section>
 
-    <section class="section section--alt" aria-labelledby="gal-title" style="padding-top:clamp(80px,10vw,140px)">
+    <!-- 6. L'équipe -->
+    <section class="section" aria-labelledby="equipe-title">
       <div class="wrap">
         <div class="sechead">
           <div>
-            <p class="label">Galerie</p>
-            <h2 id="gal-title" class="h2">Quelques <em>truffes</em> passées par ici</h2>
+            <p class="label">L'équipe</p>
+            <h2 id="equipe-title" class="h2">Derrière <em>l'objectif</em></h2>
           </div>
-          <a class="link" href="galerie.html">Toute la galerie <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h16M14 6l6 6-6 6"/></svg></a>
         </div>
-        <div class="mosaic">
-          <div class="ph ph--cobalt m1"><span class="ph__cap">Studio · Cobalt</span></div>
-          <div class="ph ph--saffron m2"><span class="ph__cap">Studio · Safran</span></div>
-          <div class="ph ph--emerald m3"><span class="ph__cap">Larzac</span></div>
-          <div class="ph ph--fuchsia m4"><span class="ph__cap">Studio · Fuchsia</span></div>
-          <div class="ph ph--tomato m5"><span class="ph__cap">Chiot · Tomate</span></div>
+        <div class="team">
+          <article>
+            <div class="ph ph--tomato "><span class="ph__cap">Le photographe</span></div>
+            <h3 class="h3">Le photographe</h3>
+            <!-- À RÉÉCRIRE avec le vrai parcours -->
+            <p><strong>Photographe animalier</strong> depuis [X] ans, [Prénom] connaît les chiens autant que la lumière. Pendant la <strong>séance photo</strong>, chaque chien est mis à l'aise avant le premier déclenchement, pour des portraits qui lui ressemblent vraiment.</p>
+          </article>
+          <article>
+            <div class="ph ph--cobalt "><span class="ph__cap">Le studio</span></div>
+            <h3 class="h3">Le studio</h3>
+            <p>Un plateau photo pensé pour les chiens : sol antidérapant, lumière continue sans flash agressif, coin repos et gamelle d'eau. Les fonds colorés changent en quelques secondes pour s'accorder à son pelage.</p>
+          </article>
         </div>
       </div>
     </section>
 
-    <section class="section reviews" aria-labelledby="avis-title">
+    <!-- 7. Contact et plan d'accès -->
+    <section class="section section--ink" id="contact" aria-labelledby="contact-title">
+      <div class="wrap access">
+        <div>
+          <p class="label">Contact</p>
+          <h2 id="contact-title" class="h2" style="margin:22px 0 28px">Contact et <em>plan d'accès</em></h2>
+          <p>Notre <strong>studio photo canin</strong> se trouve au Adresse à compléter, 12100 Millau. [Accès et stationnement à préciser : parking, temps depuis le centre-ville, etc.]</p>
+          <dl class="access__list">
+            <div><dt>Téléphone</dt><dd><a href="tel:+33000000000">00 00 00 00 00</a></dd></div>
+            <div><dt>WhatsApp</dt><dd><a href="https://wa.me/33000000000" target="_blank" rel="noopener">Écrire sur WhatsApp</a></dd></div>
+            <div><dt>E-mail</dt><dd><a href="mailto:contact@truffedewouf.fr">contact@truffedewouf.fr</a></dd></div>
+            <div><dt>Horaires</dt><dd>Du mardi au samedi, sur rendez-vous</dd></div>
+          </dl>
+          <div class="access__ctas">
+            <a class="btn btn--light" href="tel:+33000000000"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg> Appeler le studio</a>
+            <a class="btn btn--outline" href="https://www.google.com/maps/search/?api=1&query=Truffe+de+Wouf+Millau" target="_blank" rel="noopener">Itinéraire <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
+          </div>
+        </div>
+        <div class="access__map">
+          <iframe title="Plan d'accès au studio Truffe de Wouf à Millau" src="https://www.google.com/maps?q=Millau%2012100&amp;z=14&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+    </section>
+
+    <!-- 8. Avis -->
+
+    <section class="section reviews" id="avis" aria-labelledby="avis-title">
       <div class="wrap">
         <div class="sechead">
           <div>
             <p class="label">Avis Google</p>
-            <h2 id="avis-title" class="h2">Ce qu'en disent <em>leurs humains</em></h2>
+            <h2 id="avis-title" class="h2">Les derniers avis <em>de nos clients</em></h2>
           </div>
           <div class="reviews__score">
             <strong>5,0</strong>
@@ -300,37 +352,6 @@
         <div class="reviews__ctas">
           <a class="btn" href="https://www.google.com/maps/search/?api=1&query=Truffe+de+Wouf+Millau" target="_blank" rel="noopener">Voir tous les avis Google <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
           <a class="btn btn--outline" href="https://www.google.com/maps/search/?api=1&query=Truffe+de+Wouf+Millau" target="_blank" rel="noopener">Laisser un avis</a>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" aria-labelledby="local-title">
-      <div class="wrap local">
-        <div>
-          <p class="label">Photographe canin dans le sud Aveyron</p>
-          <h2 id="local-title" class="h2" style="margin:22px 0 28px">Basé à Millau, <em>présent sur tous les Causses</em></h2>
-          <p class="lead">Le studio accueille les chiens de Millau et de tout le sud Aveyron. Pour les séances en extérieur, nous nous déplaçons sur le Larzac, dans les Gorges du Tarn et de la Dourbie, sur le Causse Noir, ou directement chez vous.</p>
-        </div>
-        <div class="local__cols">
-          <div>
-            <h3>Communes desservies</h3>
-            <ul><li>Millau</li><li>Creissels</li><li>Aguessac</li><li>Saint-Georges-de-Luzençon</li><li>Saint-Affrique</li><li>Sévérac-d'Aveyron</li><li>Roquefort-sur-Soulzon</li><li>Nant · La Cavalerie</li></ul>
-          </div>
-          <div>
-            <h3>Lieux de séance</h3>
-            <ul><li>Causse du Larzac</li><li>Gorges du Tarn</li><li>Gorges de la Dourbie</li><li>Causse Noir</li><li>Viaduc de Millau</li><li>Votre jardin</li></ul>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="cta" aria-labelledby="cta-title">
-      <div class="wrap">
-        <h2 id="cta-title" class="display">Prenez <em>rendez-vous.</em></h2>
-        <div class="cta__side">
-          <p>Un appel suffit pour choisir la séance et la date. Le studio se trouve à Millau, en plein cœur du sud Aveyron.</p>
-          <a class="cta__tel" href="tel:+33000000000">00 00 00 00 00</a>
-          <a class="btn" href="reservation.html">Tarifs &amp; réservation <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h16M14 6l6 6-6 6"/></svg></a>
         </div>
       </div>
     </section>
@@ -374,6 +395,13 @@
       </div>
     </div>
   </footer>
+
+  <a class="gbadge" href="index.html#avis" aria-label="Note Google 5,0 sur 5, voir les avis">
+    <span class="gbadge__g">Google</span>
+    <strong>5,0</strong>
+    <span class="stars" role="img" aria-label="5 étoiles sur 5"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9z"/></svg></span>
+    <span class="gbadge__lbl">Avis</span>
+  </a>
 
   <script src="assets/js/main.js" defer></script>
 </body>

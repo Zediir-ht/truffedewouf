@@ -9,7 +9,7 @@ python3 -m http.server 8000
 ## Pages
 | Page | Fichier | Requête visée |
 |---|---|---|
-| Accueil | `index.html` | studio photo canin Millau, photographe chien Millau |
+| Accueil | `index.html` | studio photo canin Millau, photographe chien Millau. Structure inspirée de studiobontant.fr : offre du moment, prestations phares, points forts, bienvenue, séances, équipe, contact & accès, avis |
 | Le studio | `le-studio.html` | studio photo chien Aveyron, séance photo extérieur Larzac |
 | Galerie | `galerie.html` | photos de chiens Millau (filtres + visionneuse) |
 | Tarifs & réservation | `reservation.html` | tarif séance photo chien Millau |
@@ -37,7 +37,7 @@ Rechercher-remplacer dans tous les fichiers HTML :
 
 | Valeur provisoire | À remplacer par |
 |---|---|
-| `00 00 00 00 00` et `+33000000000` | le numéro du studio |
+| `00 00 00 00 00`, `+33000000000` et `https://wa.me/33000000000` | le numéro du studio (et son WhatsApp) |
 | `Adresse à compléter` | la rue du studio |
 | `https://www.google.com/maps/search/?api=1&query=Truffe+de+Wouf+Millau` | le lien de la fiche Google (itinéraire et avis) |
 | `www.truffedewouf.fr` | le vrai domaine (aussi dans `robots.txt` et `sitemap.xml`) |
@@ -45,7 +45,9 @@ Rechercher-remplacer dans tous les fichiers HTML :
 | `Du mardi au samedi, sur rendez-vous` | les horaires réels (aussi `openingHoursSpecification` dans le JSON-LD de `index.html`) |
 
 Et aussi :
-- **Avis Google** (accueil) : coller 3 vrais avis et la vraie note moyenne. Ne jamais inventer d'avis.
+- **Avis Google** (accueil + étiquette flottante `.gbadge` sur toutes les pages) : coller 3 vrais avis et la vraie note moyenne. Ne jamais inventer d'avis.
+- **Offre du moment** (haut de l'accueil) : « −20 % du mardi au jeudi » est un exemple, à remplacer par une vraie offre ou à retirer.
+- **Accès et stationnement** (section Contact de l'accueil) et la position de la carte (`q=Millau` dans l'iframe) : mettre l'adresse exacte.
 - **Tarifs et conditions** (`reservation.html`) : prix, acompte, délais et frais de déplacement sont des propositions à valider.
 - **Bio du photographe** (`le-studio.html`) : texte entre crochets à réécrire.
 - **Photos** : héro, mosaïque, galerie, studio, portrait.

@@ -19,7 +19,7 @@ document.querySelectorAll("[data-year]").forEach((el) => (el.textContent = new D
 
 // Apparition au scroll
 const revealables = document.querySelectorAll(
-  ".sechead, .offers li, .mosaic .ph, .review, .local__cols, .principles article, .swatches figure, .places li, .plan, .steps li, .terms div, .gallery__item, .studio-intro > *, .bio > *"
+  ".sechead, .scard, .feature, .team article, .brandband__points li, .offers li, .mosaic .ph, .review, .local__cols, .principles article, .swatches figure, .places li, .plan, .steps li, .terms div, .gallery__item, .studio-intro > *, .bio > *"
 );
 if ("IntersectionObserver" in window) {
   const io = new IntersectionObserver((entries) => {
