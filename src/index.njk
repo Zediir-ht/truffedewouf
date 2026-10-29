@@ -1,0 +1,148 @@
+---
+layout: layout.njk
+permalink: /index.html
+seoKey: accueil
+ldBusiness: true
+tags: pages
+---
+{%- set a = accueil -%}
+{%- set mapsUrl = site | mapsHref -%}
+{%- if a.promo.afficher %}
+    <!-- 1. Offre du moment -->
+    <section class="promo" aria-labelledby="promo-title">
+      <div class="wrap promo__grid">
+        <div class="promo__text">
+          <p class="promo__tag">{{ a.promo.pastille }}</p>
+          <h2 id="promo-title" class="promo__title"><span>{{ a.promo.phrase }}</span><strong>{{ a.promo.valeur }}</strong></h2>
+          <p class="promo__cond">{{ a.promo.condition }}</p>
+          <ul class="promo__types" aria-label="Séances concernées">{% for t in a.promo.types %}<li>{{ t }}</li>{% endfor %}</ul>
+          <a class="btn" href="reservation.html#demande">{{ a.promo.bouton }} {% icon "arrow" %}</a>
+          {%- if a.promo.note %}
+          <p class="promo__note">{{ a.promo.note }}</p>
+          {%- endif %}
+        </div>
+        {% ph { couleur: "cobalt", cap: "Fond n°01 · Cobalt", photo: a.promo.photo, alt: a.promo.alt, cls: "promo__ph", sizes: "(min-width: 860px) 45vw, 100vw", priority: true, cycle: true } %}
+      </div>
+      {%- if not a.promo.photo %}
+      <div class="wrap promo__dots hero__dots" data-dots aria-label="Fonds du studio">
+        <button style="--c:var(--cobalt)" data-name="Cobalt" aria-label="Fond cobalt"></button>
+        <button style="--c:var(--saffron)" data-name="Safran" aria-label="Fond safran"></button>
+        <button style="--c:var(--fuchsia)" data-name="Fuchsia" aria-label="Fond fuchsia"></button>
+        <button style="--c:var(--emerald)" data-name="Émeraude" aria-label="Fond émeraude"></button>
+        <button style="--c:var(--lilac)" data-name="Lilas" aria-label="Fond lilas"></button>
+      </div>
+      {%- endif %}
+    </section>
+{%- endif %}
+
+    <!-- 2. Prestations phares -->
+    <section class="featured" aria-label="Prestations phares">
+      <div class="wrap featured__grid">
+        {%- for f in a.phares %}
+        <a class="feature" href="{{ f.lien }}">
+          {% ph { couleur: ["saffron", "emerald"] | cycle(loop.index), photo: f.photo, alt: f.alt or f.titre, sizes: "(min-width: 700px) 50vw, 100vw" } %}
+          <span class="feature__cap"><span class="h3">{{ f.titre }}</span><span class="link">Découvrir {% icon "arrow" %}</span></span>
+        </a>
+        {%- endfor %}
+      </div>
+    </section>
+
+    <!-- 3. Bandeau marque + points forts -->
+    <section class="brandband" aria-label="Le studio en bref">
+      <div class="wrap brandband__grid">
+        <div class="brandband__logo">
+          <span class="logo__name">{{ site.nom | logo | safe }}</span>
+          <span class="logo__sub">{{ site.baseline }}</span>
+        </div>
+        <ul class="brandband__points">
+          {%- for p in a.points %}
+          <li>{% icon p.icone %}<span>{{ p.texte }}</span></li>
+          {%- endfor %}
+        </ul>
+      </div>
+    </section>
+
+    <!-- 4. Bienvenue -->
+    <section class="section welcome" aria-labelledby="hero-title">
+      <div class="wrap welcome__inner">
+        <p class="label">{{ a.bienvenue.etiquette }}</p>
+        <h1 id="hero-title" class="h2">{{ a.bienvenue.titre | em | safe }}</h1>
+        <p class="lead">{{ a.bienvenue.intro | mdi | safe }}</p>
+        {{ a.bienvenue.texte | md | safe }}
+        <p class="welcome__zone">Nous accueillons les chiens de {{ site.communes | join(", ") }} et de tout le sud Aveyron.</p>
+      </div>
+    </section>
+
+    <!-- 5. Les séances -->
+    <section class="section section--alt" aria-labelledby="seances-title">
+      <div class="wrap">
+        <div class="seances__intro">
+          <div>
+            <p class="label">Les séances</p>
+            <h2 id="seances-title" class="h2">{{ a.seances.titre | em | safe }}</h2>
+          </div>
+          <p>{{ a.seances.intro | mdi | safe }}</p>
+        </div>
+        <h3 class="seances__sub">{{ a.seances.sous_titre }}</h3>
+        <div class="scards">
+          {%- for c in a.seances.cartes %}
+          <article class="scard">
+            <h4 class="scard__t">{{ c.titre }}</h4>
+            {% ph { couleur: ["cobalt", "emerald", "lilac", "saffron", "fuchsia", "tomato"] | cycle(loop.index), cap: c.legende, photo: c.photo, alt: c.alt or c.titre, sizes: "(min-width: 860px) 33vw, 50vw" } %}
+            <a class="scard__btn" href="{{ c.lien }}" aria-label="Découvrir : {{ c.titre }}">Découvrir {% icon "arrow" %}</a>
+          </article>
+          {%- endfor %}
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. L'équipe -->
+    <section class="section" aria-labelledby="equipe-title">
+      <div class="wrap">
+        <div class="sechead">
+          <div>
+            <p class="label">L'équipe</p>
+            <h2 id="equipe-title" class="h2">{{ a.equipe.titre | em | safe }}</h2>
+          </div>
+        </div>
+        <div class="team">
+          {%- for m in a.equipe.membres %}
+          <article>
+            {% ph { couleur: ["tomato", "cobalt"] | cycle(loop.index), cap: m.legende, photo: m.photo, alt: m.alt or m.titre, sizes: "(min-width: 760px) 50vw, 100vw" } %}
+            <h3 class="h3">{{ m.titre }}</h3>
+            {{ m.texte | md | safe }}
+          </article>
+          {%- endfor %}
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. Contact et plan d'accès -->
+    <section class="section section--ink" id="contact" aria-labelledby="contact-title">
+      <div class="wrap access">
+        <div>
+          <p class="label">Contact</p>
+          <h2 id="contact-title" class="h2" style="margin:22px 0 28px">{{ a.acces.titre | em | safe }}</h2>
+          {{ a.acces.texte | md | safe }}
+          <dl class="access__list">
+            <div><dt>Adresse</dt><dd>{{ site.adresse }}, {{ site.code_postal }} {{ site.ville }}</dd></div>
+            <div><dt>Téléphone</dt><dd><a href="{{ site.telephone | telHref }}">{{ site.telephone }}</a></dd></div>
+            {%- if site.whatsapp %}
+            <div><dt>WhatsApp</dt><dd><a href="{{ site.whatsapp | waHref }}" target="_blank" rel="noopener">Écrire sur WhatsApp</a></dd></div>
+            {%- endif %}
+            <div><dt>E-mail</dt><dd><a href="mailto:{{ site.email }}">{{ site.email }}</a></dd></div>
+            <div><dt>Horaires</dt><dd>{{ site.horaires }}</dd></div>
+          </dl>
+          <div class="access__ctas">
+            <a class="btn btn--light" href="{{ site.telephone | telHref }}">{% icon "phone" %} Appeler le studio</a>
+            <a class="btn btn--outline" href="{{ mapsUrl }}" target="_blank" rel="noopener">Itinéraire {% icon "ne" %}</a>
+          </div>
+        </div>
+        <div class="access__map">
+          <iframe title="Plan d'accès au studio {{ site.nom }} à {{ site.ville }}" src="{{ site | mapsEmbed }}" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+    </section>
+
+    <!-- 8. Avis -->
+{% include "avis.njk" %}

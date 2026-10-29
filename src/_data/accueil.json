@@ -1,0 +1,131 @@
+{
+  "promo": {
+    "afficher": true,
+    "pastille": "Offre de lancement",
+    "phrase": "Votre séance photo canine",
+    "valeur": "−20 %",
+    "condition": "Uniquement du mardi au jeudi",
+    "types": [
+      "Studio",
+      "Plein air",
+      "Chiot",
+      "Senior",
+      "Duo",
+      "Famille"
+    ],
+    "bouton": "Je réserve ma séance",
+    "note": "*Offre valable sur les formules Essentielle et Signature, hors tirages.",
+    "photo": "",
+    "alt": ""
+  },
+  "phares": [
+    {
+      "titre": "Shooting en studio",
+      "lien": "reservation.html",
+      "photo": "",
+      "alt": ""
+    },
+    {
+      "titre": "Shooting en plein air",
+      "lien": "le-studio.html#exterieur",
+      "photo": "",
+      "alt": ""
+    }
+  ],
+  "points": [
+    {
+      "icone": "camera",
+      "texte": "Séances en studio et en extérieur, à Millau et dans tout le sud Aveyron"
+    },
+    {
+      "icone": "palette",
+      "texte": "Six fonds colorés signature et un éclairage doux pour les yeux de votre chien"
+    },
+    {
+      "icone": "heart",
+      "texte": "Une séance au rythme du chien : acclimatation, jeux, friandises et pauses"
+    },
+    {
+      "icone": "image",
+      "texte": "Photos retouchées à la main, galerie privée en ligne et tirages d'art"
+    }
+  ],
+  "bienvenue": {
+    "etiquette": "Bienvenue",
+    "titre": "Truffe de Wouf, le *studio photo canin* de Millau",
+    "intro": "Bienvenue chez Truffe de Wouf, le **studio photo** entièrement dédié aux chiens, au cœur de Millau dans l'Aveyron.",
+    "texte": "Nous accueillons votre compagnon sur rendez-vous, pour un **portrait en studio** sur fond coloré ou une **séance photo en extérieur** sur les Causses et dans les Gorges du Tarn.\n\nDécouvrez [le studio](le-studio.html), [nos réalisations](galerie.html) et [nos tarifs](reservation.html). À très vite pour le **shooting photo** de votre chien."
+  },
+  "seances": {
+    "titre": "Les séances photo *pour votre chien*",
+    "intro": "Des séances photo canines professionnelles pour toutes les étapes de sa vie : [portrait en studio](reservation.html), [séance en plein air](le-studio.html#exterieur), premières semaines du [chiot](reservation.html), belles années du [chien senior](reservation.html), [duo maître et chien](reservation.html) ou [toute la famille](reservation.html). Chaque séance dure jusqu'à 1 h 30 en trois temps : acclimatation, prise de vue, puis choix des images.",
+    "sous_titre": "Découvrez nos séances photo :",
+    "cartes": [
+      {
+        "titre": "Séance portrait studio",
+        "legende": "Portrait studio",
+        "lien": "reservation.html",
+        "photo": "",
+        "alt": ""
+      },
+      {
+        "titre": "Séance plein air",
+        "legende": "Plein air",
+        "lien": "le-studio.html#exterieur",
+        "photo": "",
+        "alt": ""
+      },
+      {
+        "titre": "Séance chiot",
+        "legende": "Chiot",
+        "lien": "reservation.html",
+        "photo": "",
+        "alt": ""
+      },
+      {
+        "titre": "Séance chien senior",
+        "legende": "Senior",
+        "lien": "reservation.html",
+        "photo": "",
+        "alt": ""
+      },
+      {
+        "titre": "Séance duo maître & chien",
+        "legende": "Duo",
+        "lien": "reservation.html",
+        "photo": "",
+        "alt": ""
+      },
+      {
+        "titre": "Séance famille & meute",
+        "legende": "Famille",
+        "lien": "reservation.html",
+        "photo": "",
+        "alt": ""
+      }
+    ]
+  },
+  "equipe": {
+    "titre": "Derrière *l'objectif*",
+    "membres": [
+      {
+        "titre": "Le photographe",
+        "legende": "Le photographe",
+        "texte": "**Photographe animalier** depuis [X] ans, [Prénom] connaît les chiens autant que la lumière. Pendant la **séance photo**, chaque chien est mis à l'aise avant le premier déclenchement, pour des portraits qui lui ressemblent vraiment.",
+        "photo": "",
+        "alt": ""
+      },
+      {
+        "titre": "Le studio",
+        "legende": "Le studio",
+        "texte": "Un plateau photo pensé pour les chiens : sol antidérapant, lumière continue sans flash agressif, coin repos et gamelle d'eau. Les fonds colorés changent en quelques secondes pour s'accorder à son pelage.",
+        "photo": "",
+        "alt": ""
+      }
+    ]
+  },
+  "acces": {
+    "titre": "Contact et *plan d'accès*",
+    "texte": "Notre **studio photo canin** se trouve à Millau, dans le sud Aveyron. [Accès et stationnement à préciser : parking, temps depuis le centre-ville, etc.]"
+  }
+}

@@ -1,0 +1,49 @@
+---
+layout: layout.njk
+permalink: /galerie.html
+seoKey: galerie
+crumb: Galerie
+tags: pages
+---
+{%- set g = galerie -%}
+    <section class="pagehead">
+      <div class="wrap">
+        <div>
+          <p class="crumbs"><a href="index.html">Accueil</a> / Galerie</p>
+          <p class="label">Galerie</p>
+          <h1 class="display">{{ g.entete.titre | em | safe }}</h1>
+        </div>
+        <p class="lead">{{ g.entete.intro }}</p>
+      </div>
+    </section>
+
+    <section class="section" style="padding-top:clamp(40px,5vw,64px)">
+      <div class="wrap">
+        <div class="filters" role="group" aria-label="Filtrer la galerie">
+          <button aria-pressed="true" data-filter="all">Tout</button>
+          {%- for c in g.categories %}
+          <button aria-pressed="false" data-filter="{{ c.id }}">{{ c.nom }}</button>
+          {%- endfor %}
+        </div>
+        <div class="gallery">
+          {%- for p in g.photos %}
+          <button class="gallery__item" data-cat="{{ p.categorie }}" data-cap="{{ p.legende }}" aria-label="Agrandir : {{ p.legende }}">
+            {% ph { couleur: palette | cycle(loop.index), cap: p.legende, photo: p.photo, alt: p.alt or p.legende, cls: ["ar-tall", "ar-land", "ar-sq", "ar-port"] | cycle(loop.index), sizes: "(min-width: 900px) 33vw, (min-width: 600px) 50vw, 100vw", natural: true } %}
+          </button>
+          {%- endfor %}
+        </div>
+      </div>
+    </section>
+
+    <dialog class="lightbox" aria-label="Photo agrandie">
+      <div class="lightbox__bar">
+        <span data-lb-cap></span>
+        <button data-lb-close>Fermer</button>
+      </div>
+      <div class="ph" data-lb-ph></div>
+      <div class="lightbox__bar">
+        <span data-lb-count></span>
+        <div class="lightbox__nav"><button data-lb-prev>Précédente</button><button data-lb-next>Suivante</button></div>
+      </div>
+    </dialog>
+{% include "cta.njk" %}

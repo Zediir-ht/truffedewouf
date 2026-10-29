@@ -1,0 +1,145 @@
+{
+  "entete": {
+    "titre": "Réserver *sa séance.*",
+    "intro": "Trois formules claires, sans surprise."
+  },
+  "formules": {
+    "titre": "Les formules",
+    "liste": [
+      {
+        "nom": "Essentielle",
+        "prix": "150",
+        "duree": "Studio · 45 min",
+        "mise_en_avant": false,
+        "inclus": [
+          "1 chien, 1 fond au choix",
+          "Galerie privée en ligne",
+          "10 photos retouchées en HD",
+          "Livraison sous 3 semaines"
+        ]
+      },
+      {
+        "nom": "Signature",
+        "prix": "290",
+        "duree": "Studio · 1 h 30",
+        "mise_en_avant": true,
+        "inclus": [
+          "Jusqu'à 2 chiens, 3 fonds au choix",
+          "Séance de choix des photos au studio",
+          "25 photos retouchées en HD",
+          "1 tirage d'art 30 × 40 cm"
+        ]
+      },
+      {
+        "nom": "Plein air",
+        "prix": "240",
+        "duree": "Extérieur · 1 h",
+        "mise_en_avant": false,
+        "inclus": [
+          "Lieu au choix autour de Millau",
+          "Déplacement inclus jusqu'à 25 km",
+          "20 photos retouchées en HD",
+          "Lumière du matin ou du soir"
+        ]
+      }
+    ],
+    "options": [
+      {
+        "nom": "Chien supplémentaire",
+        "prix": "+ 40 €"
+      },
+      {
+        "nom": "Photo HD supplémentaire",
+        "prix": "15 €"
+      },
+      {
+        "nom": "Tirage d'art 30 × 40 cm",
+        "prix": "65 €"
+      }
+    ]
+  },
+  "modalites": {
+    "titre": "Comment *ça se passe*",
+    "etapes": [
+      {
+        "titre": "Le premier contact",
+        "texte": "Par téléphone ou via le formulaire : on parle de votre chien, de vos envies et on fixe une date."
+      },
+      {
+        "titre": "L'acompte",
+        "texte": "Un acompte de 30 % confirme la réservation. Le solde est réglé le jour de la séance."
+      },
+      {
+        "titre": "La séance",
+        "texte": "Au studio de Millau ou en extérieur, à son rythme, avec des pauses autant que nécessaire."
+      },
+      {
+        "titre": "Vos photos",
+        "texte": "Galerie privée en ligne sous trois semaines environ. Tirages livrés au studio ou par courrier."
+      }
+    ]
+  },
+  "conditions": {
+    "titre": "Bon *à savoir*",
+    "liste": [
+      {
+        "titre": "Report",
+        "texte": "Séance reportable gratuitement jusqu'à 48 h avant. Chien malade ou météo défavorable en extérieur : report sans frais."
+      },
+      {
+        "titre": "Annulation",
+        "texte": "L'acompte est remboursé en cas d'annulation plus de 7 jours avant la séance."
+      },
+      {
+        "titre": "Déplacement",
+        "texte": "Inclus jusqu'à 25 km autour de Millau. Au-delà, 0,50 € par kilomètre supplémentaire."
+      },
+      {
+        "titre": "Paiement",
+        "texte": "Carte bancaire, virement ou espèces. Bons cadeaux disponibles toute l'année."
+      },
+      {
+        "titre": "Votre chien",
+        "texte": "À jour de ses vaccins, tenu en laisse à l'arrivée. Les chiens réactifs sont accueillis sur un créneau dédié, sans croisement."
+      },
+      {
+        "titre": "Droit à l'image",
+        "texte": "Certaines photos peuvent être publiées sur le site et les réseaux, uniquement avec votre accord."
+      }
+    ]
+  },
+  "faq": {
+    "titre": "Avant *la séance*",
+    "liste": [
+      {
+        "question": "Où se trouve le studio photo canin ?",
+        "reponse": "Le studio Truffe de Wouf est à Millau (12100), dans l'Aveyron. Les séances en extérieur ont lieu sur le Causse du Larzac, dans les Gorges du Tarn et de la Dourbie, sur le Causse Noir ou chez vous."
+      },
+      {
+        "question": "Mon chien est très agité ou timide, est-ce possible ?",
+        "reponse": "Oui. La séance suit son rythme : découverte du studio, jeux, friandises et pauses. Les chiens timides, âgés ou très énergiques sont tous les bienvenus."
+      },
+      {
+        "question": "Faut-il préparer mon chien avant la séance ?",
+        "reponse": "Une bonne promenade avant de venir l'aide à être détendu. Apportez son jouet préféré, ses friandises habituelles et sa laisse. Un toilettage récent est un plus mais n'est pas obligatoire."
+      },
+      {
+        "question": "Peut-on venir avec plusieurs chiens ?",
+        "reponse": "Oui, la formule Signature inclut jusqu'à deux chiens. Pour une meute plus nombreuse ou une séance famille, contactez-nous pour un devis."
+      },
+      {
+        "question": "Quand vais-je recevoir mes photos ?",
+        "reponse": "Une galerie privée en ligne est livrée sous trois semaines environ, avec les photos retouchées en haute définition."
+      }
+    ]
+  },
+  "demande": {
+    "titre": "Parlons de *votre chien*",
+    "intro": "Réponse sous 48 h. Pour aller plus vite, appelez directement le studio.",
+    "autres_choix": [
+      "Chiot / senior",
+      "Duo / famille",
+      "Je ne sais pas encore"
+    ]
+  }
+}

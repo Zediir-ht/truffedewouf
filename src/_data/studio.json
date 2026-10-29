@@ -1,0 +1,106 @@
+{
+  "entete": {
+    "titre": "Un lieu calme, *des fonds qui claquent.*",
+    "intro": "Un studio photo dédié aux chiens à Millau, conçu pour qu'ils s'y sentent bien et pour que leurs portraits sortent du lot."
+  },
+  "espace": {
+    "etiquette": "L'espace",
+    "titre": "Pensé à *hauteur de truffe*",
+    "texte": "Sol antidérapant, lumière continue qui ne flashe pas les yeux, gamelle d'eau et coin repos : le studio est aménagé pour que votre chien se détende avant de poser.\n\nLes fonds de papier colorés sont changés en quelques secondes. On choisit ensemble celui qui fait ressortir son pelage et son caractère.",
+    "legende": "Le studio · Millau",
+    "photo": "",
+    "alt": ""
+  },
+  "approche": {
+    "titre": "Trois règles, *aucune exception*",
+    "regles": [
+      {
+        "titre": "Son rythme d'abord",
+        "texte": "Pas de chronomètre. Le temps d'acclimatation fait partie de la séance, les pauses aussi."
+      },
+      {
+        "titre": "Que du positif",
+        "texte": "Jeux, friandises et voix douce. Aucune contrainte : un chien détendu fait toujours les plus belles images."
+      },
+      {
+        "titre": "Le soin du détail",
+        "texte": "Chaque image est sélectionnée et retouchée à la main : regard, pelage, couleurs."
+      }
+    ]
+  },
+  "fonds": {
+    "titre": "Une palette *qui ne passe pas inaperçue*",
+    "intro": "Six couleurs signature, et d'autres sur demande pour accorder la photo à votre intérieur.",
+    "liste": [
+      {
+        "nom": "Tomate",
+        "photo": "",
+        "alt": ""
+      },
+      {
+        "nom": "Cobalt",
+        "photo": "",
+        "alt": ""
+      },
+      {
+        "nom": "Safran",
+        "photo": "",
+        "alt": ""
+      },
+      {
+        "nom": "Fuchsia",
+        "photo": "",
+        "alt": ""
+      },
+      {
+        "nom": "Émeraude",
+        "photo": "",
+        "alt": ""
+      },
+      {
+        "nom": "Lilas",
+        "photo": "",
+        "alt": ""
+      }
+    ]
+  },
+  "photographe": {
+    "etiquette": "Derrière l'objectif",
+    "titre": "Une passion, *deux obsessions :* les chiens et la lumière",
+    "texte": "Installé·e à Millau, [Prénom] photographie les chiens depuis [X] ans. Formation, parcours, ce qui l'a amené·e à ouvrir un studio dédié aux chiens : c'est ici qu'on raconte l'histoire.\n\nQuelques mots sur sa façon de travailler avec les chiens, sur son propre compagnon, sur ce qu'on ressent en découvrant ses photos.",
+    "signature": "[Prénom]",
+    "legende": "Portrait · La photographe",
+    "photo": "",
+    "alt": ""
+  },
+  "exterieur": {
+    "titre": "Les plus beaux décors *du sud Aveyron*",
+    "intro": "Séances en plein air autour de Millau, au lever ou au coucher du soleil pour une lumière douce.",
+    "lieux": [
+      {
+        "nom": "Causse du Larzac",
+        "detail": "Grands espaces, lumière dorée"
+      },
+      {
+        "nom": "Gorges du Tarn",
+        "detail": "Eau claire et falaises"
+      },
+      {
+        "nom": "Gorges de la Dourbie",
+        "detail": "Rivière, villages perchés"
+      },
+      {
+        "nom": "Causse Noir",
+        "detail": "Rochers et pinèdes"
+      },
+      {
+        "nom": "Viaduc de Millau",
+        "detail": "Le décor iconique"
+      },
+      {
+        "nom": "Chez vous",
+        "detail": "Son coin préféré"
+      }
+    ]
+  }
+}

@@ -1,0 +1,806 @@
+# Configuration de l'éditeur Pages CMS (https://pagescms.org)
+# Le client se connecte avec son compte GitHub et modifie uniquement les contenus ci-dessous.
+
+media:
+  input: src/assets/img/uploads
+  output: /assets/img/uploads
+content:
+- name: site
+  label: Coordonnées du studio
+  type: file
+  path: src/_data/site.json
+  format: json
+  fields:
+  - name: telephone
+    label: Téléphone
+    type: string
+    description: Affiché en haut de chaque page et cliquable sur mobile. Ex. 05 65 00 00 00
+    required: true
+  - name: whatsapp
+    label: Numéro WhatsApp
+    type: string
+    description: Laissez vide pour masquer le lien WhatsApp.
+  - name: email
+    label: E-mail
+    type: string
+    required: true
+  - name: adresse
+    label: Adresse (rue)
+    type: string
+    description: Sans le code postal ni la ville. Ex. 12 rue de la République
+    required: true
+  - name: code_postal
+    label: Code postal
+    type: string
+    required: true
+  - name: ville
+    label: Ville
+    type: string
+    required: true
+  - name: horaires
+    label: Horaires (texte affiché)
+    type: string
+    description: Ex. Du mardi au samedi, sur rendez-vous
+    required: true
+  - name: ouverture
+    label: Horaires pour Google
+    type: object
+    fields:
+    - name: jours
+      label: Jours d'ouverture
+      type: select
+      description: Indiquez les jours ouverts.
+      options:
+        multiple: true
+        values:
+        - lundi
+        - mardi
+        - mercredi
+        - jeudi
+        - vendredi
+        - samedi
+        - dimanche
+    - name: de
+      label: Ouverture
+      type: string
+      description: Ex. 09:30
+    - name: a
+      label: Fermeture
+      type: string
+      description: Ex. 19:00
+    description: Informations lues par Google. Elles ne s'affichent pas sur le site.
+  - name: lien_google
+    label: Lien de la fiche Google
+    type: string
+    description: Copiez le lien « Partager » de votre fiche Google Business. Il sert au bouton Itinéraire
+      et aux avis.
+  - name: instagram
+    label: Lien Instagram
+    type: string
+    description: Adresse complète du profil. Laissez vide pour ne rien afficher.
+  - name: facebook
+    label: Lien Facebook
+    type: string
+    description: Laissez vide pour ne rien afficher.
+  - name: image_partage
+    label: Image de partage
+    type: image
+    description: Image affichée quand le site est partagé sur Facebook, WhatsApp, etc. Idéalement 1200
+      × 630 px.
+  - name: communes
+    label: Commune desservie
+    type: string
+    list: true
+    description: Villes d'où viennent vos clients. Elles aident à être trouvé sur Google.
+  - name: nom
+    label: Nom du studio
+    type: string
+    description: Ne changez que si le nom change vraiment.
+    required: true
+  - name: baseline
+    label: Sous-titre du logo
+    type: string
+    required: true
+  - name: description_courte
+    label: Description courte (Google)
+    type: text
+    description: Une ou deux phrases qui présentent le studio.
+  - name: domaine
+    label: Adresse du site
+    type: string
+    description: Ne modifiez pas sans en parler à votre webmaster. Ex. https://www.truffedewouf.fr
+    required: true
+  - name: latitude
+    label: Latitude
+    type: string
+    description: 'Avancé : position GPS pour Google Maps.'
+  - name: longitude
+    label: Longitude
+    type: string
+    description: 'Avancé : position GPS pour Google Maps.'
+- name: accueil
+  label: Page d'accueil
+  type: file
+  path: src/_data/accueil.json
+  format: json
+  fields:
+  - name: promo
+    label: Offre du moment (bandeau orange)
+    type: object
+    fields:
+    - name: afficher
+      label: Afficher l'offre
+      type: boolean
+      description: Décochez pour masquer tout le bandeau.
+    - name: pastille
+      label: Petite étiquette
+      type: string
+      description: Ex. Offre de lancement
+    - name: phrase
+      label: Phrase d'accroche
+      type: string
+    - name: valeur
+      label: Valeur en grand
+      type: string
+      description: Ex. −20 %
+    - name: condition
+      label: Condition
+      type: string
+      description: Ex. Uniquement du mardi au jeudi
+    - name: types
+      label: Séance concernée
+      type: string
+      list: true
+      description: Une ligne par type de séance.
+    - name: bouton
+      label: Texte du bouton
+      type: string
+    - name: note
+      label: Note en petit
+      type: string
+      description: Conditions de l'offre.
+    - name: photo
+      label: Photo (remplace le fond coloré animé)
+      type: image
+      description: Glissez une photo ici. Laissez vide pour afficher un fond coloré.
+    - name: alt
+      label: Description de la photo
+      type: string
+      description: Décrivez la photo en une phrase (ex. « Golden retriever sur fond bleu »). Utile pour
+        Google et les personnes malvoyantes.
+  - name: phares
+    label: Deux grandes vignettes
+    type: object
+    fields:
+    - name: titre
+      label: Titre
+      type: string
+      required: true
+    - name: lien
+      label: Page ouverte au clic
+      type: string
+      description: Ex. reservation.html ou galerie.html
+      required: true
+    - name: photo
+      label: Photo
+      type: image
+      description: Glissez une photo ici. Laissez vide pour afficher un fond coloré.
+    - name: alt
+      label: Description de la photo
+      type: string
+      description: Décrivez la photo en une phrase (ex. « Golden retriever sur fond bleu »). Utile pour
+        Google et les personnes malvoyantes.
+    list: true
+  - name: points
+    label: Bandeau des points forts
+    type: object
+    fields:
+    - name: icone
+      label: Icône
+      type: select
+      options:
+        values:
+        - camera
+        - palette
+        - heart
+        - image
+    - name: texte
+      label: Texte
+      type: string
+      required: true
+    list: true
+  - name: bienvenue
+    label: Texte de bienvenue
+    type: object
+    fields:
+    - name: etiquette
+      label: Petite étiquette
+      type: string
+    - name: titre
+      label: Titre principal (important pour Google)
+      type: string
+      description: 'Pour mettre un passage en italique, entourez-le d''étoiles : *comme ceci*.'
+      required: true
+    - name: intro
+      label: Phrase d'introduction
+      type: rich-text
+    - name: texte
+      label: Texte
+      type: rich-text
+  - name: seances
+    label: Les séances
+    type: object
+    fields:
+    - name: titre
+      label: Titre
+      type: string
+      description: 'Pour mettre un passage en italique, entourez-le d''étoiles : *comme ceci*.'
+      required: true
+    - name: intro
+      label: Texte d'introduction
+      type: rich-text
+      description: Vous pouvez y mettre des liens vers les autres pages.
+    - name: sous_titre
+      label: Sous-titre
+      type: string
+    - name: cartes
+      label: Cartes de séances
+      type: object
+      fields:
+      - name: titre
+        label: Titre
+        type: string
+        required: true
+      - name: legende
+        label: Mot affiché sur le fond coloré
+        type: string
+        description: Seulement tant qu'il n'y a pas de photo.
+      - name: lien
+        label: Page ouverte au clic
+        type: string
+        description: Ex. reservation.html
+        required: true
+      - name: photo
+        label: Photo
+        type: image
+        description: Glissez une photo ici. Laissez vide pour afficher un fond coloré.
+      - name: alt
+        label: Description de la photo
+        type: string
+        description: Décrivez la photo en une phrase (ex. « Golden retriever sur fond bleu »). Utile pour
+          Google et les personnes malvoyantes.
+      list: true
+  - name: equipe
+    label: L'équipe
+    type: object
+    fields:
+    - name: titre
+      label: Titre
+      type: string
+      description: 'Pour mettre un passage en italique, entourez-le d''étoiles : *comme ceci*.'
+      required: true
+    - name: membres
+      label: Présentations
+      type: object
+      fields:
+      - name: titre
+        label: Titre
+        type: string
+        required: true
+      - name: legende
+        label: Mot affiché sur le fond coloré
+        type: string
+        description: Seulement tant qu'il n'y a pas de photo.
+      - name: texte
+        label: Texte
+        type: rich-text
+      - name: photo
+        label: Photo
+        type: image
+        description: Glissez une photo ici. Laissez vide pour afficher un fond coloré.
+      - name: alt
+        label: Description de la photo
+        type: string
+        description: Décrivez la photo en une phrase (ex. « Golden retriever sur fond bleu »). Utile pour
+          Google et les personnes malvoyantes.
+      list: true
+  - name: acces
+    label: Contact et accès
+    type: object
+    fields:
+    - name: titre
+      label: Titre
+      type: string
+      description: 'Pour mettre un passage en italique, entourez-le d''étoiles : *comme ceci*.'
+      required: true
+    - name: texte
+      label: Texte
+      type: rich-text
+      description: Parking, accès, stationnement… L'adresse et le téléphone se modifient dans « Coordonnées
+        ».
+- name: studio
+  label: Page Le studio
+  type: file
+  path: src/_data/studio.json
+  format: json
+  fields:
+  - name: entete
+    label: En-tête de la page
+    type: object
+    fields:
+    - name: titre
+      label: Titre
+      type: string
+      description: 'Pour mettre un passage en italique, entourez-le d''étoiles : *comme ceci*.'
+      required: true
+    - name: intro
+      label: Introduction
+      type: text
+  - name: espace
+    label: L'espace
+    type: object
+    fields:
+    - name: etiquette
+      label: Petite étiquette
+      type: string
+    - name: titre
+      label: Titre
+      type: string
+      description: 'Pour mettre un passage en italique, entourez-le d''étoiles : *comme ceci*.'
+      required: true
+    - name: texte
+      label: Texte
+      type: rich-text
+    - name: legende
+      label: Mot affiché sur le fond coloré
+      type: string
+      description: Seulement tant qu'il n'y a pas de photo.
+    - name: photo
+      label: Photo
+      type: image
+      description: Glissez une photo ici. Laissez vide pour afficher un fond coloré.
+    - name: alt
+      label: Description de la photo
+      type: string
+      description: Décrivez la photo en une phrase (ex. « Golden retriever sur fond bleu »). Utile pour
+        Google et les personnes malvoyantes.
+  - name: approche
+    label: L'approche
+    type: object
+    fields:
+    - name: titre
+      label: Titre
+      type: string
+      description: 'Pour mettre un passage en italique, entourez-le d''étoiles : *comme ceci*.'
+      required: true
+    - name: regles
+      label: Règles
+      type: object
+      fields:
+      - name: titre
+        label: Titre
+        type: string
+        required: true
+      - name: texte
+        label: Texte
+        type: text
+      list: true
+  - name: fonds
+    label: Les fonds colorés
+    type: object
+    fields:
+    - name: titre
+      label: Titre
+      type: string
+      description: 'Pour mettre un passage en italique, entourez-le d''étoiles : *comme ceci*.'
+      required: true
+    - name: intro
+      label: Introduction
+      type: text
+    - name: liste
+      label: Fonds
+      type: object
+      fields:
+      - name: nom
+        label: Nom de la couleur
+        type: string
+        required: true
+      - name: photo
+        label: Photo (facultatif)
+        type: image
+        description: Glissez une photo ici. Laissez vide pour afficher un fond coloré.
+      - name: alt
+        label: Description de la photo
+        type: string
+        description: Décrivez la photo en une phrase (ex. « Golden retriever sur fond bleu »). Utile pour
+          Google et les personnes malvoyantes.
+      list: true
+      description: Chaque fond affiche sa couleur d'origine tant qu'il n'y a pas de photo.
+  - name: photographe
+    label: Le photographe
+    type: object
+    fields:
+    - name: etiquette
+      label: Petite étiquette
+      type: string
+    - name: titre
+      label: Titre
+      type: string
+      description: 'Pour mettre un passage en italique, entourez-le d''étoiles : *comme ceci*.'
+      required: true
+    - name: texte
+      label: Texte
+      type: rich-text
+    - name: signature
+      label: Signature
+      type: string
+      description: Ex. votre prénom.
+    - name: legende
+      label: Mot affiché sur le fond coloré
+      type: string
+      description: Seulement tant qu'il n'y a pas de photo.
+    - name: photo
+      label: Portrait
+      type: image
+      description: Glissez une photo ici. Laissez vide pour afficher un fond coloré.
+    - name: alt
+      label: Description de la photo
+      type: string
+      description: Décrivez la photo en une phrase (ex. « Golden retriever sur fond bleu »). Utile pour
+        Google et les personnes malvoyantes.
+  - name: exterieur
+    label: Séances en extérieur
+    type: object
+    fields:
+    - name: titre
+      label: Titre
+      type: string
+      description: 'Pour mettre un passage en italique, entourez-le d''étoiles : *comme ceci*.'
+      required: true
+    - name: intro
+      label: Introduction
+      type: text
+    - name: lieux
+      label: Lieux
+      type: object
+      fields:
+      - name: nom
+        label: Lieu
+        type: string
+        required: true
+      - name: detail
+        label: Détail
+        type: string
+      list: true
+- name: galerie
+  label: Galerie photos
+  type: file
+  path: src/_data/galerie.json
+  format: json
+  fields:
+  - name: entete
+    label: En-tête de la page
+    type: object
+    fields:
+    - name: titre
+      label: Titre
+      type: string
+      description: 'Pour mettre un passage en italique, entourez-le d''étoiles : *comme ceci*.'
+      required: true
+    - name: intro
+      label: Introduction
+      type: text
+  - name: categories
+    label: Catégories (boutons de filtre)
+    type: object
+    fields:
+    - name: id
+      label: Identifiant
+      type: string
+      description: Sans espace ni accent, en minuscules. Ne le changez pas si des photos l'utilisent.
+      required: true
+    - name: nom
+      label: Nom affiché
+      type: string
+      required: true
+    list: true
+  - name: photos
+    label: Photos de la galerie
+    type: object
+    fields:
+    - name: photo
+      label: Photo
+      type: image
+      description: Glissez la photo ici. Peu importe sa taille, le site la réduit automatiquement.
+    - name: alt
+      label: Description de la photo
+      type: string
+      description: Décrivez la photo en une phrase (ex. « Golden retriever sur fond bleu »). Utile pour
+        Google et les personnes malvoyantes.
+    - name: legende
+      label: Légende
+      type: string
+      description: Affichée dans l'aperçu agrandi.
+      required: true
+    - name: categorie
+      label: Catégorie
+      type: string
+      description: Doit correspondre à l'identifiant d'une catégorie ci-dessus (studio, exterieur, chiots,
+        duo).
+      required: true
+    list: true
+    description: 'Pour ajouter une photo : « Ajouter » en bas de liste. Pour en retirer une : la corbeille
+      à côté. Glissez-déposez pour changer l''ordre.'
+- name: reservation
+  label: Tarifs et réservation
+  type: file
+  path: src/_data/reservation.json
+  format: json
+  fields:
+  - name: entete
+    label: En-tête de la page
+    type: object
+    fields:
+    - name: titre
+      label: Titre
+      type: string
+      description: 'Pour mettre un passage en italique, entourez-le d''étoiles : *comme ceci*.'
+      required: true
+    - name: intro
+      label: Introduction
+      type: string
+  - name: formules
+    label: Formules et tarifs
+    type: object
+    fields:
+    - name: titre
+      label: Titre de la section
+      type: string
+    - name: liste
+      label: Formules
+      type: object
+      fields:
+      - name: nom
+        label: Nom de la formule
+        type: string
+        required: true
+      - name: prix
+        label: Prix en euros (chiffres seulement)
+        type: string
+        description: Ex. 150
+        required: true
+      - name: duree
+        label: Lieu et durée
+        type: string
+        description: Ex. Studio · 1 h 30
+      - name: mise_en_avant
+        label: Mettre en avant (« La plus choisie »)
+        type: boolean
+      - name: inclus
+        label: Ce qui est inclus
+        type: string
+        list: true
+        description: Une ligne par élément.
+      list: true
+    - name: options
+      label: Options
+      type: object
+      fields:
+      - name: nom
+        label: Option
+        type: string
+        required: true
+      - name: prix
+        label: Prix
+        type: string
+        description: Ex. + 40 € ou 15 €
+        required: true
+      list: true
+  - name: modalites
+    label: Comment ça se passe
+    type: object
+    fields:
+    - name: titre
+      label: Titre
+      type: string
+      description: 'Pour mettre un passage en italique, entourez-le d''étoiles : *comme ceci*.'
+      required: true
+    - name: etapes
+      label: Étapes
+      type: object
+      fields:
+      - name: titre
+        label: Titre
+        type: string
+        required: true
+      - name: texte
+        label: Texte
+        type: text
+      list: true
+  - name: conditions
+    label: Conditions
+    type: object
+    fields:
+    - name: titre
+      label: Titre
+      type: string
+      description: 'Pour mettre un passage en italique, entourez-le d''étoiles : *comme ceci*.'
+      required: true
+    - name: liste
+      label: Conditions
+      type: object
+      fields:
+      - name: titre
+        label: Titre
+        type: string
+        required: true
+      - name: texte
+        label: Texte
+        type: text
+      list: true
+  - name: faq
+    label: Questions fréquentes
+    type: object
+    fields:
+    - name: titre
+      label: Titre
+      type: string
+      description: 'Pour mettre un passage en italique, entourez-le d''étoiles : *comme ceci*.'
+      required: true
+    - name: liste
+      label: Questions
+      type: object
+      fields:
+      - name: question
+        label: Question
+        type: string
+        required: true
+      - name: reponse
+        label: Réponse
+        type: rich-text
+      list: true
+      description: Ces questions sont aussi envoyées à Google pour apparaître dans les résultats de recherche.
+  - name: demande
+    label: Formulaire de réservation
+    type: object
+    fields:
+    - name: titre
+      label: Titre
+      type: string
+      description: 'Pour mettre un passage en italique, entourez-le d''étoiles : *comme ceci*.'
+      required: true
+    - name: intro
+      label: Introduction
+      type: string
+    - name: autres_choix
+      label: Autre choix proposé dans la liste
+      type: string
+      list: true
+      description: Ajoutés après vos formules dans la liste « Formule » du formulaire.
+- name: avis
+  label: Avis Google
+  type: file
+  path: src/_data/avis.json
+  format: json
+  fields:
+  - name: titre
+    label: Titre
+    type: string
+    description: 'Pour mettre un passage en italique, entourez-le d''étoiles : *comme ceci*.'
+    required: true
+  - name: note
+    label: Note moyenne affichée
+    type: string
+    description: Ex. 4,9. Recopiez-la depuis votre fiche Google. Laissez vide pour masquer l'étiquette
+      « Google » sur le côté.
+  - name: nombre
+    label: Nombre d'avis sur Google
+    type: string
+    description: Chiffres seulement, ex. 42. Sert à Google pour afficher les étoiles dans les résultats.
+      Ne renseignez que le vrai nombre.
+  - name: avis
+    label: Avis à afficher
+    type: object
+    fields:
+    - name: nom
+      label: Prénom et initiale
+      type: string
+      description: Ex. Camille D.
+      required: true
+    - name: texte
+      label: Texte de l'avis
+      type: text
+      description: Recopiez un vrai avis laissé sur Google, sans le modifier.
+      required: true
+    - name: date
+      label: Date
+      type: string
+      description: Facultatif. Ex. mars 2026
+    list: true
+    description: Supprimez tous les avis pour masquer la section.
+- name: mentions
+  label: Mentions légales
+  type: file
+  path: src/_data/mentions.json
+  format: json
+  fields:
+  - name: titre
+    label: Titre
+    type: string
+    description: 'Pour mettre un passage en italique, entourez-le d''étoiles : *comme ceci*.'
+    required: true
+  - name: editeur
+    label: Éditeur du site
+    type: text
+    description: Forme juridique, nom du responsable, SIRET.
+  - name: hebergeur
+    label: Hébergeur
+    type: text
+  - name: propriete
+    label: Propriété intellectuelle
+    type: text
+  - name: donnees
+    label: Données personnelles
+    type: text
+- name: seo
+  label: Référencement Google (avancé)
+  type: file
+  path: src/_data/seo.json
+  format: json
+  fields:
+  - name: accueil
+    label: Accueil
+    type: object
+    fields:
+    - name: titre
+      label: Titre dans Google
+      type: string
+      description: Idéalement moins de 60 caractères, avec « photo chien » et « Millau ».
+      required: true
+    - name: description
+      label: Description dans Google
+      type: text
+      description: Environ 150 caractères.
+      required: true
+  - name: studio
+    label: Le studio
+    type: object
+    fields:
+    - name: titre
+      label: Titre dans Google
+      type: string
+      description: Idéalement moins de 60 caractères, avec « photo chien » et « Millau ».
+      required: true
+    - name: description
+      label: Description dans Google
+      type: text
+      description: Environ 150 caractères.
+      required: true
+  - name: galerie
+    label: Galerie
+    type: object
+    fields:
+    - name: titre
+      label: Titre dans Google
+      type: string
+      description: Idéalement moins de 60 caractères, avec « photo chien » et « Millau ».
+      required: true
+    - name: description
+      label: Description dans Google
+      type: text
+      description: Environ 150 caractères.
+      required: true
+  - name: reservation
+    label: Tarifs et réservation
+    type: object
+    fields:
+    - name: titre
+      label: Titre dans Google
+      type: string
+      description: Idéalement moins de 60 caractères, avec « photo chien » et « Millau ».
+      required: true
+    - name: description
+      label: Description dans Google
+      type: text
+      description: Environ 150 caractères.
+      required: true

@@ -1,0 +1,98 @@
+{
+  "entete": {
+    "titre": "Portraits *de chiens*",
+    "intro": "Une sélection de séances réalisées au studio de Millau et en extérieur dans le sud Aveyron."
+  },
+  "categories": [
+    {
+      "id": "studio",
+      "nom": "Studio"
+    },
+    {
+      "id": "exterieur",
+      "nom": "Extérieur"
+    },
+    {
+      "id": "chiots",
+      "nom": "Chiots"
+    },
+    {
+      "id": "duo",
+      "nom": "Duo & famille"
+    }
+  ],
+  "photos": [
+    {
+      "categorie": "studio",
+      "legende": "Studio · Cobalt",
+      "photo": "",
+      "alt": ""
+    },
+    {
+      "categorie": "exterieur",
+      "legende": "Causse du Larzac",
+      "photo": "",
+      "alt": ""
+    },
+    {
+      "categorie": "chiots",
+      "legende": "Chiot · Lilas",
+      "photo": "",
+      "alt": ""
+    },
+    {
+      "categorie": "studio",
+      "legende": "Studio · Tomate",
+      "photo": "",
+      "alt": ""
+    },
+    {
+      "categorie": "duo",
+      "legende": "Duo · Safran",
+      "photo": "",
+      "alt": ""
+    },
+    {
+      "categorie": "exterieur",
+      "legende": "Gorges du Tarn",
+      "photo": "",
+      "alt": ""
+    },
+    {
+      "categorie": "studio",
+      "legende": "Studio · Fuchsia",
+      "photo": "",
+      "alt": ""
+    },
+    {
+      "categorie": "chiots",
+      "legende": "Chiot · Safran",
+      "photo": "",
+      "alt": ""
+    },
+    {
+      "categorie": "exterieur",
+      "legende": "Gorges de la Dourbie",
+      "photo": "",
+      "alt": ""
+    },
+    {
+      "categorie": "studio",
+      "legende": "Studio · Safran",
+      "photo": "",
+      "alt": ""
+    },
+    {
+      "categorie": "duo",
+      "legende": "Duo · Cobalt",
+      "photo": "",
+      "alt": ""
+    },
+    {
+      "categorie": "studio",
+      "legende": "Studio · Lilas",
+      "photo": "",
+      "alt": ""
+    }
+  ]
+}

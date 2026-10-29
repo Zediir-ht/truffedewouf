@@ -1,0 +1,17 @@
+{
+  "name": "truffe-de-wouf",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Site du studio photo canin Truffe de Wouf (Millau)",
+  "scripts": {
+    "build": "eleventy",
+    "start": "eleventy --serve",
+    "clean": "rm -rf _site .cache"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^3.1.7",
+    "@11ty/eleventy-img": "^7.1.1",
+    "markdown-it": "^15.0.3"
+  }
+}

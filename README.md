@@ -1,55 +1,73 @@
 # Truffe de Wouf · site du studio photo canin (Millau)
 
-Site vitrine statique (HTML, CSS, JS), sans dépendance ni étape de build. Pour le voir en local :
+Site vitrine statique généré avec [Eleventy](https://www.11ty.dev/). Le contenu (textes, photos, tarifs, avis) vit dans des fichiers de données que le client modifie lui-même via [Pages CMS](https://pagescms.org), sans toucher au code.
 
 ```sh
-python3 -m http.server 8000
+npm install
+npm start        # serveur local avec rechargement : http://localhost:8080
+npm run build    # génère le site dans _site/
 ```
 
-## Pages
-| Page | Fichier | Requête visée |
-|---|---|---|
-| Accueil | `index.html` | studio photo canin Millau, photographe chien Millau. Structure inspirée de studiobontant.fr : offre du moment, prestations phares, points forts, bienvenue, séances, équipe, contact & accès, avis |
-| Le studio | `le-studio.html` | studio photo chien Aveyron, séance photo extérieur Larzac |
-| Galerie | `galerie.html` | photos de chiens Millau (filtres + visionneuse) |
-| Tarifs & réservation | `reservation.html` | tarif séance photo chien Millau |
-| Mentions légales | `mentions-legales.html` | (non indexée) |
+Node 22 (voir `.nvmrc`).
 
-L'en-tête (bandeau téléphone + adresse, menu) et le pied de page sont identiques sur chaque page : une modification doit être reportée dans tous les fichiers.
+## Comment ça marche
 
-## Design
-- Polices : Instrument Serif (titres) et Inter Tight (texte), via Google Fonts.
-- Palette dans `:root` de `assets/css/style.css` : papier, encre, et six couleurs de fonds de studio (tomate, cobalt, safran, fuchsia, émeraude, lilas).
-- Les emplacements photo (`.ph`) affichent un fond de studio coloré en attendant les vraies photos. Pour mettre une photo :
-  ```html
-  <div class="ph ph--cobalt"><img src="assets/img/galerie/pepite.webp" alt="Pépite, golden retriever, portrait studio fond cobalt à Millau" loading="lazy"></div>
-  ```
-  Utiliser du WebP (~1600 px de large maxi) et un `alt` descriptif avec la ville : c'est aussi du référencement.
+```
+Client ──(Pages CMS)──▶ commit sur GitHub ──▶ Cloudflare Pages / Netlify ──▶ site mis à jour (1 à 2 min)
+```
 
-## Référencement local
-- Title, description, H1 et canonical propres à chaque page.
-- JSON-LD : `LocalBusiness` (accueil), `BreadcrumbList` (pages intérieures), `FAQPage` (réservation, identique à la FAQ visible).
-- Contenu local : communes desservies, lieux de séance autour de Millau.
-- Hors site, et c'est ce qui pèse le plus : **fiche Google Business Profile** (catégorie « Photographe animalier »), même nom, adresse et téléphone partout, avis clients.
-
-## À compléter avant la mise en ligne
-Rechercher-remplacer dans tous les fichiers HTML :
-
-| Valeur provisoire | À remplacer par |
+| Dossier / fichier | Rôle |
 |---|---|
-| `00 00 00 00 00`, `+33000000000` et `https://wa.me/33000000000` | le numéro du studio (et son WhatsApp) |
-| `Adresse à compléter` | la rue du studio |
-| `https://www.google.com/maps/search/?api=1&query=Truffe+de+Wouf+Millau` | le lien de la fiche Google (itinéraire et avis) |
-| `www.truffedewouf.fr` | le vrai domaine (aussi dans `robots.txt` et `sitemap.xml`) |
-| `contact@truffedewouf.fr` | l'e-mail réel (aussi `CONTACT_EMAIL` dans `assets/js/main.js`) |
-| `Du mardi au samedi, sur rendez-vous` | les horaires réels (aussi `openingHoursSpecification` dans le JSON-LD de `index.html`) |
+| `src/_data/*.json` | **Tout le contenu éditable** : `site` (coordonnées), `accueil`, `studio`, `galerie`, `reservation`, `avis`, `mentions`, `seo` |
+| `src/*.njk` | Gabarits des pages (accueil, le studio, galerie, réservation, mentions légales, sitemap, robots, manifest) |
+| `src/_includes/` | Mise en page commune (`layout.njk` : bandeau téléphone/adresse, menu, pied de page, JSON-LD), avis, appel à réserver |
+| `src/assets/css/style.css`, `src/assets/js/main.js` | Design et comportements (menu mobile, filtres de galerie, visionneuse, formulaire) |
+| `src/assets/img/uploads/` | Photos envoyées par le client |
+| `.pages.yml` | Configuration de l'éditeur Pages CMS (formulaires en français) |
+| `eleventy.config.js` | Optimisation des images, filtres, données structurées Google |
+| `docs/GUIDE-CLIENT.md` | Mode d'emploi pour le client |
 
-Et aussi :
-- **Avis Google** (accueil + étiquette flottante `.gbadge` sur toutes les pages) : coller 3 vrais avis et la vraie note moyenne. Ne jamais inventer d'avis.
-- **Offre du moment** (haut de l'accueil) : « −20 % du mardi au jeudi » est un exemple, à remplacer par une vraie offre ou à retirer.
-- **Accès et stationnement** (section Contact de l'accueil) et la position de la carte (`q=Millau` dans l'iframe) : mettre l'adresse exacte.
-- **Tarifs et conditions** (`reservation.html`) : prix, acompte, délais et frais de déplacement sont des propositions à valider.
-- **Bio du photographe** (`le-studio.html`) : texte entre crochets à réécrire.
-- **Photos** : héro, mosaïque, galerie, studio, portrait.
-- **Image de partage** `assets/img/og-image.jpg` (1200 × 630).
-- **Mentions légales** : SIRET, hébergeur, responsable.
+### Photos
+Le client dépose ses photos telles quelles. Au build, chaque photo est convertie en WebP + JPEG à plusieurs largeurs (`srcset`), chargée en différé, avec le texte alternatif saisi dans l'éditeur. Un emplacement sans photo affiche un fond de studio coloré : le site n'a jamais de trou.
+
+### Données structurées et SEO
+Générées à partir des données, jamais écrites en dur :
+- `LocalBusiness` (accueil) : téléphone, adresse, horaires, communes desservies, liens sociaux. La note (`aggregateRating`) n'est publiée que si le vrai nombre d'avis est renseigné.
+- `BreadcrumbList` (pages intérieures) et `FAQPage` (réservation), cette dernière étant produite depuis la même liste que la FAQ affichée.
+- `title`, description et canonical par page (titres et descriptions modifiables dans la rubrique « Référencement Google »), `sitemap.xml`, `robots.txt`, Open Graph.
+
+Hors site, ce qui pèse le plus : fiche **Google Business Profile** (catégorie « Photographe animalier »), mêmes nom / adresse / téléphone partout, avis clients.
+
+## Mise en ligne
+
+1. **Fusionner la PR**, puis passer `main` en branche par défaut (Settings → Branches).
+2. **Hébergement** (gratuit) : Cloudflare Pages ou Netlify, relié au dépôt.
+   - Commande de build : `npm run build`
+   - Dossier de sortie : `_site`
+   - Variable `NODE_VERSION` = `22` si l'hébergeur ne lit pas `.node-version`.
+3. **Nom de domaine** : le brancher sur l'hébergeur, puis renseigner l'adresse du site dans la rubrique « Coordonnées » (`domaine` dans `src/_data/site.json`).
+4. **Éditeur du client** :
+   - Le client crée un compte GitHub gratuit.
+   - Inviter son compte sur le dépôt `Zediir-ht/truffedewouf` (Settings → Collaborators, accès en écriture).
+   - Il se connecte sur https://app.pagescms.org avec GitHub et choisit le dépôt. Le menu de l'éditeur vient de `.pages.yml`.
+   - Lui transmettre `docs/GUIDE-CLIENT.md`.
+
+## Valeurs provisoires à remplacer (dans l'éditeur ou dans `src/_data/`)
+
+| Valeur provisoire | Où |
+|---|---|
+| Téléphone et WhatsApp `00 00 00 00 00` | `site.json` |
+| `Adresse à compléter` | `site.json` |
+| Lien de la fiche Google (itinéraire et avis) | `site.json` → `lien_google` |
+| Nom de domaine `www.truffedewouf.fr`, e-mail `contact@truffedewouf.fr`, horaires | `site.json` |
+| Avis Google : 3 textes provisoires et note « 5,0 » fictive. Ne mettre que de vrais avis | `avis.json` |
+| Offre « −20 % du mardi au jeudi » : exemple à remplacer ou à masquer | `accueil.json` → `promo` |
+| Tarifs, acompte, délais, frais de déplacement, FAQ : propositions à valider | `reservation.json` |
+| Bio du photographe (`[Prénom]`, `[X]`), accès et stationnement | `studio.json`, `accueil.json` |
+| Photos (accueil, studio, galerie), image de partage | via l'éditeur |
+| Mentions légales : SIRET, hébergeur, responsable | `mentions.json` |
+
+## Limites connues
+- Le formulaire de réservation ouvre un e-mail pré-rempli dans la messagerie du visiteur (pas d'envoi par serveur).
+- La configuration `.pages.yml` a été écrite d'après la documentation de Pages CMS mais pas testée dans l'interface en ligne : faire un essai de connexion et d'enregistrement avant de la remettre au client.
+- Les avis Google sont saisis à la main (pas d'import automatique).

@@ -82,6 +82,7 @@ if (gallery) {
     const src = it.querySelector(".ph");
     lbPh.className = src.className;
     lbPh.innerHTML = src.innerHTML;
+    lbPh.querySelectorAll("img, source").forEach((el) => el.setAttribute("sizes", "(min-width: 900px) 700px, 92vw"));
     lbCap.textContent = it.dataset.cap;
     lbCount.textContent = `${idx + 1} / ${list.length}`;
     if (!lb.open) lb.showModal();
@@ -99,7 +100,6 @@ if (gallery) {
 }
 
 // Formulaire : sans serveur pour l'instant, il prépare un e-mail dans la messagerie du visiteur.
-const CONTACT_EMAIL = "contact@truffedewouf.fr";
 const form = document.getElementById("contact-form");
 if (form) {
   const note = form.querySelector(".form__note");
@@ -122,7 +122,7 @@ if (form) {
       `E-mail : ${d.get("email")}`,
       `Téléphone : ${d.get("tel") || "non précisé"}`,
     ].join("\n");
-    window.location.href = `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    window.location.href = `mailto:${form.dataset.email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
     note.textContent = "Votre messagerie s'ouvre avec la demande pré-remplie. Il ne reste qu'à l'envoyer.";
   });
 }

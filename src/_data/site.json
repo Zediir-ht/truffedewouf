@@ -1,0 +1,42 @@
+{
+  "nom": "Truffe de Wouf",
+  "baseline": "Studio photo canin · Millau",
+  "description_courte": "Studio photo canin à Millau : portraits de chiens en studio sur fonds colorés et séances photo en extérieur dans le sud Aveyron.",
+  "domaine": "https://www.truffedewouf.fr",
+  "telephone": "00 00 00 00 00",
+  "whatsapp": "00 00 00 00 00",
+  "email": "contact@truffedewouf.fr",
+  "adresse": "Adresse à compléter",
+  "code_postal": "12100",
+  "ville": "Millau",
+  "latitude": "44.0983",
+  "longitude": "3.0778",
+  "horaires": "Du mardi au samedi, sur rendez-vous",
+  "ouverture": {
+    "jours": [
+      "mardi",
+      "mercredi",
+      "jeudi",
+      "vendredi",
+      "samedi"
+    ],
+    "de": "09:30",
+    "a": "19:00"
+  },
+  "lien_google": "",
+  "instagram": "",
+  "facebook": "",
+  "communes": [
+    "Millau",
+    "Creissels",
+    "Aguessac",
+    "Saint-Georges-de-Luzençon",
+    "Saint-Affrique",
+    "Sévérac-d'Aveyron",
+    "Roquefort-sur-Soulzon",
+    "Nant",
+    "La Cavalerie",
+    "Rodez"
+  ],
+  "image_partage": ""
+}
