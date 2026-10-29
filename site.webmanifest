@@ -3,7 +3,7 @@
   "short_name": "Truffe de Wouf",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#2a0e5c",
-  "theme_color": "#2a0e5c",
+  "background_color": "#121110",
+  "theme_color": "#121110",
   "icons": [{ "src": "assets/img/favicon.svg", "sizes": "any", "type": "image/svg+xml" }]
 }
