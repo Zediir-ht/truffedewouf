@@ -1,0 +1,9 @@
+{
+  "name": "Truffe de Wouf · Studio photo canin à Millau",
+  "short_name": "Truffe de Wouf",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#2a0e5c",
+  "theme_color": "#2a0e5c",
+  "icons": [{ "src": "assets/img/favicon.svg", "sizes": "any", "type": "image/svg+xml" }]
+}
