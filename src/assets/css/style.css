@@ -598,7 +598,7 @@ h1, h2, h3 { margin: 0; font-weight: 400; }
 @media (prefers-reduced-motion: reduce) { .reel__track { animation: none; } .reel { overflow-x: auto; } }
 
 /* ---------- Hero agrandi ---------- */
-.intro { padding-top: clamp(28px, 4vw, 56px); }
+.intro { padding-top: clamp(28px, 4vw, 56px); overflow-x: clip; }
 .intro__grid { grid-template-columns: 1fr 1fr; min-height: min(calc(100svh - 150px), 860px); }
 .intro__visual { position: relative; isolation: isolate; }
 .intro__visual::before { /* disque vert derrière la photo */
