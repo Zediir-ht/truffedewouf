@@ -1,0 +1,22 @@
+{
+  "titre": "Ce qu'en disent mes clients",
+  "note": "",
+  "nombre": "",
+  "avis": [
+    {
+      "nom": "Prénom N.",
+      "texte": "Collez ici le texte d'un avis Google réel laissé par un client.",
+      "date": ""
+    },
+    {
+      "nom": "Prénom N.",
+      "texte": "Collez ici le texte d'un avis Google réel laissé par un client.",
+      "date": ""
+    },
+    {
+      "nom": "Prénom N.",
+      "texte": "Collez ici le texte d'un avis Google réel laissé par un client.",
+      "date": ""
+    }
+  ]
+}

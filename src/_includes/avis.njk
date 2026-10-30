@@ -1,0 +1,31 @@
+{%- if avis.avis.length %}
+    <section class="section reviews" id="avis" aria-labelledby="avis-title">
+      <div class="wrap">
+        <div class="sechead">
+          <div>
+            <p class="label">Avis clients</p>
+            <h2 id="avis-title" class="h2">{{ avis.titre | titre | safe }}</h2>
+          </div>
+          {%- if avis.note %}
+          <div class="reviews__score">
+            <strong>{{ avis.note }}</strong>
+            <div>{% stars %}<small>Note moyenne sur Google</small></div>
+          </div>
+          {%- endif %}
+        </div>
+        <div class="reviews__grid">
+          {%- for a in avis.avis %}
+          <article class="review">
+            {% stars %}
+            <blockquote>« {{ a.texte }} »</blockquote>
+            <footer><strong>{{ a.nom }}</strong><span>Avis Google{% if a.date %} · {{ a.date }}{% endif %}</span></footer>
+          </article>
+          {%- endfor %}
+        </div>
+        <div class="reviews__ctas">
+          <a class="btn" href="{{ site | mapsHref }}" target="_blank" rel="noopener">Voir les avis Google</a>
+          <a class="btn btn--outline" href="{{ site | mapsHref }}" target="_blank" rel="noopener">Laisser un avis</a>
+        </div>
+      </div>
+    </section>
+{%- endif %}

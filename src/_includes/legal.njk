@@ -1,0 +1,19 @@
+    <section class="pagehead">
+      <div class="wrap">
+        <div>
+          <p class="crumbs"><a href="index.html">Accueil</a> / {{ crumbName }}</p>
+          <h1 class="display">{{ doc.titre | titre | safe }}</h1>
+        </div>
+        {%- if doc.intro %}
+        <p class="lead">{{ doc.intro }}</p>
+        {%- endif %}
+      </div>
+    </section>
+    <section class="section" style="padding-top:40px">
+      <div class="wrap prose">
+        {%- for art in doc.articles %}
+        <h2>{{ loop.index }}. {{ art.titre }}</h2>
+        {{ art.texte | md | safe }}
+        {%- endfor %}
+      </div>
+    </section>

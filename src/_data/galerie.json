@@ -1,0 +1,178 @@
+{
+  "entete": {
+    "titre": "Portraits d'animaux",
+    "intro": "Une sélection de portraits réalisés au studio de Canet-de-Salars : portraits naturels, portraits fun avec accessoires et photos de jeu."
+  },
+  "categories": [
+    {
+      "id": "naturel",
+      "nom": "Portraits naturels"
+    },
+    {
+      "id": "fun",
+      "nom": "Fun et déguisés"
+    },
+    {
+      "id": "jeu",
+      "nom": "Jeu"
+    }
+  ],
+  "photos": [
+    {
+      "categorie": "fun",
+      "legende": "Lunettes rondes",
+      "photo": "/assets/img/uploads/chien-roux-lunettes-rondes-fond-vert.jpg",
+      "alt": "Chien au pelage roux portant de grosses lunettes rondes, portrait sur fond vert"
+    },
+    {
+      "categorie": "jeu",
+      "legende": "La croquette au vol",
+      "photo": "/assets/img/uploads/epagneul-croquette-en-vol.jpg",
+      "alt": "Épagneul breton bouche ouverte attrapant une croquette en l'air, fond brun"
+    },
+    {
+      "categorie": "naturel",
+      "legende": "Donne la patte",
+      "photo": "/assets/img/uploads/border-collie-donne-la-patte.jpg",
+      "alt": "Border collie noir et blanc posant sa patte dans la main d'une personne, fond gris foncé"
+    },
+    {
+      "categorie": "fun",
+      "legende": "Lunettes et sucette",
+      "photo": "/assets/img/uploads/epagneul-lunettes-sucette-fond-caramel.jpg",
+      "alt": "Épagneul breton avec des lunettes noires léchant une grande sucette tourbillon rouge et bleue, fond caramel"
+    },
+    {
+      "categorie": "jeu",
+      "legende": "Bulles de savon",
+      "photo": "/assets/img/uploads/chien-bringe-bulles-de-savon.jpg",
+      "alt": "Chien bringé tirant la langue à travers des bulles de savon, fond gris foncé"
+    },
+    {
+      "categorie": "naturel",
+      "legende": "Bandana",
+      "photo": "/assets/img/uploads/chien-roux-bandana-bd.jpg",
+      "alt": "Portrait d'un chien roux et blanc portant un bandana style bande dessinée, fond gris"
+    },
+    {
+      "categorie": "jeu",
+      "legende": "Croquette, fond vert",
+      "photo": "/assets/img/uploads/epagneul-croquette-fond-vert.jpg",
+      "alt": "Épagneul breton bouche grande ouverte, croquette en l'air, collier marron, fond vert"
+    },
+    {
+      "categorie": "naturel",
+      "legende": "Assis sur fond jaune",
+      "photo": "/assets/img/uploads/epagneul-assis-fond-jaune.jpg",
+      "alt": "Épagneul breton assis, regard droit vers l'objectif, fond jaune"
+    },
+    {
+      "categorie": "jeu",
+      "legende": "Attrape la balle",
+      "photo": "/assets/img/uploads/chien-bringe-attrape-balle.jpg",
+      "alt": "Chien bringé gueule grande ouverte attrapant une balle orange et bleue, fond gris"
+    },
+    {
+      "categorie": "fun",
+      "legende": "Lunettes rouges",
+      "photo": "/assets/img/uploads/epagneul-lunettes-rouges-fond-vert.jpg",
+      "alt": "Épagneul breton portant des lunettes rouges, portrait sur fond vert"
+    },
+    {
+      "categorie": "jeu",
+      "legende": "Attrapé !",
+      "photo": "/assets/img/uploads/epagneul-attrape-balle-jaune.jpg",
+      "alt": "Épagneul breton bondissant, une balle jaune dans la gueule, fond sombre"
+    },
+    {
+      "categorie": "naturel",
+      "legende": "Duo",
+      "photo": "/assets/img/uploads/deux-chiens-noirs-assis.jpg",
+      "alt": "Deux chiens assis côte à côte, un chien noir et un border collie, fond gris foncé"
+    },
+    {
+      "categorie": "fun",
+      "legende": "Lunettes noires",
+      "photo": "/assets/img/uploads/epagneul-assis-lunettes-fond-caramel.jpg",
+      "alt": "Épagneul breton assis avec des lunettes noires, regard levé, fond caramel"
+    },
+    {
+      "categorie": "jeu",
+      "legende": "Balle et ballons",
+      "photo": "/assets/img/uploads/epagneul-balle-et-ballons.jpg",
+      "alt": "Épagneul breton levant la tête vers une balle jaune, ballons colorés derrière lui, fond vert"
+    },
+    {
+      "categorie": "fun",
+      "legende": "Sucette",
+      "photo": "/assets/img/uploads/chien-noir-sucette-profil.jpg",
+      "alt": "Chien noir de profil léchant une grande sucette rouge, blanche et bleue, fond gris foncé"
+    },
+    {
+      "categorie": "naturel",
+      "legende": "Pattes croisées",
+      "photo": "/assets/img/uploads/epagneul-allonge-fond-jaune.jpg",
+      "alt": "Épagneul breton allongé, pattes croisées, regard attentif, fond jaune"
+    },
+    {
+      "categorie": "fun",
+      "legende": "Coup de langue",
+      "photo": "/assets/img/uploads/epagneul-lunettes-langue-fond-caramel.jpg",
+      "alt": "Épagneul breton assis avec des lunettes noires se léchant le nez, fond caramel"
+    },
+    {
+      "categorie": "jeu",
+      "legende": "En plein saut",
+      "photo": "/assets/img/uploads/epagneul-saut-balle-jaune.jpg",
+      "alt": "Épagneul breton dressé sur ses pattes arrière, une balle jaune devant la gueule, fond sombre"
+    },
+    {
+      "categorie": "fun",
+      "legende": "Langue pendante",
+      "photo": "/assets/img/uploads/chien-bringe-lunettes-rondes.jpg",
+      "alt": "Chien bringé aux oreilles dressées avec des lunettes rondes noires et la langue pendante, fond gris foncé"
+    },
+    {
+      "categorie": "jeu",
+      "legende": "Croquette, fond jaune",
+      "photo": "/assets/img/uploads/epagneul-croquette-fond-jaune.jpg",
+      "alt": "Épagneul breton bouche grande ouverte, croquette en l'air, fond jaune"
+    },
+    {
+      "categorie": "fun",
+      "legende": "Lunettes, fond vert",
+      "photo": "/assets/img/uploads/epagneul-lunettes-fond-vert.jpg",
+      "alt": "Portrait d'un épagneul breton avec de grandes lunettes noires sur fond vert"
+    },
+    {
+      "categorie": "fun",
+      "legende": "Gourmand",
+      "photo": "/assets/img/uploads/chien-noir-sucette-langue.jpg",
+      "alt": "Chien noir léchant une grande sucette tourbillon, portrait sur fond gris"
+    },
+    {
+      "categorie": "jeu",
+      "legende": "Gros plan",
+      "photo": "/assets/img/uploads/epagneul-gueule-ouverte-fond-vert.jpg",
+      "alt": "Gros plan d'un épagneul breton gueule grande ouverte sur fond vert, croquette sous la mâchoire"
+    },
+    {
+      "categorie": "fun",
+      "legende": "Regard",
+      "photo": "/assets/img/uploads/epagneul-lunettes-fond-sombre.jpg",
+      "alt": "Portrait d'un épagneul breton avec de grandes lunettes noires sur fond gris foncé"
+    },
+    {
+      "categorie": "fun",
+      "legende": "Tête penchée",
+      "photo": "/assets/img/uploads/epagneul-lunettes-tete-penchee.jpg",
+      "alt": "Épagneul breton à lunettes noires, tête penchée, portrait sur fond caramel"
+    },
+    {
+      "categorie": "fun",
+      "legende": "Lunettes noires, fond caramel",
+      "photo": "/assets/img/uploads/epagneul-lunettes.jpg",
+      "alt": "Épagneul breton debout, lunettes noires, regard levé, sur fond caramel"
+    }
+  ]
+}

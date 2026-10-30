@@ -1,0 +1,145 @@
+---
+layout: layout.njk
+permalink: /index.html
+seoKey: accueil
+ldBusiness: true
+tags: pages
+---
+{%- set a = accueil -%}
+{%- if a.promo.afficher %}
+    <!-- Offre du moment (masquable dans l'éditeur) -->
+    <section class="promo" aria-labelledby="promo-title">
+      <div class="wrap promo__grid">
+        <div class="promo__text">
+          <p class="promo__tag">{{ a.promo.pastille }}</p>
+          <h2 id="promo-title" class="promo__title"><span>{{ a.promo.phrase }}</span><strong>{{ a.promo.valeur }}</strong></h2>
+          <p class="promo__cond">{{ a.promo.condition }}</p>
+          <ul class="promo__types" aria-label="Séances concernées">{% for t in a.promo.types %}<li>{{ t }}</li>{% endfor %}</ul>
+          <a class="btn" href="contact.html">{{ a.promo.bouton }}</a>
+          {%- if a.promo.note %}
+          <p class="promo__note">{{ a.promo.note }}</p>
+          {%- endif %}
+        </div>
+        {% ph { couleur: "chocolat", photo: a.promo.photo, alt: a.promo.alt, cls: "promo__ph", sizes: "(min-width: 860px) 45vw, 100vw" } %}
+      </div>
+    </section>
+{%- endif %}
+
+    <!-- 1. Présentation -->
+    <section class="intro" aria-labelledby="hero-title">
+      <div class="wrap intro__grid">
+        <div class="intro__text">
+          <p class="label">{{ a.intro.etiquette }}</p>
+          <h1 id="hero-title" class="display">{{ a.intro.titre | titre | safe }}</h1>
+          <p class="lead">{{ a.intro.intro | mdi | safe }}</p>
+          {{ a.intro.texte | md | safe }}
+          <div class="intro__ctas">
+            <a class="btn" href="contact.html">Je réserve ma séance</a>
+            <a class="intro__tel" href="{{ site.telephone | telHref }}">{% icon "phone" %}{{ site.telephone }}</a>
+          </div>
+        </div>
+        <div class="intro__visual">
+          {% ph { couleur: "caramel", cap: "Portrait studio", photo: a.intro.photo, alt: a.intro.alt, cls: "intro__ph", sizes: "(min-width: 960px) 48vw, 100vw", priority: true } %}
+        </div>
+      </div>
+    </section>
+
+    <!-- Bande de photos défilante (décorative) -->
+    <section class="reel" aria-label="Aperçu des portraits">
+      <div class="reel__track">
+        {%- for copie in [1, 2] %}
+        {%- for g in galerie.photos | batch(12) | first %}
+        <div class="reel__item reel__item--{{ loop.index % 3 }}"{% if copie == 2 %} aria-hidden="true"{% endif %}>
+          {% ph { couleur: palette | cycle(loop.index), photo: g.photo, alt: "" if copie == 2 else g.alt, sizes: "260px" } %}
+        </div>
+        {%- endfor %}
+        {%- endfor %}
+      </div>
+    </section>
+
+    <!-- 2. Points forts -->
+    <section class="brandband" aria-label="Le studio en bref">
+      <div class="wrap">
+        <ul class="brandband__points">
+          {%- for p in a.points %}
+          <li>{% icon p.icone %}<span>{{ p.texte }}</span></li>
+          {%- endfor %}
+        </ul>
+      </div>
+    </section>
+
+    <!-- 3. Blocs vers les pages du menu -->
+    <section class="section blocs-section" aria-label="Découvrir le site">
+      <div class="wrap blocs">
+        {%- for b in a.blocs %}
+        <a class="bloc" href="{{ b.lien }}">
+          {% ph { couleur: palette | cycle(loop.index), photo: b.photo, alt: b.alt or b.titre, sizes: "(min-width: 960px) 25vw, (min-width: 600px) 50vw, 100vw" } %}
+          <span class="bloc__body">
+            <span class="h3">{{ b.titre }}</span>
+            <span class="bloc__text">{{ b.texte }}</span>
+            <span class="link">{{ b.bouton }}</span>
+          </span>
+        </a>
+        {%- endfor %}
+      </div>
+    </section>
+
+    <!-- 4. Qui suis-je -->
+    <section class="section section--ink" aria-labelledby="presentation-title">
+      <div class="wrap bio">
+        {%- set bioFallback = galerie.photos[7] -%}
+        {%- if a.presentation.photo %}
+        {% ph { couleur: "caramel", photo: a.presentation.photo, alt: a.presentation.alt or site.photographe, sizes: "(min-width: 860px) 40vw, 100vw" } %}
+        {%- else %}
+        {% ph { couleur: "caramel", photo: bioFallback.photo, alt: bioFallback.alt, sizes: "(min-width: 860px) 40vw, 100vw" } %}
+        {%- endif %}
+        <div class="bio__text">
+          <p class="label">{{ a.presentation.etiquette }}</p>
+          <h2 id="presentation-title" class="h2" style="margin:22px 0 28px">{{ a.presentation.titre | titre | safe }}</h2>
+          {{ a.presentation.texte | md | safe }}
+          {%- if a.presentation.signature %}
+          <p class="bio__sign">{{ a.presentation.signature }}</p>
+          {%- endif %}
+          <a class="link" href="le-studio.html">Découvrir le studio</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. Les séances -->
+    <section class="section" aria-labelledby="seances-title">
+      <div class="wrap">
+        <div class="seances__intro">
+          <div>
+            <p class="label">Les séances</p>
+            <h2 id="seances-title" class="h2">{{ a.seances.titre | titre | safe }}</h2>
+          </div>
+          <p>{{ a.seances.intro | mdi | safe }}</p>
+        </div>
+        <h3 class="seances__sub">{{ a.seances.sous_titre }}</h3>
+        <div class="scards">
+          {%- for c in a.seances.cartes %}
+          {%- if c.photo %}
+          <article class="scard">
+            <h4 class="scard__t">{{ c.titre }}</h4>
+            {% ph { couleur: palette | cycle(loop.index), cap: c.legende, photo: c.photo, alt: c.alt or c.titre, sizes: "(min-width: 960px) 20vw, 50vw" } %}
+            <a class="scard__btn" href="{{ c.lien }}" aria-label="Découvrir : {{ c.titre }}">Découvrir</a>
+          </article>
+          {%- endif %}
+          {%- endfor %}
+        </div>
+        <p class="seances__more"><a class="btn btn--outline" href="seances.html">Prestations et tarifs</a></p>
+      </div>
+    </section>
+
+    <!-- 6. Avis -->
+{% include "avis.njk" %}
+
+    <!-- 7. Je réserve -->
+{% include "reserver.njk" %}
+
+    <!-- 8. Zone desservie (référencement local) -->
+    <section class="section local-band" aria-label="Zone desservie">
+      <div class="wrap">
+        <p>Studio photo pour animaux à {{ site.ville }}. Séances au studio et à domicile pour les animaux de {{ site.communes | join(", ") }} et de tout l'Aveyron.</p>
+      </div>
+    </section>

@@ -1,0 +1,30 @@
+{
+  "titre": "Politique de confidentialité",
+  "intro": "Comment vos données personnelles sont utilisées sur ce site (RGPD). Modèle à faire valider.",
+  "articles": [
+    {
+      "titre": "Responsable du traitement",
+      "texte": "Gabriel Salasc, Truffe de Wouf, Canet-de-Salars (Aveyron)."
+    },
+    {
+      "titre": "Données collectées",
+      "texte": "Le formulaire de contact transmet à Truffe de Wouf les informations que vous saisissez (prénom, téléphone, e-mail, informations sur votre animal, message). Elles sont reçues par e-mail et par l'outil de formulaires de l'hébergeur du site, et servent uniquement à répondre à votre demande et à organiser la séance. Les informations transmises par e-mail ou par téléphone sont utilisées de la même façon."
+    },
+    {
+      "titre": "Durée de conservation",
+      "texte": "[Durée de conservation des échanges et des photos, ex. 3 ans après le dernier contact.]"
+    },
+    {
+      "titre": "Partage des données",
+      "texte": "Vos données ne sont ni vendues ni cédées à des tiers. Seul l'hébergeur du site, qui achemine le formulaire, y a accès techniquement."
+    },
+    {
+      "titre": "Cookies",
+      "texte": "Ce site n'utilise ni cookie de mesure d'audience ni cookie publicitaire, et ses polices sont hébergées sur le site. La carte Google Maps de la page Contact n'est chargée que si vous cliquez sur « Afficher la carte » : Google peut alors déposer ses propres cookies."
+    },
+    {
+      "titre": "Vos droits",
+      "texte": "Vous pouvez demander l'accès, la rectification ou la suppression de vos données à tout moment par e-mail. Vous pouvez aussi saisir la CNIL (www.cnil.fr)."
+    }
+  ]
+}

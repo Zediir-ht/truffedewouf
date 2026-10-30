@@ -1,0 +1,108 @@
+---
+layout: layout.njk
+permalink: /seances.html
+seoKey: seances
+crumb: Les séances
+ldFaq: true
+tags: pages
+---
+{%- set r = seances -%}
+    <section class="pagehead">
+      <div class="wrap">
+        <div>
+          <p class="crumbs"><a href="index.html">Accueil</a> / Les séances</p>
+          <p class="label">Les séances</p>
+          <h1 class="display">{{ r.entete.titre | titre | safe }}</h1>
+        </div>
+        <p class="lead">{{ r.entete.intro | mdi | safe }}</p>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="presta-title" style="padding-top:clamp(56px,7vw,96px)">
+      <div class="wrap">
+        <div class="sechead">
+          <div>
+            <p class="label">Prestations</p>
+            <h2 id="presta-title" class="h2">{{ r.prestations.titre | titre | safe }}</h2>
+          </div>
+        </div>
+        <div class="presta">
+          {%- for p in r.prestations.liste %}
+          <article class="presta__item" id="{{ p.id }}">
+            {% ph { couleur: palette | cycle(loop.index), cap: p.titre, photo: p.photo, alt: p.alt or p.titre, sizes: "(min-width: 860px) 30vw, 100vw" } %}
+            <div>
+              <h3 class="h3">{{ p.titre }}</h3>
+              {{ p.texte | md | safe }}
+            </div>
+          </article>
+          {%- endfor %}
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--alt" aria-labelledby="tarifs-title">
+      <div class="wrap">
+        <div class="sechead">
+          <div>
+            <p class="label">Tarifs</p>
+            <h2 id="tarifs-title" class="h2">{{ r.formules.titre | titre | safe }}</h2>
+          </div>
+        </div>
+        <div class="pricing">
+          {%- for f in r.formules.liste %}
+          <article class="plan{% if f.mise_en_avant %} plan--featured{% endif %}">
+            <h3 class="h3">{{ f.nom }}</h3>
+            <p class="plan__price">{{ f.prix | prix }}</p>
+            <p class="plan__meta">{{ f.duree }}</p>
+            <ul>
+              {%- for i in f.inclus %}
+              <li>{% icon "check" %}{{ i }}</li>
+              {%- endfor %}
+            </ul>
+            <a class="btn{% if not f.mise_en_avant %} btn--outline{% endif %}" href="contact.html">Je réserve</a>
+          </article>
+          {%- endfor %}
+        </div>
+        {%- if r.formules.options.length %}
+        <div class="extras">
+          {%- for o in r.formules.options %}
+          <div><span>{{ o.nom }}</span><strong>{{ o.prix }}</strong></div>
+          {%- endfor %}
+        </div>
+        {%- endif %}
+        <p class="pricing__cgv">Réservations soumises aux <a class="link" href="cgv.html">conditions générales de vente</a>.</p>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="deroule-title">
+      <div class="wrap">
+        <div class="sechead">
+          <div>
+            <p class="label">Déroulé</p>
+            <h2 id="deroule-title" class="h2">{{ r.modalites.titre | titre | safe }}</h2>
+          </div>
+        </div>
+        <ol class="steps">
+          {%- for e in r.modalites.etapes %}
+          <li><h3>{{ e.titre }}</h3><p>{{ e.texte }}</p></li>
+          {%- endfor %}
+        </ol>
+      </div>
+    </section>
+
+    <section class="section section--alt" aria-labelledby="faq-title">
+      <div class="wrap">
+        <div class="sechead">
+          <div>
+            <p class="label">Questions fréquentes</p>
+            <h2 id="faq-title" class="h2">{{ r.faq.titre | titre | safe }}</h2>
+          </div>
+        </div>
+        <div class="faq">
+          {%- for q in r.faq.liste %}
+          <details><summary>{{ q.question }}</summary>{{ q.reponse | md | safe }}</details>
+          {%- endfor %}
+        </div>
+      </div>
+    </section>
+{% include "reserver.njk" %}

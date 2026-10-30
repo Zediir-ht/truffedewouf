@@ -1,0 +1,13 @@
+---
+permalink: /site.webmanifest
+eleventyExcludeFromCollections: true
+---
+{
+  "name": {{ (site.nom + " · " + site.baseline) | dump | safe }},
+  "short_name": {{ site.nom | dump | safe }},
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#121110",
+  "theme_color": "#121110",
+  "icons": [{ "src": "assets/img/favicon.svg", "sizes": "any", "type": "image/svg+xml" }]
+}

@@ -1,0 +1,28 @@
+{
+  "titre": "Me contacter",
+  "intro": "Une question, une envie de séance ? Appelez-moi ou envoyez votre demande avec le formulaire.",
+  "acces": "[Accès et stationnement à préciser.]",
+  "formulaire": {
+    "titre": "Votre demande",
+    "seances": [
+      "Portrait naturel",
+      "Portrait fun et déguisé",
+      "Séance jeu",
+      "Je ne sais pas encore"
+    ],
+    "lieux": [
+      "Au studio, à Canet-de-Salars",
+      "À domicile",
+      "Animation / événement"
+    ],
+    "note": "Vos informations servent uniquement à répondre à votre demande (voir la politique de confidentialité). Réponse sous 48 h.",
+    "succes": "Merci, votre demande est bien envoyée. Je vous réponds très vite.",
+    "secours": "L'envoi direct n'a pas abouti : votre messagerie s'ouvre avec la demande pré-remplie, il ne reste qu'à l'envoyer.",
+    "endpoint": "",
+    "cle": ""
+  },
+  "carte": {
+    "bouton": "Afficher la carte",
+    "info": "La carte est fournie par Google Maps. Elle ne se charge qu'à votre demande, pour ne déposer aucun cookie avant."
+  }
+}

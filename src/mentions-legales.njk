@@ -1,0 +1,27 @@
+---
+layout: layout.njk
+permalink: /mentions-legales.html
+title: Mentions légales · Truffe de Wouf
+description: Mentions légales du site Truffe de Wouf, studio photo pour animaux à Canet-de-Salars.
+noindex: true
+---
+    <section class="pagehead">
+      <div class="wrap">
+        <div>
+          <p class="crumbs"><a href="index.html">Accueil</a> / Mentions légales</p>
+          <h1 class="display">{{ mentions.titre | titre | safe }}</h1>
+        </div>
+      </div>
+    </section>
+    <section class="section" style="padding-top:40px">
+      <div class="wrap prose">
+        <h2>Éditeur du site</h2>
+        <p>{{ mentions.editeur | escape | nl2br }}<br>{{ site.adresse }}, {{ site.code_postal }} {{ site.ville }}<br>Téléphone : <a href="{{ site.telephone | telHref }}">{{ site.telephone }}</a> · <a href="mailto:{{ site.email }}">{{ site.email }}</a></p>
+        <h2>Hébergement</h2>
+        <p>{{ mentions.hebergeur | escape | nl2br }}</p>
+        <h2>Propriété intellectuelle</h2>
+        <p>{{ mentions.propriete }}</p>
+        <h2>Données personnelles</h2>
+        <p>{{ mentions.donnees }} <a class="link" href="confidentialite.html">Politique de confidentialité</a></p>
+      </div>
+    </section>

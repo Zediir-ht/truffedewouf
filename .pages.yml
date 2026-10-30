@@ -1,0 +1,900 @@
+# Configuration de l'éditeur Pages CMS (https://pagescms.org)
+# Le client se connecte avec son compte GitHub et modifie uniquement les contenus ci-dessous.
+
+media:
+  input: src/assets/img/uploads
+  output: /assets/img/uploads
+content:
+- name: site
+  label: Coordonnées du studio
+  type: file
+  path: src/_data/site.json
+  format: json
+  fields:
+  - name: telephone
+    label: Téléphone
+    type: string
+    description: Affiché en haut de chaque page, dans le bouton « Je réserve » et cliquable sur mobile.
+      Ex. 06 00 00 00 00
+    required: true
+  - name: whatsapp
+    label: Numéro WhatsApp
+    type: string
+    description: Laissez vide pour masquer le lien WhatsApp.
+  - name: email
+    label: E-mail
+    type: string
+    description: Adresse qui reçoit les demandes du formulaire de contact.
+    required: true
+  - name: adresse
+    label: Adresse (rue)
+    type: string
+    description: Sans le code postal ni la ville. Ex. 3 chemin des Lacs
+    required: true
+  - name: code_postal
+    label: Code postal
+    type: string
+    required: true
+  - name: ville
+    label: Ville
+    type: string
+    required: true
+  - name: horaires
+    label: Horaires (texte affiché)
+    type: string
+    description: Ex. Sur rendez-vous, du lundi au samedi
+    required: true
+  - name: ouverture
+    label: Horaires pour Google
+    type: object
+    fields:
+    - name: jours
+      label: Jours d'ouverture
+      type: select
+      description: Indiquez les jours ouverts.
+      options:
+        multiple: true
+        values:
+        - lundi
+        - mardi
+        - mercredi
+        - jeudi
+        - vendredi
+        - samedi
+        - dimanche
+    - name: de
+      label: Ouverture
+      type: string
+      description: Ex. 09:30
+    - name: a
+      label: Fermeture
+      type: string
+      description: Ex. 19:00
+    description: Informations lues par Google. Elles ne s'affichent pas sur le site. Laissez vide si vous
+      travaillez uniquement sur rendez-vous.
+  - name: lien_google
+    label: Lien de la fiche Google
+    type: string
+    description: Copiez le lien « Partager » de votre fiche Google Business. Il sert au bouton Itinéraire
+      et aux avis.
+  - name: instagram
+    label: Lien Instagram
+    type: string
+    description: Adresse complète du profil. Laissez vide pour ne rien afficher.
+  - name: facebook
+    label: Lien Facebook
+    type: string
+    description: Laissez vide pour ne rien afficher.
+  - name: image_partage
+    label: Image de partage
+    type: image
+    description: Image affichée quand le site est partagé sur Facebook, WhatsApp, etc.
+  - name: communes
+    label: Commune desservie
+    type: string
+    list: true
+    description: Villes d'où viennent vos clients. Elles aident à être trouvé sur Google.
+  - name: accroche
+    label: Phrase d'accroche (en-tête)
+    type: string
+    description: Affichée à côté du logo.
+    required: true
+  - name: photographe
+    label: Nom du photographe
+    type: string
+    required: true
+  - name: nom
+    label: Nom du studio
+    type: string
+    description: Ne changez que si le nom change vraiment.
+    required: true
+  - name: baseline
+    label: Sous-titre court
+    type: string
+    required: true
+  - name: description_courte
+    label: Description courte (Google)
+    type: text
+    description: Une ou deux phrases qui présentent le studio.
+  - name: domaine
+    label: Adresse du site
+    type: string
+    description: Ne modifiez pas sans en parler à votre webmaster. Ex. https://www.truffedewouf.fr
+    required: true
+  - name: latitude
+    label: Latitude
+    type: string
+    description: 'Avancé : position GPS du studio pour Google.'
+  - name: longitude
+    label: Longitude
+    type: string
+    description: 'Avancé : position GPS du studio pour Google.'
+- name: accueil
+  label: Page d'accueil
+  type: file
+  path: src/_data/accueil.json
+  format: json
+  fields:
+  - name: intro
+    label: Présentation (haut de page)
+    type: object
+    fields:
+    - name: etiquette
+      label: Petite étiquette
+      type: string
+    - name: titre
+      label: Titre principal (important pour Google)
+      type: string
+      required: true
+    - name: intro
+      label: Phrase d'introduction
+      type: rich-text
+    - name: texte
+      label: Texte
+      type: rich-text
+    - name: photo
+      label: Photo principale
+      type: image
+      description: Glissez une photo ici. Laissez vide pour afficher un fond coloré.
+    - name: alt
+      label: Description de la photo
+      type: string
+      description: Décrivez la photo en une phrase (ex. « Chat roux sur fond caramel »). Utile pour Google
+        et les personnes malvoyantes.
+  - name: points
+    label: Bandeau des points forts
+    type: object
+    fields:
+    - name: icone
+      label: Icône
+      type: select
+      options:
+        values:
+        - camera
+        - pin
+        - palette
+        - heart
+        - image
+        - phone
+    - name: texte
+      label: Texte
+      type: string
+      required: true
+    list: true
+  - name: blocs
+    label: Blocs vers les pages
+    type: object
+    fields:
+    - name: titre
+      label: Titre
+      type: string
+      required: true
+    - name: texte
+      label: Texte court
+      type: text
+    - name: bouton
+      label: Texte du lien
+      type: string
+    - name: lien
+      label: Page ouverte au clic
+      type: string
+      description: Ex. le-studio.html, seances.html, galerie.html, contact.html
+      required: true
+    - name: photo
+      label: Photo
+      type: image
+      description: Glissez une photo ici. Laissez vide pour afficher un fond coloré.
+    - name: alt
+      label: Description de la photo
+      type: string
+      description: Décrivez la photo en une phrase (ex. « Chat roux sur fond caramel »). Utile pour Google
+        et les personnes malvoyantes.
+    list: true
+  - name: presentation
+    label: Qui suis-je
+    type: object
+    fields:
+    - name: etiquette
+      label: Petite étiquette
+      type: string
+    - name: titre
+      label: Titre
+      type: string
+      required: true
+    - name: texte
+      label: Texte
+      type: rich-text
+    - name: signature
+      label: Signature
+      type: string
+    - name: photo
+      label: Portrait
+      type: image
+      description: Glissez une photo ici. Laissez vide pour afficher un fond coloré.
+    - name: alt
+      label: Description de la photo
+      type: string
+      description: Décrivez la photo en une phrase (ex. « Chat roux sur fond caramel »). Utile pour Google
+        et les personnes malvoyantes.
+  - name: seances
+    label: Les séances
+    type: object
+    fields:
+    - name: titre
+      label: Titre
+      type: string
+      required: true
+    - name: intro
+      label: Texte d'introduction
+      type: rich-text
+      description: Vous pouvez y mettre des liens vers les autres pages.
+    - name: sous_titre
+      label: Sous-titre
+      type: string
+    - name: cartes
+      label: Cartes de séances
+      type: object
+      fields:
+      - name: titre
+        label: Titre
+        type: string
+        required: true
+      - name: legende
+        label: Mot affiché sur le fond coloré
+        type: string
+        description: Seulement tant qu'il n'y a pas de photo.
+      - name: lien
+        label: Page ouverte au clic
+        type: string
+        description: Ex. seances.html#fun
+        required: true
+      - name: photo
+        label: Photo
+        type: image
+        description: Glissez une photo ici. Laissez vide pour afficher un fond coloré.
+      - name: alt
+        label: Description de la photo
+        type: string
+        description: Décrivez la photo en une phrase (ex. « Chat roux sur fond caramel »). Utile pour
+          Google et les personnes malvoyantes.
+      list: true
+  - name: reserver
+    label: Bloc « Je réserve ma séance »
+    type: object
+    fields:
+    - name: titre
+      label: Titre
+      type: string
+      required: true
+    - name: texte
+      label: Texte
+      type: text
+    description: Grand bloc en bas des pages. Le bouton flottant « Je réserve ma séance » est toujours
+      présent.
+  - name: promo
+    label: Offre du moment (bandeau en haut)
+    type: object
+    fields:
+    - name: afficher
+      label: Afficher l'offre
+      type: boolean
+      description: Cochez pour afficher le bandeau, décochez pour le masquer.
+    - name: pastille
+      label: Petite étiquette
+      type: string
+    - name: phrase
+      label: Phrase d'accroche
+      type: string
+    - name: valeur
+      label: Valeur en grand
+      type: string
+      description: Ex. −20 %
+    - name: condition
+      label: Condition
+      type: string
+    - name: types
+      label: Séance concernée
+      type: string
+      list: true
+    - name: bouton
+      label: Texte du bouton
+      type: string
+    - name: note
+      label: Note en petit
+      type: string
+    - name: photo
+      label: Photo
+      type: image
+      description: Glissez une photo ici. Laissez vide pour afficher un fond coloré.
+    - name: alt
+      label: Description de la photo
+      type: string
+      description: Décrivez la photo en une phrase (ex. « Chat roux sur fond caramel »). Utile pour Google
+        et les personnes malvoyantes.
+- name: studio
+  label: Page Le Studio
+  type: file
+  path: src/_data/studio.json
+  format: json
+  fields:
+  - name: entete
+    label: En-tête de la page
+    type: object
+    fields:
+    - name: titre
+      label: Titre
+      type: string
+      required: true
+    - name: intro
+      label: Introduction
+      type: text
+  - name: espace
+    label: Le lieu
+    type: object
+    fields:
+    - name: etiquette
+      label: Petite étiquette
+      type: string
+    - name: titre
+      label: Titre
+      type: string
+      required: true
+    - name: texte
+      label: Texte
+      type: rich-text
+    - name: legende
+      label: Mot affiché sur le fond coloré
+      type: string
+      description: Seulement tant qu'il n'y a pas de photo.
+    - name: photo
+      label: Photo
+      type: image
+      description: Glissez une photo ici. Laissez vide pour afficher un fond coloré.
+    - name: alt
+      label: Description de la photo
+      type: string
+      description: Décrivez la photo en une phrase (ex. « Chat roux sur fond caramel »). Utile pour Google
+        et les personnes malvoyantes.
+  - name: approche
+    label: Les façons de photographier
+    type: object
+    fields:
+    - name: titre
+      label: Titre
+      type: string
+      required: true
+    - name: regles
+      label: Façons
+      type: object
+      fields:
+      - name: titre
+        label: Titre
+        type: string
+        required: true
+      - name: texte
+        label: Texte
+        type: text
+      list: true
+  - name: photographe
+    label: Le photographe
+    type: object
+    fields:
+    - name: etiquette
+      label: Petite étiquette
+      type: string
+    - name: titre
+      label: Titre
+      type: string
+      required: true
+    - name: texte
+      label: Texte
+      type: rich-text
+    - name: signature
+      label: Signature
+      type: string
+    - name: legende
+      label: Mot affiché sur le fond coloré
+      type: string
+      description: Seulement tant qu'il n'y a pas de photo.
+    - name: photo
+      label: Portrait
+      type: image
+      description: Glissez une photo ici. Laissez vide pour afficher un fond coloré.
+    - name: alt
+      label: Description de la photo
+      type: string
+      description: Décrivez la photo en une phrase (ex. « Chat roux sur fond caramel »). Utile pour Google
+        et les personnes malvoyantes.
+  - name: deplacements
+    label: À domicile et en événement
+    type: object
+    fields:
+    - name: titre
+      label: Titre
+      type: string
+      required: true
+    - name: intro
+      label: Introduction
+      type: text
+    - name: lieux
+      label: Lieux
+      type: object
+      fields:
+      - name: nom
+        label: Lieu
+        type: string
+        required: true
+      - name: detail
+        label: Détail
+        type: text
+      list: true
+- name: seances
+  label: Les séances et tarifs
+  type: file
+  path: src/_data/seances.json
+  format: json
+  fields:
+  - name: entete
+    label: En-tête de la page
+    type: object
+    fields:
+    - name: titre
+      label: Titre
+      type: string
+      required: true
+    - name: intro
+      label: Introduction
+      type: string
+  - name: prestations
+    label: Prestations
+    type: object
+    fields:
+    - name: titre
+      label: Titre
+      type: string
+      required: true
+    - name: liste
+      label: Prestations
+      type: object
+      fields:
+      - name: id
+        label: Identifiant (ancre)
+        type: string
+        description: Sans espace ni accent. Sert aux liens « seances.html#… ». Ne le changez pas si des
+          liens l'utilisent.
+        required: true
+      - name: titre
+        label: Titre
+        type: string
+        required: true
+      - name: texte
+        label: Description
+        type: rich-text
+      - name: photo
+        label: Photo
+        type: image
+        description: Glissez une photo ici. Laissez vide pour afficher un fond coloré.
+      - name: alt
+        label: Description de la photo
+        type: string
+        description: Décrivez la photo en une phrase (ex. « Chat roux sur fond caramel »). Utile pour
+          Google et les personnes malvoyantes.
+      list: true
+  - name: formules
+    label: Tarifs
+    type: object
+    fields:
+    - name: titre
+      label: Titre de la section
+      type: string
+    - name: liste
+      label: Formules
+      type: object
+      fields:
+      - name: nom
+        label: Nom de la formule
+        type: string
+        required: true
+      - name: prix
+        label: Prix
+        type: string
+        description: 'Chiffres seulement (ex. 150) : « € » est ajouté tout seul. Ou un texte (ex. Sur
+          devis). Vide : « Tarif à venir ».'
+      - name: duree
+        label: Lieu / durée
+        type: string
+        description: Ex. Studio · 1 h
+      - name: mise_en_avant
+        label: Mettre en avant (encadré blanc)
+        type: boolean
+      - name: inclus
+        label: Ce qui est inclus
+        type: string
+        list: true
+        description: Une ligne par élément.
+      list: true
+    - name: options
+      label: Options
+      type: object
+      fields:
+      - name: nom
+        label: Option
+        type: string
+        required: true
+      - name: prix
+        label: Prix
+        type: string
+        description: Ex. + 20 €
+        required: true
+      list: true
+      description: Laissez vide pour masquer la ligne des options.
+  - name: modalites
+    label: Comment ça se passe
+    type: object
+    fields:
+    - name: titre
+      label: Titre
+      type: string
+      required: true
+    - name: etapes
+      label: Étapes
+      type: object
+      fields:
+      - name: titre
+        label: Titre
+        type: string
+        required: true
+      - name: texte
+        label: Texte
+        type: text
+      list: true
+  - name: faq
+    label: Questions fréquentes
+    type: object
+    fields:
+    - name: titre
+      label: Titre
+      type: string
+      required: true
+    - name: liste
+      label: Questions
+      type: object
+      fields:
+      - name: question
+        label: Question
+        type: string
+        required: true
+      - name: reponse
+        label: Réponse
+        type: rich-text
+      list: true
+      description: Ces questions sont aussi envoyées à Google pour apparaître dans les résultats de recherche.
+- name: galerie
+  label: Galerie photos
+  type: file
+  path: src/_data/galerie.json
+  format: json
+  fields:
+  - name: entete
+    label: En-tête de la page
+    type: object
+    fields:
+    - name: titre
+      label: Titre
+      type: string
+      required: true
+    - name: intro
+      label: Introduction
+      type: text
+  - name: categories
+    label: Catégories (boutons de filtre)
+    type: object
+    fields:
+    - name: id
+      label: Identifiant
+      type: string
+      description: Sans espace ni accent, en minuscules. Ne le changez pas si des photos l'utilisent.
+      required: true
+    - name: nom
+      label: Nom affiché
+      type: string
+      required: true
+    list: true
+  - name: photos
+    label: Photos de la galerie
+    type: object
+    fields:
+    - name: photo
+      label: Photo
+      type: image
+      description: Glissez la photo ici. Peu importe sa taille, le site la réduit automatiquement.
+    - name: alt
+      label: Description de la photo
+      type: string
+      description: Décrivez la photo en une phrase (ex. « Chat roux sur fond caramel »). Utile pour Google
+        et les personnes malvoyantes.
+    - name: legende
+      label: Légende
+      type: string
+      description: Affichée dans l'aperçu agrandi.
+      required: true
+    - name: categorie
+      label: Catégorie
+      type: string
+      description: Identifiant d'une catégorie ci-dessus (naturel, fun ou jeu).
+      required: true
+    list: true
+    description: 'Pour ajouter une photo : « Ajouter » en bas de liste. Pour en retirer une : la corbeille.
+      Glissez-déposez pour changer l''ordre.'
+- name: contact
+  label: Page Contact
+  type: file
+  path: src/_data/contact.json
+  format: json
+  fields:
+  - name: titre
+    label: Titre
+    type: string
+    required: true
+  - name: intro
+    label: Introduction
+    type: text
+  - name: acces
+    label: Accès et stationnement
+    type: text
+    description: L'adresse et le téléphone se modifient dans « Coordonnées du studio ».
+  - name: formulaire
+    label: Formulaire
+    type: object
+    fields:
+    - name: titre
+      label: Titre
+      type: string
+      required: true
+    - name: seances
+      label: Type de séance proposé
+      type: string
+      list: true
+      description: Choix de la liste « Type de séance ».
+    - name: lieux
+      label: Lieu proposé
+      type: string
+      list: true
+      description: Choix de la liste « Lieu ».
+    - name: note
+      label: Texte sous le bouton
+      type: text
+    - name: succes
+      label: Message après envoi réussi
+      type: text
+    - name: secours
+      label: Message si l'envoi direct échoue
+      type: text
+      description: Dans ce cas, la messagerie du visiteur s'ouvre avec la demande pré-remplie.
+    - name: endpoint
+      label: Adresse d'envoi externe (facultatif)
+      type: string
+      description: Laissez vide avec Netlify (formulaire géré automatiquement). Sinon, adresse fournie par un service comme Web3Forms ou Formspree.
+    - name: cle
+      label: Clé du service externe (facultatif)
+      type: string
+  - name: carte
+    label: Carte d'accès
+    type: object
+    fields:
+    - name: bouton
+      label: Texte du bouton
+      type: string
+    - name: info
+      label: Texte avant affichage de la carte
+      type: text
+- name: avis
+  label: Avis clients
+  type: file
+  path: src/_data/avis.json
+  format: json
+  fields:
+  - name: titre
+    label: Titre
+    type: string
+    required: true
+  - name: note
+    label: Note moyenne Google
+    type: string
+    description: Ex. 4,9. Recopiez-la depuis votre fiche Google. Laissez vide pour ne pas l'afficher.
+  - name: nombre
+    label: Nombre d'avis sur Google
+    type: string
+    description: Chiffres seulement. Sert à Google pour afficher les étoiles dans les résultats. Ne renseignez
+      que le vrai nombre.
+  - name: avis
+    label: Avis à afficher
+    type: object
+    fields:
+    - name: nom
+      label: Prénom et initiale
+      type: string
+      description: Ex. Camille D.
+      required: true
+    - name: texte
+      label: Texte de l'avis
+      type: text
+      description: Recopiez un vrai avis laissé sur Google, sans le modifier.
+      required: true
+    - name: date
+      label: Date
+      type: string
+      description: Facultatif. Ex. mars 2026
+    list: true
+    description: Supprimez tous les avis pour masquer la section.
+- name: cgv
+  label: Conditions générales de vente
+  type: file
+  path: src/_data/cgv.json
+  format: json
+  fields:
+  - name: titre
+    label: Titre
+    type: string
+    required: true
+  - name: intro
+    label: Introduction
+    type: text
+  - name: articles
+    label: Articles
+    type: object
+    fields:
+    - name: titre
+      label: Titre
+      type: string
+      required: true
+    - name: texte
+      label: Texte
+      type: rich-text
+    list: true
+    description: Remplacez les passages entre crochets.
+- name: confidentialite
+  label: Confidentialité (RGPD)
+  type: file
+  path: src/_data/confidentialite.json
+  format: json
+  fields:
+  - name: titre
+    label: Titre
+    type: string
+    required: true
+  - name: intro
+    label: Introduction
+    type: text
+  - name: articles
+    label: Articles
+    type: object
+    fields:
+    - name: titre
+      label: Titre
+      type: string
+      required: true
+    - name: texte
+      label: Texte
+      type: rich-text
+    list: true
+    description: Remplacez les passages entre crochets.
+- name: mentions
+  label: Mentions légales
+  type: file
+  path: src/_data/mentions.json
+  format: json
+  fields:
+  - name: titre
+    label: Titre
+    type: string
+    required: true
+  - name: editeur
+    label: Éditeur du site
+    type: text
+    description: Nom, statut juridique, SIRET.
+  - name: hebergeur
+    label: Hébergeur
+    type: text
+  - name: propriete
+    label: Propriété intellectuelle
+    type: text
+  - name: donnees
+    label: Données personnelles
+    type: text
+- name: seo
+  label: Référencement Google (avancé)
+  type: file
+  path: src/_data/seo.json
+  format: json
+  fields:
+  - name: accueil
+    label: Accueil
+    type: object
+    fields:
+    - name: titre
+      label: Titre dans Google
+      type: string
+      description: Idéalement moins de 65 caractères, avec « photo », « animaux » et « Aveyron ».
+      required: true
+    - name: description
+      label: Description dans Google
+      type: text
+      description: Environ 150 caractères.
+      required: true
+  - name: studio
+    label: Le Studio
+    type: object
+    fields:
+    - name: titre
+      label: Titre dans Google
+      type: string
+      description: Idéalement moins de 65 caractères, avec « photo », « animaux » et « Aveyron ».
+      required: true
+    - name: description
+      label: Description dans Google
+      type: text
+      description: Environ 150 caractères.
+      required: true
+  - name: seances
+    label: Les séances
+    type: object
+    fields:
+    - name: titre
+      label: Titre dans Google
+      type: string
+      description: Idéalement moins de 65 caractères, avec « photo », « animaux » et « Aveyron ».
+      required: true
+    - name: description
+      label: Description dans Google
+      type: text
+      description: Environ 150 caractères.
+      required: true
+  - name: galerie
+    label: Galerie
+    type: object
+    fields:
+    - name: titre
+      label: Titre dans Google
+      type: string
+      description: Idéalement moins de 65 caractères, avec « photo », « animaux » et « Aveyron ».
+      required: true
+    - name: description
+      label: Description dans Google
+      type: text
+      description: Environ 150 caractères.
+      required: true
+  - name: contact
+    label: Contact
+    type: object
+    fields:
+    - name: titre
+      label: Titre dans Google
+      type: string
+      description: Idéalement moins de 65 caractères, avec « photo », « animaux » et « Aveyron ».
+      required: true
+    - name: description
+      label: Description dans Google
+      type: text
+      description: Environ 150 caractères.
+      required: true

@@ -1,0 +1,22 @@
+{
+  "accueil": {
+    "titre": "Truffe de Wouf · Studio photo pour animaux en Aveyron, Canet-de-Salars",
+    "description": "Studio photo pour animaux à Canet-de-Salars, en Aveyron : portraits de votre chien, chat ou compagnon au studio ou à domicile, du portrait naturel au portrait fun et déguisé. Réservez votre séance."
+  },
+  "studio": {
+    "titre": "Le studio · Photographe animalier à Canet-de-Salars | Truffe de Wouf",
+    "description": "Le studio Truffe de Wouf à Canet-de-Salars (Aveyron) : un studio photo pour animaux, des séances au rythme de votre compagnon, à domicile ou en événement."
+  },
+  "seances": {
+    "titre": "Séances photo pour animaux et tarifs · Aveyron | Truffe de Wouf",
+    "description": "Portrait naturel, portrait fun et déguisé, séance jeu, séance à domicile, animations en boutiques et événements : les séances photo pour animaux de Truffe de Wouf en Aveyron."
+  },
+  "galerie": {
+    "titre": "Galerie · Portraits d'animaux en Aveyron | Truffe de Wouf",
+    "description": "Galerie de portraits d'animaux réalisés au studio Truffe de Wouf à Canet-de-Salars, en Aveyron : portraits naturels, portraits fun sur fond coloré, photos de jeu."
+  },
+  "contact": {
+    "titre": "Contact et réservation · Studio photo animalier Aveyron | Truffe de Wouf",
+    "description": "Réservez votre séance photo pour animaux au studio Truffe de Wouf à Canet-de-Salars, en Aveyron : téléphone, adresse et formulaire de contact."
+  }
+}

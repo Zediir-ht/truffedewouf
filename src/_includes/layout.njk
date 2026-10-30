@@ -1,0 +1,154 @@
+{%- set s = seo[seoKey] if seoKey else {} -%}
+{%- set pageTitle = s.titre or title -%}
+{%- set pageDesc = s.description or description -%}
+{%- set canonical = site.domaine + (page.url | replace("index.html", "")) -%}
+{%- set og = "" | ogUrl -%}
+{%- set mapsUrl = site | mapsHref -%}
+{%- set telUrl = site.telephone | telHref -%}
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  {%- if page.url == "/404.html" %}
+  <base href="/">
+  {%- endif %}
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ pageTitle }}</title>
+  <meta name="description" content="{{ pageDesc }}">
+  <link rel="canonical" href="{{ canonical }}">
+  <meta name="robots" content="{{ 'noindex, follow' if noindex else 'index, follow, max-image-preview:large' }}">
+  <meta name="theme-color" content="#ecd7bf">
+  <meta name="geo.region" content="FR-12">
+  <meta name="geo.placename" content="{{ site.ville }}">
+  {%- if site.latitude and site.longitude %}
+  <meta name="geo.position" content="{{ site.latitude }};{{ site.longitude }}">
+  {%- endif %}
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="fr_FR">
+  <meta property="og:site_name" content="{{ site.nom }}">
+  <meta property="og:title" content="{{ pageTitle }}">
+  <meta property="og:description" content="{{ pageDesc }}">
+  <meta property="og:url" content="{{ canonical }}">
+  {%- if og %}
+  <meta property="og:image" content="{{ og }}">
+  {%- endif %}
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="preload" href="assets/fonts/instrument-serif-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/inter-tight-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="assets/css/style.css">
+  {%- if ldBusiness %}
+  <script type="application/ld+json">
+{{ site | localBusinessLd(avis) | safe }}
+  </script>
+  {%- endif %}
+  {%- if crumb %}
+  <script type="application/ld+json">
+{{ crumb | breadcrumbLd(page.url, site) | safe }}
+  </script>
+  {%- endif %}
+  {%- if ldFaq %}
+  <script type="application/ld+json">
+{{ seances.faq.liste | faqLd | safe }}
+  </script>
+  {%- endif %}
+</head>
+<body{% if noResa %} class="no-resa"{% endif %}>
+  <a class="skip" href="#contenu">Aller au contenu</a>
+
+  <div class="topbar">
+    <div class="wrap">
+      <a class="topbar__addr" href="{{ mapsUrl }}" target="_blank" rel="noopener">{% icon "pin" %}<span>{{ site.adresse }}, {{ site.code_postal }} {{ site.ville }}</span></a>
+      <div class="topbar__right">
+        <span class="topbar__hours">{{ site.horaires }}</span>
+        {%- if site.whatsapp %}
+        <a class="topbar__wa" href="{{ site.whatsapp | waHref }}" target="_blank" rel="noopener">{% icon "chat" %}<span>WhatsApp</span></a>
+        {%- endif %}
+        <a class="topbar__tel" href="{{ telUrl }}">{% icon "phone" %}{{ site.telephone }}</a>
+      </div>
+    </div>
+  </div>
+
+  <header class="header">
+    <div class="wrap">
+      <a class="brand" href="index.html" aria-label="{{ site.nom }}, accueil">
+        {% logoImg "brand__logo", site.nom, "noir" %}
+        <span class="brand__tagline">{{ site.accroche }}</span>
+      </a>
+      <button class="burger" aria-expanded="false" aria-controls="menu">
+        <span class="sr-only">Menu</span>
+        <svg class="burger__paw" viewBox="0 0 64 64" aria-hidden="true"><path d="M32 28c-8 0-17 9-17 17 0 5 4 8 9 8 3 0 5.5-1.5 8-1.5s5 1.5 8 1.5c5 0 9-3 9-8 0-8-9-17-17-17z"/><ellipse cx="12.5" cy="30" rx="5.5" ry="8" transform="rotate(-25 12.5 30)"/><ellipse cx="25" cy="16.5" rx="5.5" ry="8.500" transform="rotate(-8 25 16.5)"/><ellipse cx="39" cy="16.5" rx="5.5" ry="8.500" transform="rotate(8 39 16.5)"/><ellipse cx="51.5" cy="30" rx="5.5" ry="8" transform="rotate(25 51.5 30)"/></svg>
+        <svg class="burger__x" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>
+      </button>
+      <nav id="menu" class="menu" aria-label="Navigation principale">
+        <a href="le-studio.html"{% if page.url == "/le-studio.html" %} aria-current="page"{% endif %}>Le Studio</a>
+        <a href="seances.html"{% if page.url == "/seances.html" %} aria-current="page"{% endif %}>Les séances</a>
+        <a href="galerie.html"{% if page.url == "/galerie.html" %} aria-current="page"{% endif %}>Galerie</a>
+        <a href="contact.html"{% if page.url == "/contact.html" %} aria-current="page"{% endif %}>Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="contenu">
+{{ content | safe }}
+  </main>
+
+  <footer class="footer">
+    <div class="wrap">
+      <div class="footer__top">
+        <div class="footer__brand">
+          {% logoImg "footer__logo", site.nom %}
+          <p>{{ site.accroche }}</p>
+        </div>
+        <div>
+          <h2>Le studio</h2>
+          <address>{{ site.adresse }}<br>{{ site.code_postal }} {{ site.ville }}<br>Aveyron, Occitanie</address>
+          <p style="margin-top:10px"><a class="link" href="{{ mapsUrl }}" target="_blank" rel="noopener">Itinéraire</a></p>
+        </div>
+        <div>
+          <h2>Contact</h2>
+          <ul>
+            <li><a class="footer__tel" href="{{ telUrl }}">{{ site.telephone }}</a></li>
+            <li><a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
+            <li>{{ site.horaires }}</li>
+            {%- if site.instagram %}
+            <li><a href="{{ site.instagram }}" target="_blank" rel="noopener">Instagram</a></li>
+            {%- endif %}
+            {%- if site.facebook %}
+            <li><a href="{{ site.facebook }}" target="_blank" rel="noopener">Facebook</a></li>
+            {%- endif %}
+          </ul>
+        </div>
+        <div>
+          <h2>Pages</h2>
+          <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="le-studio.html">Le Studio</a></li>
+            <li><a href="seances.html">Les séances</a></li>
+            <li><a href="galerie.html">Galerie</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <span>© <span data-year>2026</span> {{ site.nom }} · Photographe animalier à {{ site.ville }}, Aveyron</span>
+        <nav class="footer__legal" aria-label="Informations légales">
+          <a href="cgv.html">Conditions générales de vente</a>
+          <a href="mentions-legales.html">Mentions légales</a>
+          <a href="confidentialite.html">Confidentialité (RGPD)</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+  {%- if not noResa %}
+  <div class="resa" role="complementary" aria-label="Réservation">
+    <a class="resa__tel" href="{{ telUrl }}">{% icon "phone" %}<span>{{ site.telephone }}</span></a>
+    <a class="resa__btn" href="contact.html">Je réserve ma séance</a>
+  </div>
+  {%- endif %}
+
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>

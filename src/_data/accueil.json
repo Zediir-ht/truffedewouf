@@ -1,0 +1,133 @@
+{
+  "promo": {
+    "afficher": false,
+    "pastille": "Offre du moment",
+    "phrase": "Votre séance photo",
+    "valeur": "−20 %",
+    "condition": "Uniquement du mardi au jeudi",
+    "types": [
+      "Portrait naturel",
+      "Portrait fun",
+      "Séance jeu",
+      "À domicile"
+    ],
+    "bouton": "Je réserve ma séance",
+    "note": "*Conditions de l'offre à préciser.",
+    "photo": "",
+    "alt": ""
+  },
+  "intro": {
+    "etiquette": "Studio photo pour animaux · Aveyron",
+    "titre": "Studio photo pour animaux à Canet-de-Salars",
+    "intro": "Je photographie vos animaux pour révéler leur sensibilité et leur caractère, et vous les montrer comme vos yeux ne peuvent pas les voir.",
+    "texte": "Du **portrait sobre et naturel** au **portrait rigolo et déguisé** sur fond coloré, en passant par des photos de jeu avec des accessoires : chaque séance est un moment ludique pour votre compagnon, au studio de Canet-de-Salars ou chez vous.",
+    "photo": "/assets/img/uploads/epagneul-lunettes.jpg",
+    "alt": "Épagneul breton portant des lunettes, portrait en studio sur fond caramel"
+  },
+  "blocs": [
+    {
+      "titre": "Le Studio",
+      "texte": "Un studio photo pour animaux installé à Canet-de-Salars, au cœur de l'Aveyron, pensé pour que votre compagnon s'y sente bien.",
+      "bouton": "Découvrir le studio",
+      "lien": "le-studio.html",
+      "photo": "/assets/img/uploads/deux-chiens-noirs-assis.jpg",
+      "alt": "Deux chiens posant au studio, un chien noir et un border collie sur fond gris foncé"
+    },
+    {
+      "titre": "Les séances",
+      "texte": "Portrait naturel, portrait fun et déguisé, séance jeu, séance à domicile ou animation en événement : prestations et tarifs.",
+      "bouton": "Voir les séances",
+      "lien": "seances.html",
+      "photo": "/assets/img/uploads/epagneul-balle-et-ballons.jpg",
+      "alt": "Épagneul breton levant la tête vers une balle jaune, ballons colorés en arrière-plan, fond vert"
+    },
+    {
+      "titre": "Galerie",
+      "texte": "Des portraits d'animaux qui font ressortir leur caractère : sérieux, tendres ou franchement drôles.",
+      "bouton": "Voir la galerie",
+      "lien": "galerie.html",
+      "photo": "/assets/img/uploads/epagneul-croquette-fond-jaune.jpg",
+      "alt": "Épagneul breton bouche grande ouverte, croquette en l'air, fond jaune"
+    },
+    {
+      "titre": "Contact",
+      "texte": "Une question, une date ? Téléphone, adresse et formulaire de contact pour réserver votre séance.",
+      "bouton": "Me contacter",
+      "lien": "contact.html",
+      "photo": "/assets/img/uploads/chien-roux-lunettes-rondes-fond-vert.jpg",
+      "alt": "Chien roux avec de grosses lunettes rondes sur fond vert"
+    }
+  ],
+  "points": [
+    {
+      "icone": "camera",
+      "texte": "Séances au studio de Canet-de-Salars, dans l'Aveyron"
+    },
+    {
+      "icone": "pin",
+      "texte": "Déplacement à domicile pour les animaux plus à l'aise chez eux ou les propriétaires à mobilité réduite"
+    },
+    {
+      "icone": "palette",
+      "texte": "Du portrait sobre et naturel au portrait rigolo et déguisé sur fond coloré"
+    },
+    {
+      "icone": "heart",
+      "texte": "Animations photo en boutiques pour animaux, foires et événements animaliers"
+    }
+  ],
+  "presentation": {
+    "etiquette": "Qui suis-je",
+    "titre": "Révéler le caractère de chaque animal",
+    "texte": "Mon métier : photographier les animaux en studio pour réaliser des portraits qui font ressortir et mettent en avant leur sensibilité et leur caractère.\n\nJe veux vous montrer votre animal comme vos yeux ne peuvent pas le faire. Et lui faire passer un moment ludique, en faisant ressortir son côté joueur.",
+    "signature": "Gabriel Salasc",
+    "photo": "",
+    "alt": ""
+  },
+  "seances": {
+    "titre": "Les séances photo pour votre animal",
+    "intro": "Chaque animal est différent. Je vous propose plusieurs façons de le photographier, au [studio de Canet-de-Salars](le-studio.html), [chez vous](seances.html#domicile) ou lors d'une [animation en boutique ou en événement](seances.html#evenements).",
+    "sous_titre": "Découvrez les séances :",
+    "cartes": [
+      {
+        "titre": "Portrait naturel",
+        "legende": "Naturel",
+        "lien": "seances.html#naturel",
+        "photo": "/assets/img/uploads/chien-roux-bandana-bd.jpg",
+        "alt": "Portrait d'un chien roux et blanc portant un bandana style bande dessinée"
+      },
+      {
+        "titre": "Portrait fun et déguisé",
+        "legende": "Fun",
+        "lien": "seances.html#fun",
+        "photo": "/assets/img/uploads/chien-bringe-lunettes-rondes.jpg",
+        "alt": "Chien bringé avec des lunettes rondes et la langue pendante, portrait fun"
+      },
+      {
+        "titre": "Séance jeu",
+        "legende": "Jeu",
+        "lien": "seances.html#jeu",
+        "photo": "/assets/img/uploads/chien-bringe-bulles-de-savon.jpg",
+        "alt": "Chien bringé tirant la langue à travers des bulles de savon"
+      },
+      {
+        "titre": "Séance à domicile",
+        "legende": "À domicile",
+        "lien": "seances.html#domicile",
+        "photo": "",
+        "alt": ""
+      },
+      {
+        "titre": "Animations et événements",
+        "legende": "Événements",
+        "lien": "seances.html#evenements",
+        "photo": "",
+        "alt": ""
+      }
+    ]
+  },
+  "reserver": {
+    "titre": "Je réserve ma séance",
+    "texte": "Appelez-moi ou laissez un message : on choisit ensemble le type de séance, le lieu et la date."
+  }
+}
