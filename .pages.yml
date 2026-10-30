@@ -655,7 +655,7 @@ content:
     - name: categorie
       label: Catégorie
       type: string
-      description: Identifiant d'une catégorie ci-dessus (naturel, fun, jeu, domicile).
+      description: Identifiant d'une catégorie ci-dessus (naturel, fun ou jeu).
       required: true
     list: true
     description: 'Pour ajouter une photo : « Ajouter » en bas de liste. Pour en retirer une : la corbeille.

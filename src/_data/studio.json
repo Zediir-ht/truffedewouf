@@ -8,15 +8,24 @@
     "titre": "Un studio photo *à Canet-de-Salars*",
     "texte": "Les séances se déroulent dans mon studio, à mon domicile de Canet-de-Salars. Votre animal prend le temps de découvrir les lieux avant les premières photos.\n\nFonds colorés, accessoires, déguisements : tout est prêt pour passer d'un portrait sobre à une image pleine d'humour.",
     "legende": "Le studio",
-    "photo": "",
-    "alt": ""
+    "photo": "/assets/img/uploads/epagneul-assis-lunettes-fond-caramel.jpg",
+    "alt": "Épagneul breton assis avec des lunettes noires sur fond caramel, au studio de Canet-de-Salars"
   },
   "approche": {
     "titre": "Trois façons *de le photographier*",
     "regles": [
-      { "titre": "Le portrait naturel", "texte": "Un portrait sobre, qui met en valeur son regard, sa sensibilité et son caractère." },
-      { "titre": "Le portrait fun", "texte": "Plus rigolo, déguisé, sur fond coloré : pour les animaux qui ont le sens du spectacle." },
-      { "titre": "Le jeu", "texte": "Des photos prises en plein jeu, stimulées par différents accessoires, pour faire ressortir son côté joueur." }
+      {
+        "titre": "Le portrait naturel",
+        "texte": "Un portrait sobre, qui met en valeur son regard, sa sensibilité et son caractère."
+      },
+      {
+        "titre": "Le portrait fun",
+        "texte": "Plus rigolo, déguisé, sur fond coloré : pour les animaux qui ont le sens du spectacle."
+      },
+      {
+        "titre": "Le jeu",
+        "texte": "Des photos prises en plein jeu, stimulées par différents accessoires, pour faire ressortir son côté joueur."
+      }
     ]
   },
   "photographe": {
@@ -32,9 +41,18 @@
     "titre": "À domicile *et en événement*",
     "intro": "Je me déplace aussi chez vous, et j'anime des stands photo lors d'événements.",
     "lieux": [
-      { "nom": "Chez vous", "detail": "Pour les propriétaires à mobilité réduite ou les animaux plus à l'aise dans leur environnement du quotidien" },
-      { "nom": "Boutiques pour animaux", "detail": "Animations photo dans les boutiques spécialisées" },
-      { "nom": "Foires et événements", "detail": "Stand photo lors des foires et événements animaliers" }
+      {
+        "nom": "Chez vous",
+        "detail": "Pour les propriétaires à mobilité réduite ou les animaux plus à l'aise dans leur environnement du quotidien"
+      },
+      {
+        "nom": "Boutiques pour animaux",
+        "detail": "Animations photo dans les boutiques spécialisées"
+      },
+      {
+        "nom": "Foires et événements",
+        "detail": "Stand photo lors des foires et événements animaliers"
+      }
     ]
   }
 }

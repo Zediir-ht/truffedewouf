@@ -402,9 +402,9 @@ h1, h2, h3 { margin: 0; font-weight: 400; }
 .ar-sq { aspect-ratio: 1; }
 .ar-land { aspect-ratio: 5 / 4; }
 
-.lightbox { border: 0; padding: 0; background: transparent; max-width: min(92vw, calc(80vh * .8)); width: 100%; }
+.lightbox { border: 0; padding: 0; background: transparent; max-width: min(92vw, 1200px); width: 100%; }
 .lightbox::backdrop { background: rgba(23, 17, 14, .96); }
-.lightbox .ph { aspect-ratio: 4 / 5; max-height: 82vh; margin-inline: auto; border-radius: 3px; }
+.lightbox .ph { --r: .8; aspect-ratio: var(--r); width: min(100%, calc(76vh * var(--r))); margin-inline: auto; border-radius: 3px; }
 .lightbox__bar { display: flex; justify-content: space-between; align-items: center; color: var(--blanc); padding: 14px 0; font-size: .9rem; }
 .lightbox__bar button { background: none; border: 1px solid rgba(255, 248, 242, .4); color: var(--blanc); border-radius: 999px; padding: 8px 16px; cursor: pointer; font: inherit; }
 .lightbox__bar button:hover { background: var(--blanc); color: var(--noir); }

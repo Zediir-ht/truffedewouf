@@ -35,7 +35,7 @@ Client ──(Pages CMS)──▶ commit sur GitHub ──▶ Netlify / Cloudfla
 - Bouton « Je réserve ma séance » fixe sur toutes les pages sauf Contact (barre en bas d'écran sur mobile, avec le téléphone).
 
 ### Photos
-Le client dépose ses photos telles quelles. Au build, chaque photo est convertie en WebP + JPEG à plusieurs largeurs (`srcset`), chargée en différé, avec le texte alternatif saisi dans l'éditeur. Un emplacement sans photo affiche un fond coloré : le site n'a jamais de trou.
+26 photos de Gabriel (portfolio fourni par WeTransfer) sont déjà en place : galerie, accueil, séances et page Le Studio. Elles ont été réduites à 2400 px maximum et leurs métadonnées (EXIF) retirées avant d'être ajoutées au dépôt. Le client dépose ses prochaines photos telles quelles. Au build, chaque photo est convertie en WebP + JPEG à plusieurs largeurs (`srcset`), chargée en différé, avec le texte alternatif saisi dans l'éditeur. Un emplacement sans photo affiche un fond coloré : le site n'a jamais de trou.
 
 ### Données structurées et SEO
 Générées à partir des données, jamais écrites en dur :
@@ -76,7 +76,7 @@ Hors site, ce qui pèse le plus : fiche **Google Business Profile** (catégorie 
 | Avis : 3 textes provisoires. Ne mettre que de vrais avis Google | `avis.json` |
 | Bio du photographe (`[À compléter…]`), accès et stationnement | `studio.json`, `contact.json` |
 | CGV, confidentialité, mentions légales : passages entre crochets, à faire valider | `cgv.json`, `confidentialite.json`, `mentions.json` |
-| Photos : le WeTransfer du client n'a pas pu être récupéré automatiquement | via l'éditeur |
+| Photos manquantes (fonds colorés affichés à la place) : portrait du photographe, photo du studio « Qui suis-je », séance à domicile, animations et événements | via l'éditeur |
 
 ## Limites connues
 - Le formulaire de contact ouvre un e-mail pré-rempli dans la messagerie du visiteur (pas d'envoi par serveur), choix validé.

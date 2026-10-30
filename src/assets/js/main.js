@@ -58,7 +58,10 @@ if (gallery) {
     const src = it.querySelector(".ph");
     lbPh.className = src.className;
     lbPh.innerHTML = src.innerHTML;
-    lbPh.querySelectorAll("img, source").forEach((el) => el.setAttribute("sizes", "(min-width: 900px) 700px, 92vw"));
+    // La visionneuse reprend le format réel de la photo (4/5 si c'est un emplacement sans photo).
+    const ratio = /([\d.]+)\s*\/\s*([\d.]+)/.exec(src.style.aspectRatio || "");
+    lbPh.style.setProperty("--r", ratio ? String(ratio[1] / ratio[2]) : "0.8");
+    lbPh.querySelectorAll("img, source").forEach((el) => el.setAttribute("sizes", "(min-width: 1200px) 1100px, 92vw"));
     lbCap.textContent = it.dataset.cap;
     lbCount.textContent = `${idx + 1} / ${list.length}`;
     if (!lb.open) lb.showModal();

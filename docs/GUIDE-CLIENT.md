@@ -34,7 +34,7 @@ Dans un titre, entourez un mot d'étoiles pour le mettre en italique et en coule
 1. Rubrique **Galerie photos**, section **Photos de la galerie**.
 2. Cliquez sur **Ajouter** en bas de la liste.
 3. Dans **Photo**, glissez votre image (ou cliquez pour la choisir). Pas besoin de la réduire : le site s'en charge.
-4. Remplissez **Description de la photo** (une phrase, ex. « Chat roux sur fond caramel »), **Légende** et **Catégorie** (`naturel`, `fun`, `jeu` ou `domicile`).
+4. Remplissez **Description de la photo** (une phrase, ex. « Chat roux sur fond caramel »), **Légende** et **Catégorie** (`naturel`, `fun` ou `jeu`). Pour créer une nouvelle catégorie (par exemple « À domicile »), ajoutez-la d'abord dans **Catégories (boutons de filtre)**, au-dessus de la liste des photos.
 5. **Enregistrer**.
 
 ### Retirer une photo ou changer l'ordre
