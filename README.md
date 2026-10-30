@@ -33,7 +33,7 @@ Client ──(Pages CMS)──▶ commit sur GitHub ──▶ Netlify / Cloudfla
 - Le brun `#974922`, teinte du fond de studio de la photo du client, structure la page : boutons, bandeau des points forts, bandeau « Je réserve ma séance », formule mise en avant, bouton flottant. Le brun profond `#3b1c0f` remplace le noir pour le bandeau du haut et le pied de page.
 - Liens et numéros sur fond clair : brun foncé `#7d3a18` (le brun de marque y serait trop pâle pour être lu).
 - Tons secondaires tirés de la même photo pour les emplacements photo vides (`caramel`, `sable`, `chocolat`, `miel`, `creme`, `noir`).
-- Polices : Instrument Serif (titres, toujours en romain et en noir) et Inter Tight (texte).
+- Polices : Instrument Serif (titres, toujours en romain et en noir) et Inter Tight (texte), hébergées dans `src/assets/fonts/` (licence SIL OFL, aucun appel à Google, conforme RGPD).
 - Ombres légères teintées de brun profond (jamais de noir pur), en trois niveaux (`--ombre-sm`, `--ombre-md`, `--ombre-lg`) : en-tête au défilement, boutons, photos, cartes, avis, tarifs, FAQ, bandeaux de couleur, champs du formulaire.
 - Les couleurs sont des variables au début de `src/assets/css/style.css` (`:root` pour le clair, un second bloc pour les zones brunes).
 - Logo : version foncée sur l'en-tête, version blanche sur le pied de page (`src/assets/img/logo-noir.png` et `logo-blanc.png`).
@@ -69,6 +69,11 @@ Hors site, ce qui pèse le plus : fiche **Google Business Profile** (catégorie 
    - Il se connecte sur https://app.pagescms.org avec GitHub et choisit le dépôt. Le menu de l'éditeur vient de `.pages.yml`.
    - Lui transmettre `docs/GUIDE-CLIENT.md`.
 
+## Formulaire, carte et page 404
+- **Formulaire** : champs `form-name` et piège anti-robots (`bot-field`) déjà en place. Après le premier déploiement sur Netlify : Site configuration → Forms → Form notifications → Add notification → Email, avec l'adresse du studio. Les messages restent aussi consultables dans l'onglet Forms de Netlify.
+- **Carte Google Maps** : remplacée par un encart qui ne charge Google qu'au clic sur « Afficher la carte » (aucun cookie avant). Textes modifiables dans la rubrique Contact. La carte s'affichera sur la vraie adresse une fois `Adresse à compléter` remplacée.
+- **Page 404** : `src/404.njk`, publiée en `404.html` (Netlify et Cloudflare Pages l'utilisent automatiquement), `noindex`, absente du sitemap.
+
 ## Valeurs provisoires à remplacer (dans l'éditeur ou dans `src/_data/`)
 
 | Valeur provisoire | Où |
@@ -85,6 +90,6 @@ Hors site, ce qui pèse le plus : fiche **Google Business Profile** (catégorie 
 | Photos manquantes (fonds colorés affichés à la place) : portrait du photographe, photo du studio « Qui suis-je », séance à domicile, animations et événements | via l'éditeur |
 
 ## Limites connues
-- Le formulaire de contact ouvre un e-mail pré-rempli dans la messagerie du visiteur (pas d'envoi par serveur), choix validé.
+- Le formulaire envoie réellement la demande via Netlify Forms (gratuit jusqu'à 100 envois par mois). Cela ne fonctionne qu'une fois le site déployé sur Netlify : en local ou sur un autre hébergeur, le formulaire retombe sur l'e-mail pré-rempli. Pour un autre hébergeur, renseigner « Adresse d'envoi externe » (et la clé) dans l'éditeur, rubrique Contact (Web3Forms, Formspree…).
 - La configuration `.pages.yml` a été écrite d'après la documentation de Pages CMS mais pas testée dans l'interface en ligne : faire un essai de connexion et d'enregistrement avant de la remettre au client.
 - Les avis Google sont saisis à la main (pas d'import automatique).

@@ -41,7 +41,9 @@ tags: pages
         </div>
         <div>
           <h2 id="demande-title" class="h2" style="margin-bottom:28px">{{ c.formulaire.titre | titre | safe }}</h2>
-          <form class="form" id="contact-form" novalidate data-email="{{ site.email }}">
+          <form class="form" id="contact-form" name="contact" method="POST" action="/" novalidate data-netlify="true" data-netlify-honeypot="bot-field" data-email="{{ site.email }}"{% if c.formulaire.endpoint %} data-endpoint="{{ c.formulaire.endpoint }}"{% endif %}{% if c.formulaire.cle %} data-cle="{{ c.formulaire.cle }}"{% endif %} data-succes="{{ c.formulaire.succes }}" data-secours="{{ c.formulaire.secours }}">
+            <input type="hidden" name="form-name" value="contact">
+            <p class="form__piege" aria-hidden="true"><label>Ne pas remplir<input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
             <label>Votre prénom<input name="prenom" autocomplete="given-name" required></label>
             <label>Téléphone<input name="tel" type="tel" autocomplete="tel"></label>
             <label class="form__full">E-mail<input name="email" type="email" autocomplete="email" required></label>
@@ -80,8 +82,12 @@ tags: pages
             <a class="btn btn--outline" href="{{ mapsUrl }}" target="_blank" rel="noopener">Itinéraire</a>
           </div>
         </div>
-        <div class="access__map">
-          <iframe title="Plan d'accès au studio {{ site.nom }} à {{ site.ville }}" src="{{ site | mapsEmbed }}" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <div class="access__map" data-map="{{ site | mapsEmbed }}" data-title="Plan d'accès au studio {{ site.nom }} à {{ site.ville }}">
+          <div class="access__ph">
+            <p>{{ c.carte.info }}</p>
+            <button class="btn" type="button" data-map-btn>{{ c.carte.bouton }}</button>
+            <a class="link" href="{{ mapsUrl }}" target="_blank" rel="noopener">Ouvrir dans Google Maps</a>
+          </div>
         </div>
       </div>
     </section>

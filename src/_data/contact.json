@@ -15,6 +15,14 @@
       "À domicile",
       "Animation / événement"
     ],
-    "note": "En cliquant sur Envoyer, votre messagerie s'ouvre avec la demande pré-remplie : il ne reste qu'à l'envoyer."
+    "note": "Vos informations servent uniquement à répondre à votre demande (voir la politique de confidentialité). Réponse sous 48 h.",
+    "succes": "Merci, votre demande est bien envoyée. Je vous réponds très vite.",
+    "secours": "L'envoi direct n'a pas abouti : votre messagerie s'ouvre avec la demande pré-remplie, il ne reste qu'à l'envoyer.",
+    "endpoint": "",
+    "cle": ""
+  },
+  "carte": {
+    "bouton": "Afficher la carte",
+    "info": "La carte est fournie par Google Maps. Elle ne se charge qu'à votre demande, pour ne déposer aucun cookie avant."
   }
 }

@@ -101,6 +101,7 @@ export default function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy({
     "src/assets/css": "assets/css",
     "src/assets/js": "assets/js",
+    "src/assets/fonts": "assets/fonts",
     "src/assets/img/favicon.svg": "assets/img/favicon.svg",
   });
   eleventyConfig.addWatchTarget("src/assets/");

@@ -78,17 +78,14 @@ if (gallery) {
   });
 }
 
-// Formulaire : sans serveur pour l'instant, il prépare un e-mail dans la messagerie du visiteur.
+// Formulaire : envoi réel (Netlify Forms, ou un service externe si une adresse d'envoi est renseignée).
+// Si l'envoi échoue (hors ligne, test local), repli sur un e-mail pré-rempli dans la messagerie du visiteur.
 const form = document.getElementById("contact-form");
 if (form) {
   const note = form.querySelector(".form__note");
-  form.addEventListener("submit", (e) => {
-    e.preventDefault();
-    if (!form.checkValidity()) {
-      note.textContent = "Merci d'indiquer votre prénom, votre e-mail et votre animal.";
-      form.querySelector(":invalid").focus();
-      return;
-    }
+  const bouton = form.querySelector("button[type=submit]");
+
+  const ouvrirMessagerie = () => {
     const d = new FormData(form);
     const subject = `Demande de séance : ${d.get("seance")} pour ${d.get("animal")}`;
     const body = [
@@ -103,6 +100,46 @@ if (form) {
       `Téléphone : ${d.get("tel") || "non précisé"}`,
     ].join("\n");
     window.location.href = `mailto:${form.dataset.email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-    note.textContent = "Votre messagerie s'ouvre avec la demande pré-remplie. Il ne reste qu'à l'envoyer.";
+  };
+
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
+    if (!form.checkValidity()) {
+      note.textContent = "Merci d'indiquer votre prénom, votre e-mail et votre animal.";
+      form.querySelector(":invalid").focus();
+      return;
+    }
+    const data = new FormData(form);
+    if (form.dataset.cle) data.set("access_key", form.dataset.cle);
+    bouton.disabled = true;
+    note.textContent = "Envoi en cours…";
+    try {
+      const rep = await fetch(form.dataset.endpoint || form.getAttribute("action") || "/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded", Accept: "application/json, text/html" },
+        body: new URLSearchParams(data).toString(),
+      });
+      if (!rep.ok) throw new Error(String(rep.status));
+      form.reset();
+      note.textContent = form.dataset.succes;
+    } catch (err) {
+      ouvrirMessagerie();
+      note.textContent = form.dataset.secours;
+    } finally {
+      bouton.disabled = false;
+    }
   });
 }
+
+// Carte : l'iframe Google Maps n'est créée qu'au clic (aucun cookie tiers avant).
+document.querySelectorAll("[data-map]").forEach((box) => {
+  const btn = box.querySelector("[data-map-btn]");
+  if (!btn) return;
+  btn.addEventListener("click", () => {
+    const f = document.createElement("iframe");
+    f.title = box.dataset.title;
+    f.src = box.dataset.map;
+    f.referrerPolicy = "no-referrer-when-downgrade";
+    box.replaceChildren(f);
+  });
+});

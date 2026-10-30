@@ -684,6 +684,30 @@ content:
     - name: note
       label: Texte sous le bouton
       type: text
+    - name: succes
+      label: Message après envoi réussi
+      type: text
+    - name: secours
+      label: Message si l'envoi direct échoue
+      type: text
+      description: Dans ce cas, la messagerie du visiteur s'ouvre avec la demande pré-remplie.
+    - name: endpoint
+      label: Adresse d'envoi externe (facultatif)
+      type: string
+      description: Laissez vide avec Netlify (formulaire géré automatiquement). Sinon, adresse fournie par un service comme Web3Forms ou Formspree.
+    - name: cle
+      label: Clé du service externe (facultatif)
+      type: string
+  - name: carte
+    label: Carte d'accès
+    type: object
+    fields:
+    - name: bouton
+      label: Texte du bouton
+      type: string
+    - name: info
+      label: Texte avant affichage de la carte
+      type: text
 - name: avis
   label: Avis clients
   type: file

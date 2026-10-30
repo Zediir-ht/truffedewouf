@@ -1,0 +1,27 @@
+---
+layout: layout.njk
+permalink: /404.html
+title: Page introuvable
+description: Cette page n'existe pas ou a changé d'adresse.
+noindex: true
+noResa: true
+---
+    <section class="pagehead">
+      <div class="wrap">
+        <div>
+          <p class="label">Erreur 404</p>
+          <h1 class="display">Cette page s'est enfuie</h1>
+        </div>
+        <p class="lead">La page que vous cherchez n'existe pas ou a changé d'adresse. Retrouvez le studio depuis l'accueil, ou appelez-moi directement.</p>
+      </div>
+    </section>
+    <section class="section" style="padding-top:clamp(40px,6vw,80px)">
+      <div class="wrap">
+        <div class="access__ctas">
+          <a class="btn" href="index.html">Retour à l'accueil</a>
+          <a class="btn btn--outline" href="seances.html">Les séances</a>
+          <a class="btn btn--outline" href="galerie.html">La galerie</a>
+          <a class="btn btn--outline" href="{{ site.telephone | telHref }}">{{ site.telephone }}</a>
+        </div>
+      </div>
+    </section>

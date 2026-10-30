@@ -55,7 +55,7 @@ Rubrique **Page d'accueil**, section **Offre du moment (bandeau en haut)** : coc
 Rubrique **Coordonnées du studio**. Le changement s'applique d'un coup sur toutes les pages, le pied de page, le bouton « Je réserve ma séance » et les données envoyées à Google.
 
 ### Recevoir les demandes de contact
-Le formulaire de la page Contact ouvre la messagerie du visiteur avec sa demande pré-remplie, adressée à l'e-mail saisi dans **Coordonnées du studio**. Vérifiez que cette adresse existe bien et que vous la consultez.
+Le formulaire de la page Contact envoie la demande directement : vous la recevez par e-mail (notification à activer une fois dans l'hébergeur, voir le README) et vous la retrouvez aussi dans l'espace « Forms » de l'hébergeur. Si l'envoi direct échoue, la messagerie du visiteur s'ouvre avec la demande pré-remplie, adressée à l'e-mail des **Coordonnées du studio**. Vérifiez que cette adresse existe bien et que vous la consultez.
 
 ## Bonnes pratiques
 

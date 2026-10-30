@@ -8,7 +8,7 @@
     },
     {
       "titre": "Données collectées",
-      "texte": "Le formulaire de contact prépare un e-mail dans votre propre messagerie : aucune donnée n'est enregistrée par le site. Les informations que vous envoyez par e-mail ou par téléphone (nom, coordonnées, informations sur votre animal) servent uniquement à répondre à votre demande et à organiser la séance."
+      "texte": "Le formulaire de contact transmet à Truffe de Wouf les informations que vous saisissez (prénom, téléphone, e-mail, informations sur votre animal, message). Elles sont reçues par e-mail et par l'outil de formulaires de l'hébergeur du site, et servent uniquement à répondre à votre demande et à organiser la séance. Les informations transmises par e-mail ou par téléphone sont utilisées de la même façon."
     },
     {
       "titre": "Durée de conservation",
@@ -16,11 +16,11 @@
     },
     {
       "titre": "Partage des données",
-      "texte": "Vos données ne sont ni vendues ni cédées à des tiers."
+      "texte": "Vos données ne sont ni vendues ni cédées à des tiers. Seul l'hébergeur du site, qui achemine le formulaire, y a accès techniquement."
     },
     {
       "titre": "Cookies",
-      "texte": "Ce site n'utilise pas de cookies de mesure d'audience ni de publicité. La carte Google Maps de la page Contact peut déposer des cookies propres à Google."
+      "texte": "Ce site n'utilise ni cookie de mesure d'audience ni cookie publicitaire, et ses polices sont hébergées sur le site. La carte Google Maps de la page Contact n'est chargée que si vous cliquez sur « Afficher la carte » : Google peut alors déposer ses propres cookies."
     },
     {
       "titre": "Vos droits",
