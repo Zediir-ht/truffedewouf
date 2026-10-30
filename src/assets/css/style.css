@@ -1,28 +1,30 @@
 /* =========================================================
    Truffe de Wouf — studio photo pour animaux, Canet-de-Salars
-   Fond clair et chaud. Le brun du fond de studio de la photo du
-   client (#974922) sert de couleur d'accent : bandeau « Je réserve »,
-   liens, numéros. Texte et encadrés en noir ou en blanc.
+   Fond sable clair et chaud, tiré du fond de studio de la photo du
+   client. Son brun (#974922) structure la page : boutons, bandeaux,
+   formule mise en avant ; le brun profond remplace le noir en haut
+   et en bas de page. Texte en noir, encadrés en blanc.
    ========================================================= */
 
 :root {
   /* Contexte clair (par défaut) */
-  --bg: #f5eadf;
-  --bg-2: #ebdac8;
+  --bg: #ecd7bf;
+  --bg-2: #e0c09d;
   --fg: #17110e;
   --fg-2: #4a3a30;
-  --muted: #6b5444;
-  --line: rgba(23, 17, 14, .2);
-  --accent: #974922;
+  --muted: #5a4234;
+  --line: rgba(23, 17, 14, .22);
+  --accent: #7d3a18;         /* brun foncé pour les liens et numéros sur fond clair */
   --inv: #fff8f2;            /* couleur inverse du texte, pour les survols pleins */
-  --btn-bg: #17110e;
+  --btn-bg: #974922;
   --btn-fg: #fff8f2;
-  --btn-hover: #974922;
+  --btn-hover: #17110e;
   --btn-hover-fg: #fff8f2;
 
   --noir: #17110e;
   --blanc: #fff8f2;
-  --brun: #974922;
+  --brun: #974922;           /* brun de la photo du client */
+  --profond: #3b1c0f;        /* brun profond : haut et bas de page */
 
   /* Fonds des emplacements photo sans image (tons tirés de la photo) */
   --caramel: #c57b45;
@@ -39,8 +41,8 @@
   --ease: cubic-bezier(.2, .7, .1, 1);
 }
 
-/* Contexte sombre : bandeau du haut, pied de page, bandeau « Je réserve », offre, formule mise en avant */
-.topbar, .footer, .cta, .promo, .plan--featured {
+/* Contexte sombre (brun) : bandeau du haut, pied de page, points forts, bandeau « Je réserve », offre, formule mise en avant */
+.topbar, .footer, .brandband, .cta, .promo, .plan--featured {
   --fg: #fff8f2;
   --fg-2: rgba(255, 248, 242, .8);
   --muted: rgba(255, 248, 242, .62);
@@ -130,7 +132,7 @@ h1, h2, h3 { margin: 0; font-weight: 400; }
 .icon { width: 16px; height: 16px; flex: none; fill: none; stroke: currentColor; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
 
 /* ---------- Bandeau infos (téléphone + adresse) ---------- */
-.topbar { background: var(--noir); color: var(--fg); font-size: .86rem; }
+.topbar { background: var(--profond); color: var(--fg); font-size: .86rem; }
 .topbar .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; min-height: 44px; }
 .topbar a { display: inline-flex; align-items: center; gap: 8px; opacity: .88; transition: opacity .2s; }
 .topbar a:hover { opacity: 1; }
@@ -146,7 +148,7 @@ h1, h2, h3 { margin: 0; font-weight: 400; }
 }
 
 /* ---------- En-tête : logo + phrase d'accroche ---------- */
-.header { position: sticky; top: 0; z-index: 40; background: rgba(245, 234, 223, .94); backdrop-filter: blur(14px); border-bottom: 1px solid transparent; transition: border-color .3s; }
+.header { position: sticky; top: 0; z-index: 40; background: rgba(236, 215, 191, .94); backdrop-filter: blur(14px); border-bottom: 1px solid transparent; transition: border-color .3s; }
 .header.is-scrolled { border-bottom-color: var(--line); }
 .header .wrap { display: flex; align-items: center; justify-content: space-between; gap: 24px; height: 96px; }
 .brand { display: flex; align-items: center; gap: 20px; min-width: 0; }
@@ -195,18 +197,18 @@ h1, h2, h3 { margin: 0; font-weight: 400; }
   display: flex; align-items: center; gap: 8px;
 }
 .resa a { display: inline-flex; align-items: center; gap: 10px; border-radius: 0; font-weight: 600; box-shadow: 0 14px 34px -14px rgba(23, 17, 14, .7); transition: background .25s var(--ease), color .25s var(--ease); }
-.resa__tel { padding: 15px 18px; background: var(--noir); color: var(--blanc); }
+.resa__tel { padding: 15px 18px; background: var(--profond); color: var(--blanc); }
 .resa__tel span { display: none; }
 .resa__btn { padding: 15px 24px; background: var(--brun); color: var(--blanc); }
 .resa__btn .icon { width: 18px; height: 18px; }
 .resa__tel:hover { background: var(--brun); }
-.resa__btn:hover { background: var(--noir); }
+.resa__btn:hover { background: var(--profond); }
 @media (max-width: 760px) {
   body:not(.no-resa) { padding-bottom: calc(68px + env(safe-area-inset-bottom, 0px)); }
   .resa {
     left: 0; right: 0; bottom: 0; gap: 0;
     padding: 10px max(12px, env(safe-area-inset-right, 0px)) calc(10px + env(safe-area-inset-bottom, 0px)) max(12px, env(safe-area-inset-left, 0px));
-    background: var(--noir); box-shadow: 0 -10px 30px -16px rgba(23, 17, 14, .8);
+    background: var(--profond); box-shadow: 0 -10px 30px -16px rgba(23, 17, 14, .8);
   }
   .resa a { box-shadow: none; white-space: nowrap; font-size: .9rem; }
   .resa__tel { padding: 12px 8px; background: transparent; }
@@ -309,10 +311,10 @@ h1, h2, h3 { margin: 0; font-weight: 400; }
 }
 
 /* 2. points forts */
-.brandband { border-block: 1px solid var(--line); padding: clamp(28px, 3.4vw, 44px) 0; }
+.brandband { background: var(--brun); color: var(--fg); padding: clamp(28px, 3.4vw, 44px) 0; }
 .brandband__points { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px 36px; }
 .brandband__points li { display: flex; gap: 14px; align-items: flex-start; font-size: .96rem; line-height: 1.45; color: var(--fg-2); }
-.brandband__points .icon { width: 26px; height: 26px; color: var(--brun); stroke-width: 1.4; }
+.brandband__points .icon { width: 26px; height: 26px; color: var(--accent); stroke-width: 1.4; }
 @media (max-width: 1080px) { .brandband__points { grid-template-columns: 1fr 1fr; } }
 @media (max-width: 600px) { .brandband__points { grid-template-columns: 1fr; } }
 
@@ -389,7 +391,7 @@ h1, h2, h3 { margin: 0; font-weight: 400; }
 .principles { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0; border-top: 1px solid var(--line); }
 .principles article { padding: 36px 32px 8px 0; }
 .principles article + article { padding-left: 32px; border-left: 1px solid var(--line); }
-.principles span { font-size: .8rem; font-weight: 600; letter-spacing: .12em; color: var(--brun); }
+.principles span { font-size: .8rem; font-weight: 600; letter-spacing: .12em; color: var(--accent); }
 .principles h3 { margin: 18px 0 14px; }
 .principles p { color: var(--fg-2); margin: 0; }
 @media (max-width: 860px) {
@@ -451,7 +453,7 @@ h1, h2, h3 { margin: 0; font-weight: 400; }
 
 .pricing { display: grid; grid-template-columns: repeat(3, 1fr); gap: clamp(14px, 2vw, 24px); }
 .plan { position: relative; display: flex; flex-direction: column; padding: clamp(28px, 3vw, 44px); border: 1px solid var(--line); border-radius: 4px; }
-.plan--featured { background: var(--noir); color: var(--blanc); border-color: var(--noir); }
+.plan--featured { background: var(--brun); color: var(--fg); border-color: var(--brun); }
 .plan__price { font-family: var(--serif); font-size: clamp(2.6rem, 3.6vw, 3.6rem); line-height: 1; margin: 18px 0 6px; }
 .plan__meta { font-size: .92rem; opacity: .75; margin-bottom: 26px; }
 .plan ul { list-style: none; margin: 0 0 32px; padding: 0; flex: 1; }
@@ -472,7 +474,7 @@ h1, h2, h3 { margin: 0; font-weight: 400; }
 
 .steps { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(3, 1fr); gap: clamp(20px, 3vw, 40px); counter-reset: st; }
 .steps li { counter-increment: st; border-top: 1px solid var(--line); padding-top: 22px; }
-.steps li::before { content: "0" counter(st); display: block; font-family: var(--serif); font-size: 3.4rem; line-height: 1; color: var(--brun); margin-bottom: 18px; }
+.steps li::before { content: "0" counter(st); display: block; font-family: var(--serif); font-size: 3.4rem; line-height: 1; color: var(--accent); margin-bottom: 18px; }
 .steps h3 { font-family: var(--serif); font-size: 1.7rem; margin-bottom: 10px; }
 .steps p { color: var(--fg-2); margin: 0; font-size: .98rem; }
 @media (max-width: 760px) { .steps { grid-template-columns: 1fr; } }
@@ -527,7 +529,7 @@ h1, h2, h3 { margin: 0; font-weight: 400; }
 /* =========================================================
    PIED DE PAGE
    ========================================================= */
-.footer { background: var(--noir); color: var(--fg); padding: clamp(64px, 8vw, 110px) 0 32px; }
+.footer { background: var(--profond); color: var(--fg); padding: clamp(64px, 8vw, 110px) 0 32px; }
 .footer__top { display: grid; grid-template-columns: 1.6fr 1fr 1fr 1fr; gap: 40px; padding-bottom: clamp(48px, 6vw, 80px); }
 .footer__logo { width: 220px; height: auto; margin-bottom: 18px; }
 .footer__brand p { max-width: 22em; color: var(--muted); font-size: .95rem; }
