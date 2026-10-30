@@ -145,7 +145,6 @@ content:
     - name: titre
       label: Titre principal (important pour Google)
       type: string
-      description: 'Pour mettre un passage en italique (en couleur), entourez-le d''étoiles : *comme ceci*.'
       required: true
     - name: intro
       label: Phrase d'introduction
@@ -221,7 +220,6 @@ content:
     - name: titre
       label: Titre
       type: string
-      description: 'Pour mettre un passage en italique (en couleur), entourez-le d''étoiles : *comme ceci*.'
       required: true
     - name: texte
       label: Texte
@@ -245,7 +243,6 @@ content:
     - name: titre
       label: Titre
       type: string
-      description: 'Pour mettre un passage en italique (en couleur), entourez-le d''étoiles : *comme ceci*.'
       required: true
     - name: intro
       label: Texte d'introduction
@@ -288,7 +285,6 @@ content:
     - name: titre
       label: Titre
       type: string
-      description: 'Pour mettre un passage en italique (en couleur), entourez-le d''étoiles : *comme ceci*.'
       required: true
     - name: texte
       label: Texte
@@ -348,7 +344,6 @@ content:
     - name: titre
       label: Titre
       type: string
-      description: 'Pour mettre un passage en italique (en couleur), entourez-le d''étoiles : *comme ceci*.'
       required: true
     - name: intro
       label: Introduction
@@ -363,7 +358,6 @@ content:
     - name: titre
       label: Titre
       type: string
-      description: 'Pour mettre un passage en italique (en couleur), entourez-le d''étoiles : *comme ceci*.'
       required: true
     - name: texte
       label: Texte
@@ -388,7 +382,6 @@ content:
     - name: titre
       label: Titre
       type: string
-      description: 'Pour mettre un passage en italique (en couleur), entourez-le d''étoiles : *comme ceci*.'
       required: true
     - name: regles
       label: Façons
@@ -412,7 +405,6 @@ content:
     - name: titre
       label: Titre
       type: string
-      description: 'Pour mettre un passage en italique (en couleur), entourez-le d''étoiles : *comme ceci*.'
       required: true
     - name: texte
       label: Texte
@@ -440,7 +432,6 @@ content:
     - name: titre
       label: Titre
       type: string
-      description: 'Pour mettre un passage en italique (en couleur), entourez-le d''étoiles : *comme ceci*.'
       required: true
     - name: intro
       label: Introduction
@@ -470,7 +461,6 @@ content:
     - name: titre
       label: Titre
       type: string
-      description: 'Pour mettre un passage en italique (en couleur), entourez-le d''étoiles : *comme ceci*.'
       required: true
     - name: intro
       label: Introduction
@@ -482,7 +472,6 @@ content:
     - name: titre
       label: Titre
       type: string
-      description: 'Pour mettre un passage en italique (en couleur), entourez-le d''étoiles : *comme ceci*.'
       required: true
     - name: liste
       label: Prestations
@@ -566,7 +555,6 @@ content:
     - name: titre
       label: Titre
       type: string
-      description: 'Pour mettre un passage en italique (en couleur), entourez-le d''étoiles : *comme ceci*.'
       required: true
     - name: etapes
       label: Étapes
@@ -587,7 +575,6 @@ content:
     - name: titre
       label: Titre
       type: string
-      description: 'Pour mettre un passage en italique (en couleur), entourez-le d''étoiles : *comme ceci*.'
       required: true
     - name: liste
       label: Questions
@@ -615,7 +602,6 @@ content:
     - name: titre
       label: Titre
       type: string
-      description: 'Pour mettre un passage en italique (en couleur), entourez-le d''étoiles : *comme ceci*.'
       required: true
     - name: intro
       label: Introduction
@@ -669,7 +655,6 @@ content:
   - name: titre
     label: Titre
     type: string
-    description: 'Pour mettre un passage en italique (en couleur), entourez-le d''étoiles : *comme ceci*.'
     required: true
   - name: intro
     label: Introduction
@@ -685,7 +670,6 @@ content:
     - name: titre
       label: Titre
       type: string
-      description: 'Pour mettre un passage en italique (en couleur), entourez-le d''étoiles : *comme ceci*.'
       required: true
     - name: seances
       label: Type de séance proposé
@@ -709,7 +693,6 @@ content:
   - name: titre
     label: Titre
     type: string
-    description: 'Pour mettre un passage en italique (en couleur), entourez-le d''étoiles : *comme ceci*.'
     required: true
   - name: note
     label: Note moyenne Google
@@ -749,7 +732,6 @@ content:
   - name: titre
     label: Titre
     type: string
-    description: 'Pour mettre un passage en italique (en couleur), entourez-le d''étoiles : *comme ceci*.'
     required: true
   - name: intro
     label: Introduction
@@ -776,7 +758,6 @@ content:
   - name: titre
     label: Titre
     type: string
-    description: 'Pour mettre un passage en italique (en couleur), entourez-le d''étoiles : *comme ceci*.'
     required: true
   - name: intro
     label: Introduction
@@ -803,7 +784,6 @@ content:
   - name: titre
     label: Titre
     type: string
-    description: 'Pour mettre un passage en italique (en couleur), entourez-le d''étoiles : *comme ceci*.'
     required: true
   - name: editeur
     label: Éditeur du site

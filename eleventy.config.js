@@ -106,8 +106,8 @@ export default function (eleventyConfig) {
   eleventyConfig.addWatchTarget("src/assets/");
 
   // ---------- Filtres de texte ----------
-  // « Un titre *en italique* » : les étoiles mettent un passage en italique.
-  eleventyConfig.addFilter("em", (s) => esc(s).replace(/\*([^*]+)\*/g, "<em>$1</em>"));
+  // Titres : texte brut, sans italique ni changement de couleur (d'éventuelles étoiles saisies sont retirées).
+  eleventyConfig.addFilter("titre", (s) => esc(s).replace(/\*([^*]+)\*/g, "$1"));
   // Nom du studio : le petit mot « de » passe en italique (Truffe *de* Wouf).
   eleventyConfig.addFilter("logo", (s) => esc(s).replace(/\b(de)\b/, "<em>$1</em>"));
   eleventyConfig.addFilter("md", (s) => md.render(String(s ?? "")));

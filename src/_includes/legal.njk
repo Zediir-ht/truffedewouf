@@ -2,7 +2,7 @@
       <div class="wrap">
         <div>
           <p class="crumbs"><a href="index.html">Accueil</a> / {{ crumbName }}</p>
-          <h1 class="display">{{ doc.titre | em | safe }}</h1>
+          <h1 class="display">{{ doc.titre | titre | safe }}</h1>
         </div>
         {%- if doc.intro %}
         <p class="lead">{{ doc.intro }}</p>

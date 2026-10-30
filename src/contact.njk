@@ -13,7 +13,7 @@ tags: pages
         <div>
           <p class="crumbs"><a href="index.html">Accueil</a> / Contact</p>
           <p class="label">Contact et réservation</p>
-          <h1 class="display">{{ c.titre | em | safe }}</h1>
+          <h1 class="display">{{ c.titre | titre | safe }}</h1>
         </div>
         <p class="lead">{{ c.intro }}</p>
       </div>
@@ -40,7 +40,7 @@ tags: pages
           {%- endif %}
         </div>
         <div>
-          <h2 id="demande-title" class="h2" style="margin-bottom:28px">{{ c.formulaire.titre | em | safe }}</h2>
+          <h2 id="demande-title" class="h2" style="margin-bottom:28px">{{ c.formulaire.titre | titre | safe }}</h2>
           <form class="form" id="contact-form" novalidate data-email="{{ site.email }}">
             <label>Votre prénom<input name="prenom" autocomplete="given-name" required></label>
             <label>Téléphone<input name="tel" type="tel" autocomplete="tel"></label>
@@ -61,7 +61,7 @@ tags: pages
               </select>
             </label>
             <label class="form__full">Votre message<textarea name="message" rows="4"></textarea></label>
-            <button class="btn" type="submit">Envoyer ma demande {% icon "arrow" %}</button>
+            <button class="btn" type="submit">Envoyer ma demande</button>
             <p class="form__hint form__full">{{ c.formulaire.note }}</p>
             <p class="form__note form__full" role="status" aria-live="polite"></p>
           </form>
@@ -73,11 +73,11 @@ tags: pages
       <div class="wrap access">
         <div>
           <p class="label">Plan d'accès</p>
-          <h2 id="plan-title" class="h2" style="margin:22px 0 28px">Le studio, <em>à {{ site.ville }}</em></h2>
+          <h2 id="plan-title" class="h2" style="margin:22px 0 28px">Le studio, à {{ site.ville }}</h2>
           <p>{{ site.adresse }}, {{ site.code_postal }} {{ site.ville }}, Aveyron.</p>
           <div class="access__ctas">
             <a class="btn btn--light" href="{{ site.telephone | telHref }}">{% icon "phone" %} Appeler</a>
-            <a class="btn btn--outline" href="{{ mapsUrl }}" target="_blank" rel="noopener">Itinéraire {% icon "ne" %}</a>
+            <a class="btn btn--outline" href="{{ mapsUrl }}" target="_blank" rel="noopener">Itinéraire</a>
           </div>
         </div>
         <div class="access__map">

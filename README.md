@@ -31,7 +31,8 @@ Client ──(Pages CMS)──▶ commit sur GitHub ──▶ Netlify / Cloudfla
 ### Design
 - Fond `#974922` : la teinte la plus foncée du fond de studio de la photo fournie par le client. Texte en blanc (contraste 6,1:1), encadrés en blanc ou en noir, comme demandé.
 - Tons secondaires tirés de la même photo pour les emplacements photo vides (`caramel`, `sable`, `chocolat`, `miel`, `creme`, `noir`).
-- Polices : Instrument Serif (titres) et Inter Tight (texte).
+- Polices : Instrument Serif (titres, toujours en romain et en blanc) et Inter Tight (texte).
+- Boutons : rectangles à angles droits avec un liseré intérieur façon passe-partout, sans flèche ni pastille arrondie. Le bouton de menu mobile est une patte de chien (une croix quand le menu est ouvert).
 - Bouton « Je réserve ma séance » fixe sur toutes les pages sauf Contact (barre en bas d'écran sur mobile, avec le téléphone).
 
 ### Photos
@@ -67,7 +68,7 @@ Hors site, ce qui pèse le plus : fiche **Google Business Profile** (catégorie 
 
 | Valeur provisoire | Où |
 |---|---|
-| Téléphone `00 00 00 00 00` (et WhatsApp, vide pour l'instant) | `site.json` |
+| WhatsApp (vide pour l'instant : le numéro 07 48 17 13 05 est en place pour l'appel, à confirmer s'il est aussi sur WhatsApp) | `site.json` |
 | `Adresse à compléter` (rue du studio à Canet-de-Salars) | `site.json` |
 | Coordonnées GPS (approximatives, centre de Canet-de-Salars) | `site.json` → `latitude`, `longitude` |
 | E-mail `contact@truffedewouf.fr` : n'existe pas encore, voir « Adresse e-mail du studio » | `site.json` |

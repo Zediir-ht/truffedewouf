@@ -1,11 +1,20 @@
 {
-  "titre": "Me *contacter*",
+  "titre": "Me contacter",
   "intro": "Une question, une envie de séance ? Appelez-moi ou envoyez votre demande avec le formulaire.",
   "acces": "[Accès et stationnement à préciser.]",
   "formulaire": {
-    "titre": "Votre *demande*",
-    "seances": ["Portrait naturel", "Portrait fun et déguisé", "Séance jeu", "Je ne sais pas encore"],
-    "lieux": ["Au studio, à Canet-de-Salars", "À domicile", "Animation / événement"],
+    "titre": "Votre demande",
+    "seances": [
+      "Portrait naturel",
+      "Portrait fun et déguisé",
+      "Séance jeu",
+      "Je ne sais pas encore"
+    ],
+    "lieux": [
+      "Au studio, à Canet-de-Salars",
+      "À domicile",
+      "Animation / événement"
+    ],
     "note": "En cliquant sur Envoyer, votre messagerie s'ouvre avec la demande pré-remplie : il ne reste qu'à l'envoyer."
   }
 }

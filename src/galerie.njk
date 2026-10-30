@@ -11,7 +11,7 @@ tags: pages
         <div>
           <p class="crumbs"><a href="index.html">Accueil</a> / Galerie</p>
           <p class="label">Galerie</p>
-          <h1 class="display">{{ g.entete.titre | em | safe }}</h1>
+          <h1 class="display">{{ g.entete.titre | titre | safe }}</h1>
         </div>
         <p class="lead">{{ g.entete.intro }}</p>
       </div>

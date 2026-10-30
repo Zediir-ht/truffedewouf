@@ -15,7 +15,7 @@ tags: pages
           <h2 id="promo-title" class="promo__title"><span>{{ a.promo.phrase }}</span><strong>{{ a.promo.valeur }}</strong></h2>
           <p class="promo__cond">{{ a.promo.condition }}</p>
           <ul class="promo__types" aria-label="Séances concernées">{% for t in a.promo.types %}<li>{{ t }}</li>{% endfor %}</ul>
-          <a class="btn" href="contact.html">{{ a.promo.bouton }} {% icon "arrow" %}</a>
+          <a class="btn" href="contact.html">{{ a.promo.bouton }}</a>
           {%- if a.promo.note %}
           <p class="promo__note">{{ a.promo.note }}</p>
           {%- endif %}
@@ -30,11 +30,11 @@ tags: pages
       <div class="wrap intro__grid">
         <div class="intro__text">
           <p class="label">{{ a.intro.etiquette }}</p>
-          <h1 id="hero-title" class="display">{{ a.intro.titre | em | safe }}</h1>
+          <h1 id="hero-title" class="display">{{ a.intro.titre | titre | safe }}</h1>
           <p class="lead">{{ a.intro.intro | mdi | safe }}</p>
           {{ a.intro.texte | md | safe }}
           <div class="intro__ctas">
-            <a class="btn" href="contact.html">Je réserve ma séance {% icon "arrow" %}</a>
+            <a class="btn" href="contact.html">Je réserve ma séance</a>
             <a class="intro__tel" href="{{ site.telephone | telHref }}">{% icon "phone" %}{{ site.telephone }}</a>
           </div>
         </div>
@@ -62,7 +62,7 @@ tags: pages
           <span class="bloc__body">
             <span class="h3">{{ b.titre }}</span>
             <span class="bloc__text">{{ b.texte }}</span>
-            <span class="link">{{ b.bouton }} {% icon "arrow" %}</span>
+            <span class="link">{{ b.bouton }}</span>
           </span>
         </a>
         {%- endfor %}
@@ -75,12 +75,12 @@ tags: pages
         {% ph { couleur: "caramel", cap: "Le photographe", photo: a.presentation.photo, alt: a.presentation.alt or site.photographe, sizes: "(min-width: 860px) 40vw, 100vw" } %}
         <div class="bio__text">
           <p class="label">{{ a.presentation.etiquette }}</p>
-          <h2 id="presentation-title" class="h2" style="margin:22px 0 28px">{{ a.presentation.titre | em | safe }}</h2>
+          <h2 id="presentation-title" class="h2" style="margin:22px 0 28px">{{ a.presentation.titre | titre | safe }}</h2>
           {{ a.presentation.texte | md | safe }}
           {%- if a.presentation.signature %}
           <p class="bio__sign">{{ a.presentation.signature }}</p>
           {%- endif %}
-          <a class="link" href="le-studio.html">Découvrir le studio {% icon "arrow" %}</a>
+          <a class="link" href="le-studio.html">Découvrir le studio</a>
         </div>
       </div>
     </section>
@@ -91,7 +91,7 @@ tags: pages
         <div class="seances__intro">
           <div>
             <p class="label">Les séances</p>
-            <h2 id="seances-title" class="h2">{{ a.seances.titre | em | safe }}</h2>
+            <h2 id="seances-title" class="h2">{{ a.seances.titre | titre | safe }}</h2>
           </div>
           <p>{{ a.seances.intro | mdi | safe }}</p>
         </div>
@@ -101,11 +101,11 @@ tags: pages
           <article class="scard">
             <h4 class="scard__t">{{ c.titre }}</h4>
             {% ph { couleur: palette | cycle(loop.index), cap: c.legende, photo: c.photo, alt: c.alt or c.titre, sizes: "(min-width: 960px) 20vw, 50vw" } %}
-            <a class="scard__btn" href="{{ c.lien }}" aria-label="Découvrir : {{ c.titre }}">Découvrir {% icon "arrow" %}</a>
+            <a class="scard__btn" href="{{ c.lien }}" aria-label="Découvrir : {{ c.titre }}">Découvrir</a>
           </article>
           {%- endfor %}
         </div>
-        <p class="seances__more"><a class="btn btn--outline" href="seances.html">Prestations et tarifs {% icon "arrow" %}</a></p>
+        <p class="seances__more"><a class="btn btn--outline" href="seances.html">Prestations et tarifs</a></p>
       </div>
     </section>
 

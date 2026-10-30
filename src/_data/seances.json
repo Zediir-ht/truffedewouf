@@ -1,6 +1,6 @@
 {
   "entete": {
-    "titre": "Les séances *et tarifs*",
+    "titre": "Les séances et tarifs",
     "intro": "Portrait naturel, fun ou ludique, au studio de Canet-de-Salars, chez vous ou en événement."
   },
   "prestations": {
@@ -82,7 +82,7 @@
     "options": []
   },
   "modalites": {
-    "titre": "Comment *ça se passe*",
+    "titre": "Comment ça se passe",
     "etapes": [
       {
         "titre": "On fait connaissance",
@@ -99,7 +99,7 @@
     ]
   },
   "faq": {
-    "titre": "Questions *fréquentes*",
+    "titre": "Questions fréquentes",
     "liste": [
       {
         "question": "Où se trouve le studio ?",

@@ -11,7 +11,7 @@ tags: pages
         <div>
           <p class="crumbs"><a href="index.html">Accueil</a> / Le Studio</p>
           <p class="label">Le Studio</p>
-          <h1 class="display">{{ st.entete.titre | em | safe }}</h1>
+          <h1 class="display">{{ st.entete.titre | titre | safe }}</h1>
         </div>
         <p class="lead">{{ st.entete.intro }}</p>
       </div>
@@ -22,7 +22,7 @@ tags: pages
         {% ph { couleur: "caramel", cap: st.espace.legende, photo: st.espace.photo, alt: st.espace.alt or st.espace.legende, sizes: "(min-width: 860px) 50vw, 100vw" } %}
         <div>
           <p class="label">{{ st.espace.etiquette }}</p>
-          <h2 class="h2" style="margin:22px 0 28px">{{ st.espace.titre | em | safe }}</h2>
+          <h2 class="h2" style="margin:22px 0 28px">{{ st.espace.titre | titre | safe }}</h2>
           {{ st.espace.texte | md | safe }}
         </div>
       </div>
@@ -33,7 +33,7 @@ tags: pages
         <div class="sechead">
           <div>
             <p class="label">Les portraits</p>
-            <h2 id="approche-title" class="h2">{{ st.approche.titre | em | safe }}</h2>
+            <h2 id="approche-title" class="h2">{{ st.approche.titre | titre | safe }}</h2>
           </div>
         </div>
         <div class="principles">
@@ -49,7 +49,7 @@ tags: pages
         {% ph { couleur: "chocolat", cap: st.photographe.legende, photo: st.photographe.photo, alt: st.photographe.alt or st.photographe.legende, sizes: "(min-width: 860px) 40vw, 100vw" } %}
         <div class="bio__text">
           <p class="label">{{ st.photographe.etiquette }}</p>
-          <h2 id="bio-title" class="h2" style="margin:22px 0 28px">{{ st.photographe.titre | em | safe }}</h2>
+          <h2 id="bio-title" class="h2" style="margin:22px 0 28px">{{ st.photographe.titre | titre | safe }}</h2>
           {{ st.photographe.texte | md | safe }}
           {%- if st.photographe.signature %}
           <p class="bio__sign">{{ st.photographe.signature }}</p>
@@ -63,7 +63,7 @@ tags: pages
         <div class="sechead">
           <div>
             <p class="label">Déplacements</p>
-            <h2 id="dep-title" class="h2">{{ st.deplacements.titre | em | safe }}</h2>
+            <h2 id="dep-title" class="h2">{{ st.deplacements.titre | titre | safe }}</h2>
           </div>
           <p class="lead" style="max-width:24em;margin:0">{{ st.deplacements.intro }}</p>
         </div>

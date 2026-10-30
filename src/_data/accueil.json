@@ -18,7 +18,7 @@
   },
   "intro": {
     "etiquette": "Studio photo pour animaux · Aveyron",
-    "titre": "Studio photo pour animaux *à Canet-de-Salars*",
+    "titre": "Studio photo pour animaux à Canet-de-Salars",
     "intro": "Je photographie vos animaux pour révéler leur sensibilité et leur caractère, et vous les montrer comme vos yeux ne peuvent pas les voir.",
     "texte": "Du **portrait sobre et naturel** au **portrait rigolo et déguisé** sur fond coloré, en passant par des photos de jeu avec des accessoires : chaque séance est un moment ludique pour votre compagnon, au studio de Canet-de-Salars ou chez vous.",
     "photo": "/assets/img/uploads/epagneul-lunettes.jpg",
@@ -78,14 +78,14 @@
   ],
   "presentation": {
     "etiquette": "Qui suis-je",
-    "titre": "Révéler le caractère *de chaque animal*",
+    "titre": "Révéler le caractère de chaque animal",
     "texte": "Mon métier : photographier les animaux en studio pour réaliser des portraits qui font ressortir et mettent en avant leur sensibilité et leur caractère.\n\nJe veux vous montrer votre animal comme vos yeux ne peuvent pas le faire. Et lui faire passer un moment ludique, en faisant ressortir son côté joueur.",
     "signature": "Gabriel Salasc",
     "photo": "",
     "alt": ""
   },
   "seances": {
-    "titre": "Les séances photo *pour votre animal*",
+    "titre": "Les séances photo pour votre animal",
     "intro": "Chaque animal est différent. Je vous propose plusieurs façons de le photographier, au [studio de Canet-de-Salars](le-studio.html), [chez vous](seances.html#domicile) ou lors d'une [animation en boutique ou en événement](seances.html#evenements).",
     "sous_titre": "Découvrez les séances :",
     "cartes": [
@@ -127,7 +127,7 @@
     ]
   },
   "reserver": {
-    "titre": "Je réserve *ma séance*",
+    "titre": "Je réserve ma séance",
     "texte": "Appelez-moi ou laissez un message : on choisit ensemble le type de séance, le lieu et la date."
   }
 }

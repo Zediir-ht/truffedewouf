@@ -12,7 +12,7 @@ tags: pages
         <div>
           <p class="crumbs"><a href="index.html">Accueil</a> / Les séances</p>
           <p class="label">Les séances</p>
-          <h1 class="display">{{ r.entete.titre | em | safe }}</h1>
+          <h1 class="display">{{ r.entete.titre | titre | safe }}</h1>
         </div>
         <p class="lead">{{ r.entete.intro | mdi | safe }}</p>
       </div>
@@ -23,7 +23,7 @@ tags: pages
         <div class="sechead">
           <div>
             <p class="label">Prestations</p>
-            <h2 id="presta-title" class="h2">{{ r.prestations.titre | em | safe }}</h2>
+            <h2 id="presta-title" class="h2">{{ r.prestations.titre | titre | safe }}</h2>
           </div>
         </div>
         <div class="presta">
@@ -45,7 +45,7 @@ tags: pages
         <div class="sechead">
           <div>
             <p class="label">Tarifs</p>
-            <h2 id="tarifs-title" class="h2">{{ r.formules.titre | em | safe }}</h2>
+            <h2 id="tarifs-title" class="h2">{{ r.formules.titre | titre | safe }}</h2>
           </div>
         </div>
         <div class="pricing">
@@ -59,7 +59,7 @@ tags: pages
               <li>{% icon "check" %}{{ i }}</li>
               {%- endfor %}
             </ul>
-            <a class="btn{% if not f.mise_en_avant %} btn--outline{% endif %}" href="contact.html">Je réserve {% icon "arrow" %}</a>
+            <a class="btn{% if not f.mise_en_avant %} btn--outline{% endif %}" href="contact.html">Je réserve</a>
           </article>
           {%- endfor %}
         </div>
@@ -79,7 +79,7 @@ tags: pages
         <div class="sechead">
           <div>
             <p class="label">Déroulé</p>
-            <h2 id="deroule-title" class="h2">{{ r.modalites.titre | em | safe }}</h2>
+            <h2 id="deroule-title" class="h2">{{ r.modalites.titre | titre | safe }}</h2>
           </div>
         </div>
         <ol class="steps">
@@ -95,7 +95,7 @@ tags: pages
         <div class="sechead">
           <div>
             <p class="label">Questions fréquentes</p>
-            <h2 id="faq-title" class="h2">{{ r.faq.titre | em | safe }}</h2>
+            <h2 id="faq-title" class="h2">{{ r.faq.titre | titre | safe }}</h2>
           </div>
         </div>
         <div class="faq">

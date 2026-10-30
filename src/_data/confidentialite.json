@@ -1,12 +1,30 @@
 {
-  "titre": "Politique *de confidentialité*",
+  "titre": "Politique de confidentialité",
   "intro": "Comment vos données personnelles sont utilisées sur ce site (RGPD). Modèle à faire valider.",
   "articles": [
-    { "titre": "Responsable du traitement", "texte": "Gabriel Salasc, Truffe de Wouf, Canet-de-Salars (Aveyron)." },
-    { "titre": "Données collectées", "texte": "Le formulaire de contact prépare un e-mail dans votre propre messagerie : aucune donnée n'est enregistrée par le site. Les informations que vous envoyez par e-mail ou par téléphone (nom, coordonnées, informations sur votre animal) servent uniquement à répondre à votre demande et à organiser la séance." },
-    { "titre": "Durée de conservation", "texte": "[Durée de conservation des échanges et des photos, ex. 3 ans après le dernier contact.]" },
-    { "titre": "Partage des données", "texte": "Vos données ne sont ni vendues ni cédées à des tiers." },
-    { "titre": "Cookies", "texte": "Ce site n'utilise pas de cookies de mesure d'audience ni de publicité. La carte Google Maps de la page Contact peut déposer des cookies propres à Google." },
-    { "titre": "Vos droits", "texte": "Vous pouvez demander l'accès, la rectification ou la suppression de vos données à tout moment par e-mail. Vous pouvez aussi saisir la CNIL (www.cnil.fr)." }
+    {
+      "titre": "Responsable du traitement",
+      "texte": "Gabriel Salasc, Truffe de Wouf, Canet-de-Salars (Aveyron)."
+    },
+    {
+      "titre": "Données collectées",
+      "texte": "Le formulaire de contact prépare un e-mail dans votre propre messagerie : aucune donnée n'est enregistrée par le site. Les informations que vous envoyez par e-mail ou par téléphone (nom, coordonnées, informations sur votre animal) servent uniquement à répondre à votre demande et à organiser la séance."
+    },
+    {
+      "titre": "Durée de conservation",
+      "texte": "[Durée de conservation des échanges et des photos, ex. 3 ans après le dernier contact.]"
+    },
+    {
+      "titre": "Partage des données",
+      "texte": "Vos données ne sont ni vendues ni cédées à des tiers."
+    },
+    {
+      "titre": "Cookies",
+      "texte": "Ce site n'utilise pas de cookies de mesure d'audience ni de publicité. La carte Google Maps de la page Contact peut déposer des cookies propres à Google."
+    },
+    {
+      "titre": "Vos droits",
+      "texte": "Vous pouvez demander l'accès, la rectification ou la suppression de vos données à tout moment par e-mail. Vous pouvez aussi saisir la CNIL (www.cnil.fr)."
+    }
   ]
 }

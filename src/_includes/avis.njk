@@ -4,7 +4,7 @@
         <div class="sechead">
           <div>
             <p class="label">Avis clients</p>
-            <h2 id="avis-title" class="h2">{{ avis.titre | em | safe }}</h2>
+            <h2 id="avis-title" class="h2">{{ avis.titre | titre | safe }}</h2>
           </div>
           {%- if avis.note %}
           <div class="reviews__score">
@@ -23,7 +23,7 @@
           {%- endfor %}
         </div>
         <div class="reviews__ctas">
-          <a class="btn" href="{{ site | mapsHref }}" target="_blank" rel="noopener">Voir les avis Google {% icon "ne" %}</a>
+          <a class="btn" href="{{ site | mapsHref }}" target="_blank" rel="noopener">Voir les avis Google</a>
           <a class="btn btn--outline" href="{{ site | mapsHref }}" target="_blank" rel="noopener">Laisser un avis</a>
         </div>
       </div>

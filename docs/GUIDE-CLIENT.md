@@ -28,7 +28,6 @@ Après chaque modification, cliquez sur **Enregistrer** (en haut ou en bas du fo
 
 ### Changer un texte
 Ouvrez la rubrique, cliquez dans le champ, modifiez, **Enregistrer**.
-Dans un titre, entourez un mot d'étoiles pour le mettre en italique et en couleur : `Studio photo pour animaux *à Canet-de-Salars*`
 
 ### Ajouter une photo à la galerie
 1. Rubrique **Galerie photos**, section **Photos de la galerie**.
