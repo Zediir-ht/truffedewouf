@@ -14,7 +14,7 @@
   <meta name="description" content="{{ pageDesc }}">
   <link rel="canonical" href="{{ canonical }}">
   <meta name="robots" content="{{ 'noindex, follow' if noindex else 'index, follow, max-image-preview:large' }}">
-  <meta name="theme-color" content="#974922">
+  <meta name="theme-color" content="#f5eadf">
   <meta name="geo.region" content="FR-12">
   <meta name="geo.placename" content="{{ site.ville }}">
   {%- if site.latitude and site.longitude %}
@@ -71,7 +71,7 @@
   <header class="header">
     <div class="wrap">
       <a class="brand" href="index.html" aria-label="{{ site.nom }}, accueil">
-        {% logoImg "brand__logo", site.nom %}
+        {% logoImg "brand__logo", site.nom, "noir" %}
         <span class="brand__tagline">{{ site.accroche }}</span>
       </a>
       <button class="burger" aria-expanded="false" aria-controls="menu">

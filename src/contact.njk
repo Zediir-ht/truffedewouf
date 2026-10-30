@@ -69,14 +69,14 @@ tags: pages
       </div>
     </section>
 
-    <section class="section section--ink" aria-labelledby="plan-title">
+    <section class="section section--line" aria-labelledby="plan-title">
       <div class="wrap access">
         <div>
           <p class="label">Plan d'accès</p>
           <h2 id="plan-title" class="h2" style="margin:22px 0 28px">Le studio, à {{ site.ville }}</h2>
           <p>{{ site.adresse }}, {{ site.code_postal }} {{ site.ville }}, Aveyron.</p>
           <div class="access__ctas">
-            <a class="btn btn--light" href="{{ site.telephone | telHref }}">{% icon "phone" %} Appeler</a>
+            <a class="btn" href="{{ site.telephone | telHref }}">{% icon "phone" %} Appeler</a>
             <a class="btn btn--outline" href="{{ mapsUrl }}" target="_blank" rel="noopener">Itinéraire</a>
           </div>
         </div>

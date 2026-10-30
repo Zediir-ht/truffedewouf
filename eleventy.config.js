@@ -208,9 +208,9 @@ export default function (eleventyConfig) {
     return `<div class="ph ph--${esc(couleur)} ${esc(cls)}"${style}>${inner}</div>`;
   });
 
-  // Logo (calligraphie du studio) : version blanche pour le fond brun.
-  eleventyConfig.addAsyncShortcode("logoImg", async (cls = "", alt = "Truffe de Wouf") => {
-    const meta = await Image(path.join(SRC, "assets/img/logo-blanc.png"), {
+  // Logo (calligraphie du studio) : version foncée sur fond clair, blanche sur fond sombre.
+  eleventyConfig.addAsyncShortcode("logoImg", async (cls = "", alt = "Truffe de Wouf", variant = "blanc") => {
+    const meta = await Image(path.join(SRC, `assets/img/logo-${variant === "noir" ? "noir" : "blanc"}.png`), {
       widths: [240, 480, 720],
       formats: ["webp", "png"],
       outputDir: path.join(OUT, IMG_URL),

@@ -29,9 +29,12 @@ Client ──(Pages CMS)──▶ commit sur GitHub ──▶ Netlify / Cloudfla
 | `docs/GUIDE-CLIENT.md` | Mode d'emploi pour le client |
 
 ### Design
-- Fond `#974922` : la teinte la plus foncée du fond de studio de la photo fournie par le client. Texte en blanc (contraste 6,1:1), encadrés en blanc ou en noir, comme demandé.
+- Fond clair et chaud `#f5eadf` (sections alternées en `#ebdac8`), texte en noir `#17110e` : contrastes de 5,2:1 à 15,8:1 mesurés sur le texte courant.
+- Le brun `#974922`, teinte la plus foncée du fond de studio de la photo du client (son choix de départ), reste la couleur de la marque : bandeau « Je réserve ma séance », liens, numéros, bouton flottant. Seuls le bandeau du haut, le bandeau « Je réserve » et le pied de page sont foncés.
 - Tons secondaires tirés de la même photo pour les emplacements photo vides (`caramel`, `sable`, `chocolat`, `miel`, `creme`, `noir`).
-- Polices : Instrument Serif (titres, toujours en romain et en blanc) et Inter Tight (texte).
+- Polices : Instrument Serif (titres, toujours en romain et en noir) et Inter Tight (texte).
+- Les couleurs sont des variables au début de `src/assets/css/style.css` (`:root` pour le clair, un second bloc pour les zones sombres).
+- Logo : version foncée sur l'en-tête, version blanche sur le pied de page (`src/assets/img/logo-noir.png` et `logo-blanc.png`).
 - Boutons : rectangles à angles droits avec un liseré intérieur façon passe-partout, sans flèche ni pastille arrondie. Le bouton de menu mobile est une patte de chien (une croix quand le menu est ouvert).
 - Bouton « Je réserve ma séance » fixe sur toutes les pages sauf Contact (barre en bas d'écran sur mobile, avec le téléphone).
 
