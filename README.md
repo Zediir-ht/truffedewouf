@@ -34,6 +34,7 @@ Client ──(Pages CMS)──▶ commit sur GitHub ──▶ Netlify / Cloudfla
 - Liens et numéros sur fond clair : brun foncé `#7d3a18` (le brun de marque y serait trop pâle pour être lu).
 - Tons secondaires tirés de la même photo pour les emplacements photo vides (`caramel`, `sable`, `chocolat`, `miel`, `creme`, `noir`).
 - Polices : Instrument Serif (titres, toujours en romain et en noir) et Inter Tight (texte).
+- Ombres légères teintées de brun profond (jamais de noir pur), en trois niveaux (`--ombre-sm`, `--ombre-md`, `--ombre-lg`) : en-tête au défilement, boutons, photos, cartes, avis, tarifs, FAQ, bandeaux de couleur, champs du formulaire.
 - Les couleurs sont des variables au début de `src/assets/css/style.css` (`:root` pour le clair, un second bloc pour les zones brunes).
 - Logo : version foncée sur l'en-tête, version blanche sur le pied de page (`src/assets/img/logo-noir.png` et `logo-blanc.png`).
 - Style arrondi et contrasté : étiquettes en pastilles (sans trait devant les titres), boutons en pilules sans flèche, photos en arche avec une ombre pleine jaune ou brune, blocs et bandeaux aux coins arrondis, chiffres dans des ronds. Jaune soleil `#ffd23f` (tiré des fonds jaunes des photos) très présent, toujours avec du texte noir : bandeau du haut, bandeau des points forts, grand bandeau « Je réserve », étiquettes, pastilles numérotées, bouton flottant, soulignement du menu. La section « Qui suis-je » / « Les portraits » est en brun plein. Le bouton de menu mobile est une patte de chien dans un rond (une croix quand le menu est ouvert).
