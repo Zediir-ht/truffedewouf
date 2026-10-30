@@ -649,3 +649,24 @@ h1, h2, h3 { margin: 0; font-weight: 400; }
 .btn--outline:hover, .scard__btn:hover { background: var(--soleil); color: var(--noir); }
 .filters button:active { transform: translate(3px, 3px); }
 @media (max-width: 760px) { .resa .resa__tel, .resa .resa__tel:hover, .resa .resa__tel:active { box-shadow: none; transform: none; } }
+
+/* ---------- Relief des cartes : contour noir et ombre pleine décalée ---------- */
+.bloc, .review, .plan, .steps li, .faq details, .pagehead .lead {
+  border: 2px solid var(--noir);
+  box-shadow: 8px 8px 0 var(--noir);
+  transition: transform .25s var(--ease), box-shadow .25s var(--ease);
+}
+.plan--featured { border-color: var(--noir); box-shadow: 8px 8px 0 var(--noir); }
+.faq details { box-shadow: 5px 5px 0 var(--noir); }
+.faq details[open] { box-shadow: 8px 8px 0 var(--soleil), 8px 8px 0 2px var(--noir); }
+.bloc .ph { border-bottom: 2px solid var(--noir); border-radius: 0; }
+.bloc:hover { transform: translate(-3px, -3px); box-shadow: 11px 11px 0 var(--noir); }
+.bloc:active { transform: translate(4px, 4px); box-shadow: 3px 3px 0 var(--noir); }
+
+/* ---------- Relief des photos : ombre pleine de couleur (jaune, vert, brun en alternance) ---------- */
+.scard .ph, .presta__item .ph, .reel__item .ph { box-shadow: 8px 8px 0 var(--relief, var(--soleil)); }
+.scard:nth-child(3n+2) .ph, .presta__item:nth-child(3n+2) .ph, .reel__item:nth-child(3n+2) .ph { --relief: var(--vert); }
+.scard:nth-child(3n) .ph, .presta__item:nth-child(3n) .ph, .reel__item:nth-child(3n) .ph { --relief: var(--brun); }
+.access__map { border: 2px solid var(--noir); box-shadow: 8px 8px 0 var(--vert); }
+.gallery__item .ph { box-shadow: 10px 10px 0 var(--relief); }
+.gallery__item:hover .ph, .gallery__item:focus-visible .ph { box-shadow: 14px 14px 0 var(--relief); }
