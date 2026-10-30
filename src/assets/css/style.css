@@ -584,3 +584,14 @@ h1, h2, h3 { margin: 0; font-weight: 400; }
   .reveal { opacity: 1; transform: none; }
 }
 .access__ph .btn { background: var(--soleil); color: var(--noir); }
+
+/* Bande de photos défilante sous l'accroche */
+.reel { overflow: hidden; padding: clamp(36px, 5vw, 64px) 0 clamp(12px, 2vw, 24px); }
+.reel__track { display: flex; gap: 18px; width: max-content; animation: reel 70s linear infinite; padding: 8px 0 24px; }
+.reel:hover .reel__track { animation-play-state: paused; }
+.reel__item { flex: none; width: clamp(150px, 17vw, 230px); }
+.reel__item .ph { aspect-ratio: 4 / 5; border-radius: var(--r-md); }
+.reel__item--1 .ph { border-radius: var(--arch); }
+.reel__item--2 { margin-top: 28px; }
+@keyframes reel { to { transform: translateX(calc(-50% - 9px)); } }
+@media (prefers-reduced-motion: reduce) { .reel__track { animation: none; } .reel { overflow-x: auto; } }

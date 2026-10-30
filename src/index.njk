@@ -42,6 +42,19 @@ tags: pages
       </div>
     </section>
 
+    <!-- Bande de photos défilante (décorative) -->
+    <section class="reel" aria-label="Aperçu des portraits">
+      <div class="reel__track">
+        {%- for copie in [1, 2] %}
+        {%- for g in galerie.photos | batch(12) | first %}
+        <div class="reel__item reel__item--{{ loop.index % 3 }}"{% if copie == 2 %} aria-hidden="true"{% endif %}>
+          {% ph { couleur: palette | cycle(loop.index), photo: g.photo, alt: "" if copie == 2 else g.alt, sizes: "260px" } %}
+        </div>
+        {%- endfor %}
+        {%- endfor %}
+      </div>
+    </section>
+
     <!-- 2. Points forts -->
     <section class="brandband" aria-label="Le studio en bref">
       <div class="wrap">
@@ -72,7 +85,12 @@ tags: pages
     <!-- 4. Qui suis-je -->
     <section class="section section--ink" aria-labelledby="presentation-title">
       <div class="wrap bio">
-        {% ph { couleur: "caramel", cap: "Le photographe", photo: a.presentation.photo, alt: a.presentation.alt or site.photographe, sizes: "(min-width: 860px) 40vw, 100vw" } %}
+        {%- set bioFallback = galerie.photos[7] -%}
+        {%- if a.presentation.photo %}
+        {% ph { couleur: "caramel", photo: a.presentation.photo, alt: a.presentation.alt or site.photographe, sizes: "(min-width: 860px) 40vw, 100vw" } %}
+        {%- else %}
+        {% ph { couleur: "caramel", photo: bioFallback.photo, alt: bioFallback.alt, sizes: "(min-width: 860px) 40vw, 100vw" } %}
+        {%- endif %}
         <div class="bio__text">
           <p class="label">{{ a.presentation.etiquette }}</p>
           <h2 id="presentation-title" class="h2" style="margin:22px 0 28px">{{ a.presentation.titre | titre | safe }}</h2>
@@ -98,11 +116,13 @@ tags: pages
         <h3 class="seances__sub">{{ a.seances.sous_titre }}</h3>
         <div class="scards">
           {%- for c in a.seances.cartes %}
+          {%- if c.photo %}
           <article class="scard">
             <h4 class="scard__t">{{ c.titre }}</h4>
             {% ph { couleur: palette | cycle(loop.index), cap: c.legende, photo: c.photo, alt: c.alt or c.titre, sizes: "(min-width: 960px) 20vw, 50vw" } %}
             <a class="scard__btn" href="{{ c.lien }}" aria-label="Découvrir : {{ c.titre }}">Découvrir</a>
           </article>
+          {%- endif %}
           {%- endfor %}
         </div>
         <p class="seances__more"><a class="btn btn--outline" href="seances.html">Prestations et tarifs</a></p>
