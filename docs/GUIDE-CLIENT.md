@@ -12,13 +12,14 @@ Vous voyez alors un menu avec les rubriques du site :
 
 | Rubrique | Ce que vous y modifiez |
 |---|---|
-| **Coordonnées du studio** | Téléphone, WhatsApp, e-mail, adresse, horaires, liens Instagram et Google |
-| **Page d'accueil** | L'offre du moment, les grandes vignettes, les séances, l'équipe, les textes |
-| **Page Le studio** | La présentation du studio, les fonds colorés, le portrait du photographe, les lieux |
+| **Coordonnées du studio** | Téléphone, WhatsApp, e-mail, adresse, horaires, phrase d'accroche, liens Instagram et Google |
+| **Page d'accueil** | La présentation, les points forts, les blocs vers les pages, « Qui suis-je », les séances, le bloc « Je réserve », l'offre du moment |
+| **Page Le Studio** | Le lieu, les façons de photographier, le photographe, les déplacements |
+| **Les séances et tarifs** | Les prestations, les prix, le déroulé, les questions fréquentes |
 | **Galerie photos** | Les photos de la galerie |
-| **Tarifs et réservation** | Les formules, les prix, les options, les conditions, les questions fréquentes |
-| **Avis Google** | La note et les avis affichés |
-| **Mentions légales** | Les informations légales |
+| **Page Contact** | Le texte de la page, l'accès, les choix du formulaire |
+| **Avis clients** | La note et les avis affichés |
+| **Conditions générales de vente**, **Confidentialité (RGPD)**, **Mentions légales** | Les textes légaux |
 | **Référencement Google (avancé)** | Le titre et la description de chaque page dans Google |
 
 Après chaque modification, cliquez sur **Enregistrer** (en haut ou en bas du formulaire). C'est tout : le site se met à jour tout seul.
@@ -27,13 +28,13 @@ Après chaque modification, cliquez sur **Enregistrer** (en haut ou en bas du fo
 
 ### Changer un texte
 Ouvrez la rubrique, cliquez dans le champ, modifiez, **Enregistrer**.
-Dans un titre, entourez un mot d'étoiles pour le mettre en italique : `Un lieu calme, *des fonds qui claquent.*`
+Dans un titre, entourez un mot d'étoiles pour le mettre en italique et en couleur : `Studio photo pour animaux *à Canet-de-Salars*`
 
 ### Ajouter une photo à la galerie
 1. Rubrique **Galerie photos**, section **Photos de la galerie**.
 2. Cliquez sur **Ajouter** en bas de la liste.
 3. Dans **Photo**, glissez votre image (ou cliquez pour la choisir). Pas besoin de la réduire : le site s'en charge.
-4. Remplissez **Description de la photo** (une phrase, ex. « Golden retriever sur fond bleu »), **Légende** et **Catégorie** (`studio`, `exterieur`, `chiots` ou `duo`).
+4. Remplissez **Description de la photo** (une phrase, ex. « Chat roux sur fond caramel »), **Légende** et **Catégorie** (`naturel`, `fun`, `jeu` ou `domicile`).
 5. **Enregistrer**.
 
 ### Retirer une photo ou changer l'ordre
@@ -43,16 +44,19 @@ Dans la même liste, cliquez sur la corbeille à côté de la photo pour la reti
 Ouvrez la rubrique, repérez le champ **Photo** de la vignette concernée, glissez la nouvelle image, remplissez la description, **Enregistrer**. Tant qu'un emplacement n'a pas de photo, le site affiche un fond coloré.
 
 ### Modifier un tarif
-Rubrique **Tarifs et réservation**, section **Formules et tarifs**. Changez le prix (chiffres seulement, le symbole € est ajouté tout seul). **Enregistrer**.
+Rubrique **Les séances et tarifs**, section **Tarifs**. Tapez le prix en chiffres (le symbole € est ajouté tout seul), ou un texte comme « Sur devis ». Laissé vide, le site affiche « Tarif à venir ». **Enregistrer**.
 
 ### Ajouter ou retirer un avis Google
-Rubrique **Avis Google**. Recopiez un vrai avis tel qu'il apparaît sur Google (prénom, texte). Ne modifiez jamais le texte d'un avis. Pour tout masquer, supprimez tous les avis.
+Rubrique **Avis clients**. Recopiez un vrai avis tel qu'il apparaît sur Google (prénom, texte). Ne modifiez jamais le texte d'un avis. Pour tout masquer, supprimez tous les avis.
 
-### Retirer l'offre du moment
-Rubrique **Page d'accueil**, section **Offre du moment** : décochez **Afficher l'offre**. **Enregistrer**. Pour la remettre plus tard, recochez.
+### Afficher ou masquer une offre du moment
+Rubrique **Page d'accueil**, section **Offre du moment (bandeau en haut)** : cochez **Afficher l'offre** et remplissez les champs. Décochez pour la masquer. **Enregistrer**.
 
 ### Changer le téléphone ou l'adresse
-Rubrique **Coordonnées du studio**. Le changement s'applique d'un coup sur toutes les pages, le pied de page, le bouton d'appel et les données envoyées à Google.
+Rubrique **Coordonnées du studio**. Le changement s'applique d'un coup sur toutes les pages, le pied de page, le bouton « Je réserve ma séance » et les données envoyées à Google.
+
+### Recevoir les demandes de contact
+Le formulaire de la page Contact ouvre la messagerie du visiteur avec sa demande pré-remplie, adressée à l'e-mail saisi dans **Coordonnées du studio**. Vérifiez que cette adresse existe bien et que vous la consultez.
 
 ## Bonnes pratiques
 

@@ -1,0 +1,14 @@
+{
+  "titre": "Conditions générales *de vente*",
+  "intro": "Modèle à compléter et à faire valider avant la mise en ligne. Les passages entre crochets sont à remplacer.",
+  "articles": [
+    { "titre": "Objet", "texte": "Les présentes conditions s'appliquent aux prestations photographiques proposées par Truffe de Wouf (Gabriel Salasc) : séances au studio de Canet-de-Salars, séances à domicile et animations en boutiques ou événements." },
+    { "titre": "Réservation", "texte": "La réservation est confirmée [par écrit / à réception d'un acompte de X %]." },
+    { "titre": "Tarifs et paiement", "texte": "Les tarifs sont ceux affichés sur la page « Les séances » au jour de la réservation. [Moyens de paiement acceptés, échéances.]" },
+    { "titre": "Report et annulation", "texte": "[Conditions de report et d'annulation, sort de l'acompte, cas de l'animal malade.]" },
+    { "titre": "Déplacements", "texte": "[Zone de déplacement incluse et frais éventuels au-delà.]" },
+    { "titre": "Remise des photos", "texte": "[Nombre de photos, format, délai et mode de remise.]" },
+    { "titre": "Droit à l'image et utilisation des photos", "texte": "Les photos restent la propriété de leur auteur. Le client dispose d'un droit d'usage privé. Toute publication des photos par Truffe de Wouf (site, réseaux sociaux) se fait uniquement avec l'accord du client." },
+    { "titre": "Responsabilité", "texte": "[Responsabilité du propriétaire quant au comportement de son animal pendant la séance.]" }
+  ]
+}

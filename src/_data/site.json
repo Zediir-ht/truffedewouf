@@ -1,42 +1,36 @@
 {
   "nom": "Truffe de Wouf",
-  "baseline": "Studio photo canin · Millau",
-  "description_courte": "Studio photo canin à Millau : portraits de chiens en studio sur fonds colorés et séances photo en extérieur dans le sud Aveyron.",
+  "accroche": "Le studio photo pour animaux dans l'Aveyron à Canet-de-Salars",
+  "baseline": "Studio photo pour animaux · Aveyron",
+  "photographe": "Gabriel Salasc",
+  "description_courte": "Studio photo pour animaux à Canet-de-Salars, dans l'Aveyron : portraits au studio ou à domicile, du portrait naturel au portrait fun et déguisé, et animations photo en boutiques et événements.",
   "domaine": "https://www.truffedewouf.fr",
   "telephone": "00 00 00 00 00",
-  "whatsapp": "00 00 00 00 00",
+  "whatsapp": "",
   "email": "contact@truffedewouf.fr",
   "adresse": "Adresse à compléter",
-  "code_postal": "12100",
-  "ville": "Millau",
-  "latitude": "44.0983",
-  "longitude": "3.0778",
-  "horaires": "Du mardi au samedi, sur rendez-vous",
+  "code_postal": "12290",
+  "ville": "Canet-de-Salars",
+  "latitude": "44.2367",
+  "longitude": "2.7594",
+  "horaires": "Sur rendez-vous",
   "ouverture": {
-    "jours": [
-      "mardi",
-      "mercredi",
-      "jeudi",
-      "vendredi",
-      "samedi"
-    ],
-    "de": "09:30",
-    "a": "19:00"
+    "jours": [],
+    "de": "",
+    "a": ""
   },
   "lien_google": "",
   "instagram": "",
   "facebook": "",
   "communes": [
-    "Millau",
-    "Creissels",
-    "Aguessac",
-    "Saint-Georges-de-Luzençon",
-    "Saint-Affrique",
-    "Sévérac-d'Aveyron",
-    "Roquefort-sur-Soulzon",
-    "Nant",
-    "La Cavalerie",
-    "Rodez"
+    "Canet-de-Salars",
+    "Pont-de-Salars",
+    "Salles-Curan",
+    "Arvieu",
+    "Prades-Salars",
+    "Flavin",
+    "Rodez",
+    "Millau"
   ],
-  "image_partage": ""
+  "image_partage": "/assets/img/uploads/epagneul-lunettes.jpg"
 }

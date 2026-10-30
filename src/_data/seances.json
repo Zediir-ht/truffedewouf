@@ -1,0 +1,90 @@
+{
+  "entete": {
+    "titre": "Les séances *et tarifs*",
+    "intro": "Portrait naturel, fun ou ludique, au studio de Canet-de-Salars, chez vous ou en événement."
+  },
+  "prestations": {
+    "titre": "Les prestations",
+    "liste": [
+      {
+        "id": "naturel",
+        "titre": "Portrait naturel",
+        "texte": "Un portrait sobre et naturel, qui met en avant la sensibilité et le caractère de votre animal. Au studio de Canet-de-Salars.",
+        "photo": "",
+        "alt": ""
+      },
+      {
+        "id": "fun",
+        "titre": "Portrait fun et déguisé",
+        "texte": "Un portrait plus rigolo : déguisements, accessoires et fonds colorés pour les animaux qui ont le sens du spectacle.",
+        "photo": "/assets/img/uploads/epagneul-lunettes.jpg",
+        "alt": "Épagneul breton à lunettes sur fond caramel"
+      },
+      {
+        "id": "jeu",
+        "titre": "Séance jeu",
+        "texte": "Des photos prises dans le jeu, stimulées par différents accessoires, pour faire ressortir son côté joueur et amusé.",
+        "photo": "",
+        "alt": ""
+      },
+      {
+        "id": "domicile",
+        "titre": "Séance à domicile",
+        "texte": "Je me déplace chez vous si vous avez des difficultés de mobilité, ou si votre animal est plus à l'aise dans son environnement du quotidien.",
+        "photo": "",
+        "alt": ""
+      },
+      {
+        "id": "evenements",
+        "titre": "Animations et événements",
+        "texte": "Stand photo dans les boutiques spécialisées pour animaux, les foires et les événements animaliers.",
+        "photo": "",
+        "alt": ""
+      }
+    ]
+  },
+  "formules": {
+    "titre": "Les tarifs",
+    "liste": [
+      {
+        "nom": "Séance au studio",
+        "prix": "",
+        "duree": "Studio de Canet-de-Salars",
+        "mise_en_avant": true,
+        "inclus": ["Portrait naturel, fun ou séance jeu", "Fonds colorés, accessoires et déguisements", "[Nombre de photos remises à préciser]"]
+      },
+      {
+        "nom": "Séance à domicile",
+        "prix": "",
+        "duree": "Chez vous",
+        "mise_en_avant": false,
+        "inclus": ["Dans l'environnement de votre animal", "[Zone de déplacement à préciser]", "[Nombre de photos remises à préciser]"]
+      },
+      {
+        "nom": "Animation / événement",
+        "prix": "Sur devis",
+        "duree": "Boutiques, foires, événements",
+        "mise_en_avant": false,
+        "inclus": ["Stand photo sur place", "Pour les boutiques et organisateurs d'événements"]
+      }
+    ],
+    "options": []
+  },
+  "modalites": {
+    "titre": "Comment *ça se passe*",
+    "etapes": [
+      { "titre": "On fait connaissance", "texte": "Par téléphone ou par message : on parle de votre animal, de son caractère et du type de séance qui lui convient." },
+      { "titre": "La séance", "texte": "Au studio, chez vous ou en événement. Votre animal découvre les lieux à son rythme avant les premières photos." },
+      { "titre": "Vos photos", "texte": "[Délai et mode de remise des photos à préciser : galerie en ligne, choix des images, tirages…]" }
+    ]
+  },
+  "faq": {
+    "titre": "Questions *fréquentes*",
+    "liste": [
+      { "question": "Où se trouve le studio ?", "reponse": "Le studio Truffe de Wouf est à Canet-de-Salars (12290), dans l'Aveyron. Je me déplace aussi à domicile et pour des animations en boutiques et événements." },
+      { "question": "Quels animaux photographiez-vous ?", "reponse": "Les animaux de compagnie : chiens, chats et bien d'autres. Chaque séance s'adapte au caractère de l'animal." },
+      { "question": "Mon animal est craintif, est-ce possible ?", "reponse": "Oui. La séance suit son rythme. Et s'il est plus à l'aise chez lui, je peux venir le photographier à domicile." },
+      { "question": "Proposez-vous des animations pour les boutiques ou les événements ?", "reponse": "Oui, j'anime des stands photo dans les boutiques spécialisées pour animaux, les foires et les événements animaliers. Contactez-moi pour un devis." }
+    ]
+  }
+}

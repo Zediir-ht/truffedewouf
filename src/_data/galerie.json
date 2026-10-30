@@ -1,98 +1,23 @@
 {
   "entete": {
-    "titre": "Portraits *de chiens*",
-    "intro": "Une sélection de séances réalisées au studio de Millau et en extérieur dans le sud Aveyron."
+    "titre": "Portraits *d'animaux*",
+    "intro": "Une sélection de portraits réalisés au studio de Canet-de-Salars, à domicile et en événement."
   },
   "categories": [
-    {
-      "id": "studio",
-      "nom": "Studio"
-    },
-    {
-      "id": "exterieur",
-      "nom": "Extérieur"
-    },
-    {
-      "id": "chiots",
-      "nom": "Chiots"
-    },
-    {
-      "id": "duo",
-      "nom": "Duo & famille"
-    }
+    { "id": "naturel", "nom": "Portraits naturels" },
+    { "id": "fun", "nom": "Fun et déguisés" },
+    { "id": "jeu", "nom": "Jeu" },
+    { "id": "domicile", "nom": "À domicile" }
   ],
   "photos": [
-    {
-      "categorie": "studio",
-      "legende": "Studio · Cobalt",
-      "photo": "",
-      "alt": ""
-    },
-    {
-      "categorie": "exterieur",
-      "legende": "Causse du Larzac",
-      "photo": "",
-      "alt": ""
-    },
-    {
-      "categorie": "chiots",
-      "legende": "Chiot · Lilas",
-      "photo": "",
-      "alt": ""
-    },
-    {
-      "categorie": "studio",
-      "legende": "Studio · Tomate",
-      "photo": "",
-      "alt": ""
-    },
-    {
-      "categorie": "duo",
-      "legende": "Duo · Safran",
-      "photo": "",
-      "alt": ""
-    },
-    {
-      "categorie": "exterieur",
-      "legende": "Gorges du Tarn",
-      "photo": "",
-      "alt": ""
-    },
-    {
-      "categorie": "studio",
-      "legende": "Studio · Fuchsia",
-      "photo": "",
-      "alt": ""
-    },
-    {
-      "categorie": "chiots",
-      "legende": "Chiot · Safran",
-      "photo": "",
-      "alt": ""
-    },
-    {
-      "categorie": "exterieur",
-      "legende": "Gorges de la Dourbie",
-      "photo": "",
-      "alt": ""
-    },
-    {
-      "categorie": "studio",
-      "legende": "Studio · Safran",
-      "photo": "",
-      "alt": ""
-    },
-    {
-      "categorie": "duo",
-      "legende": "Duo · Cobalt",
-      "photo": "",
-      "alt": ""
-    },
-    {
-      "categorie": "studio",
-      "legende": "Studio · Lilas",
-      "photo": "",
-      "alt": ""
-    }
+    { "categorie": "fun", "legende": "Épagneul breton à lunettes", "photo": "/assets/img/uploads/epagneul-lunettes.jpg", "alt": "Épagneul breton portant des lunettes, portrait fun sur fond caramel" },
+    { "categorie": "naturel", "legende": "Portrait naturel", "photo": "", "alt": "" },
+    { "categorie": "jeu", "legende": "Séance jeu", "photo": "", "alt": "" },
+    { "categorie": "naturel", "legende": "Portrait naturel", "photo": "", "alt": "" },
+    { "categorie": "fun", "legende": "Portrait fun", "photo": "", "alt": "" },
+    { "categorie": "domicile", "legende": "À domicile", "photo": "", "alt": "" },
+    { "categorie": "jeu", "legende": "Séance jeu", "photo": "", "alt": "" },
+    { "categorie": "naturel", "legende": "Portrait naturel", "photo": "", "alt": "" },
+    { "categorie": "fun", "legende": "Portrait fun", "photo": "", "alt": "" }
   ]
 }

@@ -1,106 +1,40 @@
 {
   "entete": {
-    "titre": "Un lieu calme, *des fonds qui claquent.*",
-    "intro": "Un studio photo dédié aux chiens à Millau, conçu pour qu'ils s'y sentent bien et pour que leurs portraits sortent du lot."
+    "titre": "Le studio, *à hauteur d'animal*",
+    "intro": "Installé à Canet-de-Salars, dans l'Aveyron, le studio Truffe de Wouf accueille vos animaux dans un cadre calme, pensé pour qu'ils se sentent bien."
   },
   "espace": {
-    "etiquette": "L'espace",
-    "titre": "Pensé à *hauteur de truffe*",
-    "texte": "Sol antidérapant, lumière continue qui ne flashe pas les yeux, gamelle d'eau et coin repos : le studio est aménagé pour que votre chien se détende avant de poser.\n\nLes fonds de papier colorés sont changés en quelques secondes. On choisit ensemble celui qui fait ressortir son pelage et son caractère.",
-    "legende": "Le studio · Millau",
+    "etiquette": "Le lieu",
+    "titre": "Un studio photo *à Canet-de-Salars*",
+    "texte": "Les séances se déroulent dans mon studio, à mon domicile de Canet-de-Salars. Votre animal prend le temps de découvrir les lieux avant les premières photos.\n\nFonds colorés, accessoires, déguisements : tout est prêt pour passer d'un portrait sobre à une image pleine d'humour.",
+    "legende": "Le studio",
     "photo": "",
     "alt": ""
   },
   "approche": {
-    "titre": "Trois règles, *aucune exception*",
+    "titre": "Trois façons *de le photographier*",
     "regles": [
-      {
-        "titre": "Son rythme d'abord",
-        "texte": "Pas de chronomètre. Le temps d'acclimatation fait partie de la séance, les pauses aussi."
-      },
-      {
-        "titre": "Que du positif",
-        "texte": "Jeux, friandises et voix douce. Aucune contrainte : un chien détendu fait toujours les plus belles images."
-      },
-      {
-        "titre": "Le soin du détail",
-        "texte": "Chaque image est sélectionnée et retouchée à la main : regard, pelage, couleurs."
-      }
-    ]
-  },
-  "fonds": {
-    "titre": "Une palette *qui ne passe pas inaperçue*",
-    "intro": "Six couleurs signature, et d'autres sur demande pour accorder la photo à votre intérieur.",
-    "liste": [
-      {
-        "nom": "Tomate",
-        "photo": "",
-        "alt": ""
-      },
-      {
-        "nom": "Cobalt",
-        "photo": "",
-        "alt": ""
-      },
-      {
-        "nom": "Safran",
-        "photo": "",
-        "alt": ""
-      },
-      {
-        "nom": "Fuchsia",
-        "photo": "",
-        "alt": ""
-      },
-      {
-        "nom": "Émeraude",
-        "photo": "",
-        "alt": ""
-      },
-      {
-        "nom": "Lilas",
-        "photo": "",
-        "alt": ""
-      }
+      { "titre": "Le portrait naturel", "texte": "Un portrait sobre, qui met en valeur son regard, sa sensibilité et son caractère." },
+      { "titre": "Le portrait fun", "texte": "Plus rigolo, déguisé, sur fond coloré : pour les animaux qui ont le sens du spectacle." },
+      { "titre": "Le jeu", "texte": "Des photos prises en plein jeu, stimulées par différents accessoires, pour faire ressortir son côté joueur." }
     ]
   },
   "photographe": {
-    "etiquette": "Derrière l'objectif",
-    "titre": "Une passion, *deux obsessions :* les chiens et la lumière",
-    "texte": "Installé·e à Millau, [Prénom] photographie les chiens depuis [X] ans. Formation, parcours, ce qui l'a amené·e à ouvrir un studio dédié aux chiens : c'est ici qu'on raconte l'histoire.\n\nQuelques mots sur sa façon de travailler avec les chiens, sur son propre compagnon, sur ce qu'on ressent en découvrant ses photos.",
-    "signature": "[Prénom]",
-    "legende": "Portrait · La photographe",
+    "etiquette": "Le photographe",
+    "titre": "Gabriel Salasc, *photographe animalier*",
+    "texte": "[À compléter par Gabriel : son parcours, depuis quand il photographie les animaux, ses propres animaux…]\n\nMon objectif : vous montrer votre animal comme vos yeux ne peuvent pas le voir, et lui faire passer, à lui comme à vous, un moment ludique.",
+    "signature": "Gabriel",
+    "legende": "Le photographe",
     "photo": "",
     "alt": ""
   },
-  "exterieur": {
-    "titre": "Les plus beaux décors *du sud Aveyron*",
-    "intro": "Séances en plein air autour de Millau, au lever ou au coucher du soleil pour une lumière douce.",
+  "deplacements": {
+    "titre": "À domicile *et en événement*",
+    "intro": "Je me déplace aussi chez vous, et j'anime des stands photo lors d'événements.",
     "lieux": [
-      {
-        "nom": "Causse du Larzac",
-        "detail": "Grands espaces, lumière dorée"
-      },
-      {
-        "nom": "Gorges du Tarn",
-        "detail": "Eau claire et falaises"
-      },
-      {
-        "nom": "Gorges de la Dourbie",
-        "detail": "Rivière, villages perchés"
-      },
-      {
-        "nom": "Causse Noir",
-        "detail": "Rochers et pinèdes"
-      },
-      {
-        "nom": "Viaduc de Millau",
-        "detail": "Le décor iconique"
-      },
-      {
-        "nom": "Chez vous",
-        "detail": "Son coin préféré"
-      }
+      { "nom": "Chez vous", "detail": "Pour les propriétaires à mobilité réduite ou les animaux plus à l'aise dans leur environnement du quotidien" },
+      { "nom": "Boutiques pour animaux", "detail": "Animations photo dans les boutiques spécialisées" },
+      { "nom": "Foires et événements", "detail": "Stand photo lors des foires et événements animaliers" }
     ]
   }
 }

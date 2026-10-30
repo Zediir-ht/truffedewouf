@@ -1,4 +1,4 @@
-// Truffe de Wouf : menu, héro, galerie, formulaire de réservation.
+// Truffe de Wouf : menu, apparitions, galerie, formulaire de contact.
 
 const header = document.querySelector(".header");
 const burger = document.querySelector(".burger");
@@ -19,7 +19,7 @@ document.querySelectorAll("[data-year]").forEach((el) => (el.textContent = new D
 
 // Apparition au scroll
 const revealables = document.querySelectorAll(
-  ".sechead, .scard, .feature, .team article, .brandband__points li, .offers li, .mosaic .ph, .review, .local__cols, .principles article, .swatches figure, .places li, .plan, .steps li, .terms div, .gallery__item, .studio-intro > *, .bio > *"
+  ".sechead, .scard, .bloc, .presta__item, .brandband__points li, .review, .principles article, .places li, .plan, .steps li, .gallery__item, .studio-intro > *, .bio > *"
 );
 if ("IntersectionObserver" in window) {
   const io = new IntersectionObserver((entries) => {
@@ -34,30 +34,6 @@ if ("IntersectionObserver" in window) {
   });
 }
 
-// Héro : le fond de studio change de couleur
-const cycle = document.querySelector("[data-cycle]");
-const dots = document.querySelectorAll("[data-dots] button");
-if (cycle && dots.length) {
-  const label = cycle.querySelector("[data-cycle-label]");
-  const accent = document.querySelector("[data-accent]");
-  let current = 0, timer;
-  const show = (i) => {
-    current = i;
-    const c = dots[i].style.getPropertyValue("--c");
-    cycle.style.setProperty("--bd", c);
-    if (accent) accent.style.color = c;
-    if (label) label.textContent = `Fond n°0${i + 1} · ${dots[i].dataset.name}`;
-    dots.forEach((d, k) => d.setAttribute("aria-pressed", String(k === i)));
-  };
-  const play = () => {
-    if (matchMedia("(prefers-reduced-motion: reduce)").matches) return;
-    clearInterval(timer);
-    timer = setInterval(() => show((current + 1) % dots.length), 3200);
-  };
-  dots.forEach((d, i) => d.addEventListener("click", () => { show(i); play(); }));
-  show(0);
-  play();
-}
 
 // Galerie : filtres + visionneuse
 const gallery = document.querySelector(".gallery");
@@ -106,16 +82,17 @@ if (form) {
   form.addEventListener("submit", (e) => {
     e.preventDefault();
     if (!form.checkValidity()) {
-      note.textContent = "Merci d'indiquer votre prénom, votre e-mail et le nom de votre chien.";
+      note.textContent = "Merci d'indiquer votre prénom, votre e-mail et votre animal.";
       form.querySelector(":invalid").focus();
       return;
     }
     const d = new FormData(form);
-    const subject = `Demande de séance ${d.get("seance")} pour ${d.get("chien")}`;
+    const subject = `Demande de séance : ${d.get("seance")} pour ${d.get("animal")}`;
     const body = [
       "Bonjour,",
       "",
-      `Je m'appelle ${d.get("prenom")} et je souhaite réserver une séance « ${d.get("seance")} » pour ${d.get("chien")}.`,
+      `Je m'appelle ${d.get("prenom")} et je souhaite réserver une séance « ${d.get("seance")} » pour ${d.get("animal")}.`,
+      `Lieu souhaité : ${d.get("lieu")}`,
       "",
       d.get("message"),
       "",

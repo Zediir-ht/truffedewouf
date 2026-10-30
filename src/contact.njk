@@ -1,0 +1,88 @@
+---
+layout: layout.njk
+permalink: /contact.html
+seoKey: contact
+crumb: Contact
+noResa: true
+tags: pages
+---
+{%- set c = contact -%}
+{%- set mapsUrl = site | mapsHref -%}
+    <section class="pagehead">
+      <div class="wrap">
+        <div>
+          <p class="crumbs"><a href="index.html">Accueil</a> / Contact</p>
+          <p class="label">Contact et réservation</p>
+          <h1 class="display">{{ c.titre | em | safe }}</h1>
+        </div>
+        <p class="lead">{{ c.intro }}</p>
+      </div>
+    </section>
+
+    <section class="section" id="demande" aria-labelledby="demande-title" style="padding-top:clamp(56px,7vw,96px)">
+      <div class="wrap booking">
+        <div>
+          <p class="label">Me joindre</p>
+          <div class="booking__direct">
+            <a href="{{ site.telephone | telHref }}">{{ site.telephone }}</a>
+            <a href="mailto:{{ site.email }}" class="booking__mail">{{ site.email }}</a>
+          </div>
+          <dl class="access__list">
+            <div><dt>Adresse</dt><dd>{{ site.adresse }}<br>{{ site.code_postal }} {{ site.ville }}</dd></div>
+            {%- if site.whatsapp %}
+            <div><dt>WhatsApp</dt><dd><a href="{{ site.whatsapp | waHref }}" target="_blank" rel="noopener">Écrire sur WhatsApp</a></dd></div>
+            {%- endif %}
+            <div><dt>Horaires</dt><dd>{{ site.horaires }}</dd></div>
+            <div><dt>Déplacements</dt><dd>À domicile et en événement : <a href="le-studio.html#domicile">voir les détails</a></dd></div>
+          </dl>
+          {%- if c.acces %}
+          <p class="booking__acces">{{ c.acces }}</p>
+          {%- endif %}
+        </div>
+        <div>
+          <h2 id="demande-title" class="h2" style="margin-bottom:28px">{{ c.formulaire.titre | em | safe }}</h2>
+          <form class="form" id="contact-form" novalidate data-email="{{ site.email }}">
+            <label>Votre prénom<input name="prenom" autocomplete="given-name" required></label>
+            <label>Téléphone<input name="tel" type="tel" autocomplete="tel"></label>
+            <label class="form__full">E-mail<input name="email" type="email" autocomplete="email" required></label>
+            <label class="form__full">Votre animal (nom, espèce, race)<input name="animal" required></label>
+            <label>Type de séance
+              <select name="seance">
+                {%- for s in c.formulaire.seances %}
+                <option>{{ s }}</option>
+                {%- endfor %}
+              </select>
+            </label>
+            <label>Lieu
+              <select name="lieu">
+                {%- for l in c.formulaire.lieux %}
+                <option>{{ l }}</option>
+                {%- endfor %}
+              </select>
+            </label>
+            <label class="form__full">Votre message<textarea name="message" rows="4"></textarea></label>
+            <button class="btn" type="submit">Envoyer ma demande {% icon "arrow" %}</button>
+            <p class="form__hint form__full">{{ c.formulaire.note }}</p>
+            <p class="form__note form__full" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--ink" aria-labelledby="plan-title">
+      <div class="wrap access">
+        <div>
+          <p class="label">Plan d'accès</p>
+          <h2 id="plan-title" class="h2" style="margin:22px 0 28px">Le studio, <em>à {{ site.ville }}</em></h2>
+          <p>{{ site.adresse }}, {{ site.code_postal }} {{ site.ville }}, Aveyron.</p>
+          <div class="access__ctas">
+            <a class="btn btn--light" href="{{ site.telephone | telHref }}">{% icon "phone" %} Appeler</a>
+            <a class="btn btn--outline" href="{{ mapsUrl }}" target="_blank" rel="noopener">Itinéraire {% icon "ne" %}</a>
+          </div>
+        </div>
+        <div class="access__map">
+          <iframe title="Plan d'accès au studio {{ site.nom }} à {{ site.ville }}" src="{{ site | mapsEmbed }}" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+    </section>
+{% include "avis.njk" %}

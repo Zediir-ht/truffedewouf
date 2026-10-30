@@ -113,6 +113,12 @@ export default function (eleventyConfig) {
   eleventyConfig.addFilter("md", (s) => md.render(String(s ?? "")));
   eleventyConfig.addFilter("mdi", (s) => md.renderInline(String(s ?? "")));
   eleventyConfig.addFilter("pad2", (n) => String(n).padStart(2, "0"));
+  // Prix : « 150 » → « 150 € » ; un texte (« Sur devis ») reste tel quel ; vide → « Tarif à venir ».
+  eleventyConfig.addFilter("prix", (p) => {
+    const s = String(p ?? "").trim();
+    if (!s) return "Tarif à venir";
+    return /^\d+([.,]\d+)?$/.test(s) ? `${s} €` : s;
+  });
   eleventyConfig.addFilter("cycle", (arr, i) => arr[(i - 1) % arr.length]);
 
   eleventyConfig.addFilter("telHref", (n) => "tel:+" + intl(n));
@@ -166,7 +172,7 @@ export default function (eleventyConfig) {
   );
 
   // ---------- Photos ----------
-  // {% ph { couleur, cap, photo, alt, cls, sizes, priority, natural, cycle } %}
+  // {% ph { couleur, cap, photo, alt, cls, sizes, priority, natural } %}
   // Avec une photo : image optimisée (WebP + JPEG, plusieurs largeurs).
   // Sans photo (ou fichier introuvable) : fond de studio coloré.
   const optimise = (file) =>
@@ -179,11 +185,10 @@ export default function (eleventyConfig) {
     });
 
   eleventyConfig.addAsyncShortcode("ph", async (o = {}) => {
-    const { couleur = "cobalt", cap = "", photo = "", alt = "", cls = "", sizes = "100vw", priority = false, natural = false, cycle = false } = o;
+    const { couleur = "caramel", cap = "", photo = "", alt = "", cls = "", sizes = "100vw", priority = false, natural = false } = o;
     const file = photo ? path.join(SRC, String(photo).replace(/^\/+/, "")) : "";
     let inner = "";
     let style = "";
-    let attrs = "";
     if (file && fs.existsSync(file)) {
       const meta = await optimise(file);
       inner = Image.generateHTML(meta, {
@@ -197,15 +202,21 @@ export default function (eleventyConfig) {
         const m = meta.jpeg[0];
         style = ` style="aspect-ratio: ${m.width} / ${m.height}"`;
       }
-    } else {
-      if (cycle) {
-        attrs = " data-cycle";
-        inner = `<span class="ph__cap" data-cycle-label>${esc(cap)}</span>`;
-      } else if (cap) {
-        inner = `<span class="ph__cap">${esc(cap)}</span>`;
-      }
+    } else if (cap) {
+      inner = `<span class="ph__cap">${esc(cap)}</span>`;
     }
-    return `<div class="ph ph--${esc(couleur)} ${esc(cls)}"${attrs}${style}>${inner}</div>`;
+    return `<div class="ph ph--${esc(couleur)} ${esc(cls)}"${style}>${inner}</div>`;
+  });
+
+  // Logo (calligraphie du studio) : version blanche pour le fond brun.
+  eleventyConfig.addAsyncShortcode("logoImg", async (cls = "", alt = "Truffe de Wouf") => {
+    const meta = await Image(path.join(SRC, "assets/img/logo-blanc.png"), {
+      widths: [240, 480, 720],
+      formats: ["webp", "png"],
+      outputDir: path.join(OUT, IMG_URL),
+      urlPath: IMG_URL,
+    });
+    return Image.generateHTML(meta, { alt, class: cls, sizes: "(min-width: 900px) 220px, 170px", decoding: "async" });
   });
 
   // Image de partage (réseaux sociaux) : 1200 px de large, générée une fois par build.

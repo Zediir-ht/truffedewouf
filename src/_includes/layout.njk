@@ -14,7 +14,7 @@
   <meta name="description" content="{{ pageDesc }}">
   <link rel="canonical" href="{{ canonical }}">
   <meta name="robots" content="{{ 'noindex, follow' if noindex else 'index, follow, max-image-preview:large' }}">
-  <meta name="theme-color" content="#121110">
+  <meta name="theme-color" content="#974922">
   <meta name="geo.region" content="FR-12">
   <meta name="geo.placename" content="{{ site.ville }}">
   {%- if site.latitude and site.longitude %}
@@ -48,11 +48,11 @@
   {%- endif %}
   {%- if ldFaq %}
   <script type="application/ld+json">
-{{ reservation.faq.liste | faqLd | safe }}
+{{ seances.faq.liste | faqLd | safe }}
   </script>
   {%- endif %}
 </head>
-<body>
+<body{% if noResa %} class="no-resa"{% endif %}>
   <a class="skip" href="#contenu">Aller au contenu</a>
 
   <div class="topbar">
@@ -70,16 +70,16 @@
 
   <header class="header">
     <div class="wrap">
-      <a class="logo" href="index.html" aria-label="{{ site.nom }}, accueil">
-        <span class="logo__name">{{ site.nom | logo | safe }}</span>
-        <span class="logo__sub">{{ site.baseline }}</span>
+      <a class="brand" href="index.html" aria-label="{{ site.nom }}, accueil">
+        {% logoImg "brand__logo", site.nom %}
+        <span class="brand__tagline">{{ site.accroche }}</span>
       </a>
       <button class="burger" aria-expanded="false" aria-controls="menu"><span class="sr-only">Menu</span><span></span><span></span></button>
       <nav id="menu" class="menu" aria-label="Navigation principale">
-        <a href="index.html"{% if page.url == "/" or page.url == "/index.html" %} aria-current="page"{% endif %}>Accueil</a>
-        <a href="le-studio.html"{% if page.url == "/le-studio.html" %} aria-current="page"{% endif %}>Le studio</a>
+        <a href="le-studio.html"{% if page.url == "/le-studio.html" %} aria-current="page"{% endif %}>Le Studio</a>
+        <a href="seances.html"{% if page.url == "/seances.html" %} aria-current="page"{% endif %}>Les séances</a>
         <a href="galerie.html"{% if page.url == "/galerie.html" %} aria-current="page"{% endif %}>Galerie</a>
-        <a class="btn" href="reservation.html"{% if page.url == "/reservation.html" %} aria-current="page"{% endif %}>Réserver</a>
+        <a href="contact.html"{% if page.url == "/contact.html" %} aria-current="page"{% endif %}>Contact</a>
       </nav>
     </div>
   </header>
@@ -91,8 +91,9 @@
   <footer class="footer">
     <div class="wrap">
       <div class="footer__top">
-        <div>
-          <p class="logo"><span class="logo__name">{{ site.nom | logo | safe }}</span><span class="logo__sub">{{ site.baseline }}, Aveyron</span></p>
+        <div class="footer__brand">
+          {% logoImg "footer__logo", site.nom %}
+          <p>{{ site.accroche }}</p>
         </div>
         <div>
           <h2>Le studio</h2>
@@ -117,29 +118,29 @@
           <h2>Pages</h2>
           <ul>
             <li><a href="index.html">Accueil</a></li>
-            <li><a href="le-studio.html">Le studio</a></li>
+            <li><a href="le-studio.html">Le Studio</a></li>
+            <li><a href="seances.html">Les séances</a></li>
             <li><a href="galerie.html">Galerie</a></li>
-            <li><a href="reservation.html">Tarifs &amp; réservation</a></li>
+            <li><a href="contact.html">Contact</a></li>
           </ul>
         </div>
       </div>
       <div class="footer__bottom">
-        <span>© <span data-year>2026</span> {{ site.nom }} · Photographe canin à {{ site.ville }}, Aveyron</span>
-        <a href="mentions-legales.html">Mentions légales</a>
-      </div>
-      <div class="footer__colors" aria-hidden="true">
-        <span style="--c:var(--tomato)"></span><span style="--c:var(--saffron)"></span><span style="--c:var(--fuchsia)"></span><span style="--c:var(--cobalt)"></span><span style="--c:var(--emerald)"></span><span style="--c:var(--lilac)"></span>
+        <span>© <span data-year>2026</span> {{ site.nom }} · Photographe animalier à {{ site.ville }}, Aveyron</span>
+        <nav class="footer__legal" aria-label="Informations légales">
+          <a href="cgv.html">Conditions générales de vente</a>
+          <a href="mentions-legales.html">Mentions légales</a>
+          <a href="confidentialite.html">Confidentialité (RGPD)</a>
+        </nav>
       </div>
     </div>
   </footer>
 
-  {%- if avis.note %}
-  <a class="gbadge" href="{{ 'index.html#avis' if avis.avis.length else mapsUrl }}" aria-label="Note Google {{ avis.note }} sur 5, voir les avis">
-    <span class="gbadge__g">Google</span>
-    <strong>{{ avis.note }}</strong>
-    {% stars %}
-    <span class="gbadge__lbl">Avis</span>
-  </a>
+  {%- if not noResa %}
+  <div class="resa" role="complementary" aria-label="Réservation">
+    <a class="resa__tel" href="{{ telUrl }}">{% icon "phone" %}<span>{{ site.telephone }}</span></a>
+    <a class="resa__btn" href="contact.html">Je réserve ma séance {% icon "arrow" %}</a>
+  </div>
   {%- endif %}
 
   <script src="assets/js/main.js" defer></script>

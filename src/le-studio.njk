@@ -2,15 +2,15 @@
 layout: layout.njk
 permalink: /le-studio.html
 seoKey: studio
-crumb: Le studio
+crumb: Le Studio
 tags: pages
 ---
 {%- set st = studio -%}
     <section class="pagehead">
       <div class="wrap">
         <div>
-          <p class="crumbs"><a href="index.html">Accueil</a> / Le studio</p>
-          <p class="label">Le studio</p>
+          <p class="crumbs"><a href="index.html">Accueil</a> / Le Studio</p>
+          <p class="label">Le Studio</p>
           <h1 class="display">{{ st.entete.titre | em | safe }}</h1>
         </div>
         <p class="lead">{{ st.entete.intro }}</p>
@@ -19,7 +19,7 @@ tags: pages
 
     <section class="section">
       <div class="wrap studio-intro">
-        {% ph { couleur: "cobalt", cap: st.espace.legende, photo: st.espace.photo, alt: st.espace.alt or st.espace.legende, sizes: "(min-width: 860px) 50vw, 100vw" } %}
+        {% ph { couleur: "caramel", cap: st.espace.legende, photo: st.espace.photo, alt: st.espace.alt or st.espace.legende, sizes: "(min-width: 860px) 50vw, 100vw" } %}
         <div>
           <p class="label">{{ st.espace.etiquette }}</p>
           <h2 class="h2" style="margin:22px 0 28px">{{ st.espace.titre | em | safe }}</h2>
@@ -32,7 +32,7 @@ tags: pages
       <div class="wrap">
         <div class="sechead">
           <div>
-            <p class="label">L'approche</p>
+            <p class="label">Les portraits</p>
             <h2 id="approche-title" class="h2">{{ st.approche.titre | em | safe }}</h2>
           </div>
         </div>
@@ -44,26 +44,9 @@ tags: pages
       </div>
     </section>
 
-    <section class="section" aria-labelledby="fonds-title">
-      <div class="wrap">
-        <div class="sechead">
-          <div>
-            <p class="label">Les fonds</p>
-            <h2 id="fonds-title" class="h2">{{ st.fonds.titre | em | safe }}</h2>
-          </div>
-          <p class="lead" style="max-width:24em;margin:0">{{ st.fonds.intro }}</p>
-        </div>
-        <div class="swatches">
-          {%- for f in st.fonds.liste %}
-          <figure>{% ph { couleur: palette | cycle(loop.index), photo: f.photo, alt: f.alt or ("Fond " + f.nom), sizes: "(min-width: 860px) 16vw, 33vw" } %}<figcaption>{{ f.nom }}<span>n°{{ loop.index | pad2 }}</span></figcaption></figure>
-          {%- endfor %}
-        </div>
-      </div>
-    </section>
-
-    <section class="section section--alt" aria-labelledby="bio-title">
+    <section class="section" aria-labelledby="bio-title">
       <div class="wrap bio">
-        {% ph { couleur: "tomato", cap: st.photographe.legende, photo: st.photographe.photo, alt: st.photographe.alt or st.photographe.legende, sizes: "(min-width: 860px) 40vw, 100vw" } %}
+        {% ph { couleur: "chocolat", cap: st.photographe.legende, photo: st.photographe.photo, alt: st.photographe.alt or st.photographe.legende, sizes: "(min-width: 860px) 40vw, 100vw" } %}
         <div class="bio__text">
           <p class="label">{{ st.photographe.etiquette }}</p>
           <h2 id="bio-title" class="h2" style="margin:22px 0 28px">{{ st.photographe.titre | em | safe }}</h2>
@@ -75,20 +58,20 @@ tags: pages
       </div>
     </section>
 
-    <section class="section" id="exterieur" aria-labelledby="ext-title">
+    <section class="section section--alt" id="domicile" aria-labelledby="dep-title">
       <div class="wrap">
         <div class="sechead">
           <div>
-            <p class="label">En extérieur</p>
-            <h2 id="ext-title" class="h2">{{ st.exterieur.titre | em | safe }}</h2>
+            <p class="label">Déplacements</p>
+            <h2 id="dep-title" class="h2">{{ st.deplacements.titre | em | safe }}</h2>
           </div>
-          <p class="lead" style="max-width:24em;margin:0">{{ st.exterieur.intro }}</p>
+          <p class="lead" style="max-width:24em;margin:0">{{ st.deplacements.intro }}</p>
         </div>
         <ul class="places">
-          {%- for l in st.exterieur.lieux %}
+          {%- for l in st.deplacements.lieux %}
           <li><strong>{{ l.nom }}</strong><span>{{ l.detail }}</span></li>
           {%- endfor %}
         </ul>
       </div>
     </section>
-{% include "cta.njk" %}
+{% include "reserver.njk" %}

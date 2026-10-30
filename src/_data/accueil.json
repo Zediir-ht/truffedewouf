@@ -1,131 +1,86 @@
 {
   "promo": {
-    "afficher": true,
-    "pastille": "Offre de lancement",
-    "phrase": "Votre séance photo canine",
+    "afficher": false,
+    "pastille": "Offre du moment",
+    "phrase": "Votre séance photo",
     "valeur": "−20 %",
     "condition": "Uniquement du mardi au jeudi",
-    "types": [
-      "Studio",
-      "Plein air",
-      "Chiot",
-      "Senior",
-      "Duo",
-      "Famille"
-    ],
+    "types": ["Portrait naturel", "Portrait fun", "Séance jeu", "À domicile"],
     "bouton": "Je réserve ma séance",
-    "note": "*Offre valable sur les formules Essentielle et Signature, hors tirages.",
+    "note": "*Conditions de l'offre à préciser.",
     "photo": "",
     "alt": ""
   },
-  "phares": [
+  "intro": {
+    "etiquette": "Studio photo pour animaux · Aveyron",
+    "titre": "Studio photo pour animaux *à Canet-de-Salars*",
+    "intro": "Je photographie vos animaux pour révéler leur sensibilité et leur caractère, et vous les montrer comme vos yeux ne peuvent pas les voir.",
+    "texte": "Du **portrait sobre et naturel** au **portrait rigolo et déguisé** sur fond coloré, en passant par des photos de jeu avec des accessoires : chaque séance est un moment ludique pour votre compagnon, au studio de Canet-de-Salars ou chez vous.",
+    "photo": "/assets/img/uploads/epagneul-lunettes.jpg",
+    "alt": "Épagneul breton portant des lunettes, portrait en studio sur fond caramel"
+  },
+  "blocs": [
     {
-      "titre": "Shooting en studio",
-      "lien": "reservation.html",
+      "titre": "Le Studio",
+      "texte": "Un studio photo pour animaux installé à Canet-de-Salars, au cœur de l'Aveyron, pensé pour que votre compagnon s'y sente bien.",
+      "bouton": "Découvrir le studio",
+      "lien": "le-studio.html",
       "photo": "",
       "alt": ""
     },
     {
-      "titre": "Shooting en plein air",
-      "lien": "le-studio.html#exterieur",
+      "titre": "Les séances",
+      "texte": "Portrait naturel, portrait fun et déguisé, séance jeu, séance à domicile ou animation en événement : prestations et tarifs.",
+      "bouton": "Voir les séances",
+      "lien": "seances.html",
+      "photo": "",
+      "alt": ""
+    },
+    {
+      "titre": "Galerie",
+      "texte": "Des portraits d'animaux qui font ressortir leur caractère : sérieux, tendres ou franchement drôles.",
+      "bouton": "Voir la galerie",
+      "lien": "galerie.html",
+      "photo": "",
+      "alt": ""
+    },
+    {
+      "titre": "Contact",
+      "texte": "Une question, une date ? Téléphone, adresse et formulaire de contact pour réserver votre séance.",
+      "bouton": "Me contacter",
+      "lien": "contact.html",
       "photo": "",
       "alt": ""
     }
   ],
   "points": [
-    {
-      "icone": "camera",
-      "texte": "Séances en studio et en extérieur, à Millau et dans tout le sud Aveyron"
-    },
-    {
-      "icone": "palette",
-      "texte": "Six fonds colorés signature et un éclairage doux pour les yeux de votre chien"
-    },
-    {
-      "icone": "heart",
-      "texte": "Une séance au rythme du chien : acclimatation, jeux, friandises et pauses"
-    },
-    {
-      "icone": "image",
-      "texte": "Photos retouchées à la main, galerie privée en ligne et tirages d'art"
-    }
+    { "icone": "camera", "texte": "Séances au studio de Canet-de-Salars, dans l'Aveyron" },
+    { "icone": "pin", "texte": "Déplacement à domicile pour les animaux plus à l'aise chez eux ou les propriétaires à mobilité réduite" },
+    { "icone": "palette", "texte": "Du portrait sobre et naturel au portrait rigolo et déguisé sur fond coloré" },
+    { "icone": "heart", "texte": "Animations photo en boutiques pour animaux, foires et événements animaliers" }
   ],
-  "bienvenue": {
-    "etiquette": "Bienvenue",
-    "titre": "Truffe de Wouf, le *studio photo canin* de Millau",
-    "intro": "Bienvenue chez Truffe de Wouf, le **studio photo** entièrement dédié aux chiens, au cœur de Millau dans l'Aveyron.",
-    "texte": "Nous accueillons votre compagnon sur rendez-vous, pour un **portrait en studio** sur fond coloré ou une **séance photo en extérieur** sur les Causses et dans les Gorges du Tarn.\n\nDécouvrez [le studio](le-studio.html), [nos réalisations](galerie.html) et [nos tarifs](reservation.html). À très vite pour le **shooting photo** de votre chien."
+  "presentation": {
+    "etiquette": "Qui suis-je",
+    "titre": "Révéler le caractère *de chaque animal*",
+    "texte": "Mon métier : photographier les animaux en studio pour réaliser des portraits qui font ressortir et mettent en avant leur sensibilité et leur caractère.\n\nJe veux vous montrer votre animal comme vos yeux ne peuvent pas le faire. Et lui faire passer un moment ludique, en faisant ressortir son côté joueur.",
+    "signature": "Gabriel Salasc",
+    "photo": "",
+    "alt": ""
   },
   "seances": {
-    "titre": "Les séances photo *pour votre chien*",
-    "intro": "Des séances photo canines professionnelles pour toutes les étapes de sa vie : [portrait en studio](reservation.html), [séance en plein air](le-studio.html#exterieur), premières semaines du [chiot](reservation.html), belles années du [chien senior](reservation.html), [duo maître et chien](reservation.html) ou [toute la famille](reservation.html). Chaque séance dure jusqu'à 1 h 30 en trois temps : acclimatation, prise de vue, puis choix des images.",
-    "sous_titre": "Découvrez nos séances photo :",
+    "titre": "Les séances photo *pour votre animal*",
+    "intro": "Chaque animal est différent. Je vous propose plusieurs façons de le photographier, au [studio de Canet-de-Salars](le-studio.html), [chez vous](seances.html#domicile) ou lors d'une [animation en boutique ou en événement](seances.html#evenements).",
+    "sous_titre": "Découvrez les séances :",
     "cartes": [
-      {
-        "titre": "Séance portrait studio",
-        "legende": "Portrait studio",
-        "lien": "reservation.html",
-        "photo": "",
-        "alt": ""
-      },
-      {
-        "titre": "Séance plein air",
-        "legende": "Plein air",
-        "lien": "le-studio.html#exterieur",
-        "photo": "",
-        "alt": ""
-      },
-      {
-        "titre": "Séance chiot",
-        "legende": "Chiot",
-        "lien": "reservation.html",
-        "photo": "",
-        "alt": ""
-      },
-      {
-        "titre": "Séance chien senior",
-        "legende": "Senior",
-        "lien": "reservation.html",
-        "photo": "",
-        "alt": ""
-      },
-      {
-        "titre": "Séance duo maître & chien",
-        "legende": "Duo",
-        "lien": "reservation.html",
-        "photo": "",
-        "alt": ""
-      },
-      {
-        "titre": "Séance famille & meute",
-        "legende": "Famille",
-        "lien": "reservation.html",
-        "photo": "",
-        "alt": ""
-      }
+      { "titre": "Portrait naturel", "legende": "Naturel", "lien": "seances.html#naturel", "photo": "", "alt": "" },
+      { "titre": "Portrait fun et déguisé", "legende": "Fun", "lien": "seances.html#fun", "photo": "/assets/img/uploads/epagneul-lunettes.jpg", "alt": "Épagneul breton à lunettes, portrait fun en studio" },
+      { "titre": "Séance jeu", "legende": "Jeu", "lien": "seances.html#jeu", "photo": "", "alt": "" },
+      { "titre": "Séance à domicile", "legende": "À domicile", "lien": "seances.html#domicile", "photo": "", "alt": "" },
+      { "titre": "Animations et événements", "legende": "Événements", "lien": "seances.html#evenements", "photo": "", "alt": "" }
     ]
   },
-  "equipe": {
-    "titre": "Derrière *l'objectif*",
-    "membres": [
-      {
-        "titre": "Le photographe",
-        "legende": "Le photographe",
-        "texte": "**Photographe animalier** depuis [X] ans, [Prénom] connaît les chiens autant que la lumière. Pendant la **séance photo**, chaque chien est mis à l'aise avant le premier déclenchement, pour des portraits qui lui ressemblent vraiment.",
-        "photo": "",
-        "alt": ""
-      },
-      {
-        "titre": "Le studio",
-        "legende": "Le studio",
-        "texte": "Un plateau photo pensé pour les chiens : sol antidérapant, lumière continue sans flash agressif, coin repos et gamelle d'eau. Les fonds colorés changent en quelques secondes pour s'accorder à son pelage.",
-        "photo": "",
-        "alt": ""
-      }
-    ]
-  },
-  "acces": {
-    "titre": "Contact et *plan d'accès*",
-    "texte": "Notre **studio photo canin** se trouve à Millau, dans le sud Aveyron. [Accès et stationnement à préciser : parking, temps depuis le centre-ville, etc.]"
+  "reserver": {
+    "titre": "Je réserve *ma séance*",
+    "texte": "Appelez-moi ou laissez un message : on choisit ensemble le type de séance, le lieu et la date."
   }
 }
