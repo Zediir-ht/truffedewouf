@@ -31,6 +31,8 @@ Client ──(Pages CMS)──▶ commit sur GitHub ──▶ Netlify / Cloudfla
 ### Design
 - Fond sable clair `#ecd7bf` (sections alternées en `#e0c09d`), texte noir : contrastes de 5,4:1 à 13,4:1 sur le texte courant.
 - Le brun `#974922`, teinte du fond de studio de la photo du client, structure la page : boutons, bandeau des points forts, bandeau « Je réserve ma séance », formule mise en avant, bouton flottant. Le brun profond `#3b1c0f` remplace le noir pour le bandeau du haut et le pied de page.
+- Vert `#016b2d` (fonds verts des photos de Gabriel), toujours avec du texte blanc, en touche de couleur : disque derrière la photo d'accueil, tampon rond « Truffe de Wouf · Studio photo · Aveyron » (rotation lente), en-têtes des pages intérieures (bandeau jaune avec disques vert et brun), relief coloré des photos de la galerie (jaune, vert, brun en alternance).
+- Accueil : grande photo en arche à hauteur d'écran, puis bande de portraits défilante (figée si le visiteur a réduit les animations).
 - Liens et numéros sur fond clair : brun foncé `#7d3a18` (le brun de marque y serait trop pâle pour être lu).
 - Tons secondaires tirés de la même photo pour les emplacements photo vides (`caramel`, `sable`, `chocolat`, `miel`, `creme`, `noir`).
 - Polices : Instrument Serif (titres, toujours en romain et en noir) et Inter Tight (texte), hébergées dans `src/assets/fonts/` (licence SIL OFL, aucun appel à Google, conforme RGPD).

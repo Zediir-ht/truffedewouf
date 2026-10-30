@@ -38,7 +38,15 @@ tags: pages
             <a class="intro__tel" href="{{ site.telephone | telHref }}">{% icon "phone" %}{{ site.telephone }}</a>
           </div>
         </div>
-        {% ph { couleur: "caramel", cap: "Portrait studio", photo: a.intro.photo, alt: a.intro.alt, cls: "intro__ph", sizes: "(min-width: 960px) 42vw, 100vw", priority: true } %}
+        <div class="intro__visual">
+          {% ph { couleur: "caramel", cap: "Portrait studio", photo: a.intro.photo, alt: a.intro.alt, cls: "intro__ph", sizes: "(min-width: 960px) 48vw, 100vw", priority: true } %}
+          <svg class="stamp" viewBox="0 0 200 200" aria-hidden="true">
+            <defs><path id="stamp-cercle" d="M100 100m-74 0a74 74 0 1 1 148 0a74 74 0 1 1-148 0"/></defs>
+            <circle cx="100" cy="100" r="98"/>
+            <text><textPath href="#stamp-cercle" textLength="462">{{ site.nom }} · Studio photo · Aveyron ·</textPath></text>
+            <g class="stamp__paw" transform="translate(68 66) scale(1)"><path d="M32 28c-8 0-17 9-17 17 0 5 4 8 9 8 3 0 5.5-1.5 8-1.5s5 1.5 8 1.5c5 0 9-3 9-8 0-8-9-17-17-17z"/><ellipse cx="12.5" cy="30" rx="5.5" ry="8" transform="rotate(-25 12.5 30)"/><ellipse cx="25" cy="16.5" rx="5.5" ry="8.5" transform="rotate(-8 25 16.5)"/><ellipse cx="39" cy="16.5" rx="5.5" ry="8.5" transform="rotate(8 39 16.5)"/><ellipse cx="51.5" cy="30" rx="5.5" ry="8" transform="rotate(25 51.5 30)"/></g>
+          </svg>
+        </div>
       </div>
     </section>
 

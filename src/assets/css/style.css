@@ -34,6 +34,7 @@
   --brun: #974922;           /* brun de la photo du client */
   --profond: #3b1c0f;        /* brun profond : haut et bas de page */
   --soleil: #ffd23f;         /* jaune des fonds de studio de Gabriel, toujours avec du texte noir */
+  --vert: #016b2d;           /* vert des fonds de studio de Gabriel, toujours avec du texte blanc */
 
   /* Ombres légères teintées de brun profond (jamais de noir pur) */
   --ombre-sm: 0 1px 2px rgba(59, 28, 15, .10), 0 4px 10px -4px rgba(59, 28, 15, .14);
@@ -595,3 +596,52 @@ h1, h2, h3 { margin: 0; font-weight: 400; }
 .reel__item--2 { margin-top: 28px; }
 @keyframes reel { to { transform: translateX(calc(-50% - 9px)); } }
 @media (prefers-reduced-motion: reduce) { .reel__track { animation: none; } .reel { overflow-x: auto; } }
+
+/* ---------- Hero agrandi ---------- */
+.intro { padding-top: clamp(28px, 4vw, 56px); }
+.intro__grid { grid-template-columns: 1fr 1fr; min-height: min(calc(100svh - 150px), 860px); }
+.intro__visual { position: relative; isolation: isolate; }
+.intro__visual::before { /* disque vert derrière la photo */
+  content: ""; position: absolute; z-index: -1; width: 46%; aspect-ratio: 1; border-radius: 50%;
+  background: var(--vert); right: -7%; top: -5%; box-shadow: var(--ombre-lg);
+}
+.intro__ph { aspect-ratio: auto; height: min(70svh, 760px); min-height: 460px; width: 100%; }
+.stamp { position: absolute; z-index: 2; width: clamp(120px, 12vw, 172px); left: -6%; bottom: 9%; filter: drop-shadow(0 14px 24px rgba(59, 28, 15, .35)); animation: stamp 28s linear infinite; }
+.stamp circle { fill: var(--vert); }
+.stamp text { fill: #fff; font: 600 15px/1 var(--sans); letter-spacing: .14em; text-transform: uppercase; }
+.stamp__paw { fill: var(--soleil); }
+@keyframes stamp { to { transform: rotate(360deg); } }
+@media (max-width: 960px) {
+  .intro__grid { min-height: 0; grid-template-columns: 1fr; }
+  .intro__ph { height: auto; aspect-ratio: 4 / 4.8; min-height: 0; max-width: none; }
+  .intro__visual { max-width: 560px; margin-left: 22px; }
+  .stamp { left: -18px; width: 108px; }
+}
+
+/* ---------- En-têtes des pages intérieures : bandeau jaune ---------- */
+.pagehead {
+  position: relative; isolation: isolate; overflow: hidden; border: 0;
+  background: var(--soleil); color: var(--noir);
+  margin: clamp(8px, 1.6vw, 24px); border-radius: var(--r-lg); box-shadow: var(--ombre-lg);
+  --fg: #17110e; --fg-2: #2b1d15; --muted: #4a3020; --accent: #6b3013;
+}
+.pagehead::before, .pagehead::after { content: ""; position: absolute; z-index: -1; border-radius: 50%; }
+.pagehead::before { width: clamp(220px, 30vw, 440px); aspect-ratio: 1; background: var(--vert); right: -6%; top: -38%; }
+.pagehead::after { width: clamp(70px, 7vw, 110px); aspect-ratio: 1; background: var(--brun); right: 33%; top: -4%; }
+.pagehead .label.label { background: var(--noir); color: var(--soleil); }
+.pagehead .lead { position: relative; background: var(--blanc); padding: clamp(20px, 2.4vw, 32px); border-radius: var(--r-md); box-shadow: var(--ombre-md); font-size: 1.1rem; }
+@media (max-width: 860px) { .pagehead::before { top: auto; bottom: -30%; right: -30%; } .pagehead::after { display: none; } }
+
+/* ---------- Galerie : filtres en pastilles, photos en relief ---------- */
+.filters button { background: var(--blanc); box-shadow: var(--ombre-sm); }
+.filters button:hover { box-shadow: inset 0 0 0 2px var(--noir), var(--ombre-sm); }
+.filters button[aria-pressed="true"] { background: var(--soleil); color: var(--noir); box-shadow: inset 0 0 0 2px var(--noir), 4px 4px 0 var(--noir); }
+.gallery { column-gap: clamp(18px, 2vw, 30px); }
+.gallery__item { margin-bottom: clamp(22px, 2.4vw, 34px); }
+.gallery__item .ph { transition: transform .35s var(--ease), box-shadow .35s var(--ease); }
+.gallery__item:nth-child(3n+1) .ph { --relief: var(--soleil); }
+.gallery__item:nth-child(3n+2) .ph { --relief: var(--vert); }
+.gallery__item:nth-child(3n) .ph { --relief: var(--brun); }
+.gallery__item .ph { box-shadow: 10px 10px 0 var(--relief), var(--ombre-md); }
+.gallery__item:hover .ph, .gallery__item:focus-visible .ph { transform: translate(-4px, -4px); box-shadow: 14px 14px 0 var(--relief), var(--ombre-lg); }
+@media (prefers-reduced-motion: reduce) { .stamp { animation: none; } }
